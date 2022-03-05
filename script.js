@@ -18,6 +18,12 @@ $(function () {
       600
     );
   });
+  $(".th__on__board__item img").mouseover(function () {
+    $(this).siblings(".th__on__board__item__tooltip").show();
+  });
+  $(".th__on__board__item img").mouseout(function () {
+    $(this).siblings(".th__on__board__item__tooltip").hide();
+  });
   $(".th__accordion .th__accordion__item__title").click(function () {
     if ($(this).hasClass("active")) {
       $(this)
@@ -90,7 +96,7 @@ $(function () {
       .find(".photo__gallery__large a")
       .attr("href", $galleryLink);
   });
-  
+
   $(".cabin__item__desc__btn__show").click(function () {
     $(this)
       .closest(".cabins__list")
@@ -127,7 +133,9 @@ $(function () {
     nextArrow:
       '<button class="slick__next"><i class="fa-solid fa-chevron-right"></i></button>',
   });
-  $(".photo__gallery__large a.colorbox, .th__photo__gallery__list a.colorbox").colorbox({
+  $(
+    ".photo__gallery__large a.colorbox, .th__photo__gallery__list a.colorbox"
+  ).colorbox({
     innerHeight: 600,
   });
   $(".th__sale__item").click(function () {
@@ -223,5 +231,19 @@ $(function () {
   });
   $(".cruise__list__item__price i").mouseout(function () {
     $(this).find(".item__price__tooltip").toggle();
+  });
+  $(".cabin__filter .bi-plus-circle").click(function () {
+    let $currentValue = +$(this).siblings(".count").text();
+    if ($currentValue > 0) {
+      $currentValue += 1;
+      $(this).siblings(".count").text($currentValue);
+    }
+  });
+  $(".cabin__filter .bi-dash-circle").click(function () {
+    let $currentValue = +$(this).siblings(".count").text();
+    if ($currentValue > 0) {
+      $currentValue -= 1;
+      $(this).siblings(".count").text($currentValue);
+    }
   });
 });

@@ -56,6 +56,10 @@ body {
   cursor: pointer;
   font-feature-settings: "pnum" on, "lnum" on;
 }
+.th__tab__item:hover {
+  color: #006ec7;
+  transition: 0.2s linear;
+}
 .th__tab__item:last-child {
   border-radius: 0px 4px 4px 0px;
 }
@@ -84,6 +88,11 @@ body {
 }
 .about__link__item {
   margin: 10px auto;
+  border-bottom: 1px solid transparent;
+}
+.about__link__item:hover {
+  border-bottom: 1px solid #343434;
+  transition: 0.2s;
 }
 .about__link__item a {
   text-decoration: none;
@@ -104,9 +113,10 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 100px;
 }
 .about__th__block__item {
-  width: 40%;
+  width: 45%;
   color: #343434;
 }
 @media (max-width: 960px) {
@@ -133,6 +143,38 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
+  margin-bottom: 48px;
+}
+.about__th__block__pop__info__icons {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.about__th__block__pop__info__icons > div {
+  min-width: 94px;
+}
+.about__th__block__pop__info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.about__th__block__pop__info .about__th__block__pop__info__title {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  color: #343434;
+  font-feature-settings: "pnum" on, "lnum" on;
+}
+.about__th__block__pop__info .about__th__block__pop__info__short__desc {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #242424;
 }
 div[data-tab-content="th-cruises"] {
   display: none;
@@ -141,16 +183,19 @@ div[data-tab-content="th-cruises"] {
 .th__cruises__content .header__1 {
   font-family: Raleway;
   font-style: normal;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 40px;
   color: #242424;
   display: block;
   margin: 90px 0 30px 0;
   font-feature-settings: "pnum" on, "lnum" on;
 }
-.th__accordion {
+#services {
   max-width: 600px;
   margin: 0 auto;
+}
+.th__accordion {
+  margin-top: 2px;
 }
 .th__accordion__item {
   margin-bottom: 50px;
@@ -174,11 +219,11 @@ div[data-tab-content="th-cruises"] {
   font-size: 18px;
   color: #585858;
 }
-.th__accordion__item__title > div:first-child{
+.th__accordion__item__title > div:first-child {
   width: 50px;
   text-align: center;
 }
-.th__accordion__item__title > div:last-child{
+.th__accordion__item__title > div:last-child {
   margin-left: auto;
 }
 .th__accordion__item__title > div:first-child img {
@@ -208,9 +253,22 @@ div[data-tab-content="th-cruises"] {
   font-feature-settings: "pnum" on, "lnum" on;
   text-align: center;
 }
-.th__on__board__item .on__board__tooltip {
+.th__on__board__item .th__on__board__item__tooltip {
   position: absolute;
   display: none;
+  box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
+    0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+  border-radius: 2px;
+  z-index: 1;
+  right: -100px;
+  bottom: 0;
+  padding: 8px 16px;
+  background-color: #fff;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #7e7e7e;
 }
 .service__on__board {
   max-width: 600px;
@@ -253,13 +311,17 @@ div[data-tab-content="th-cruises"] {
 }
 .crew__items {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 20px;
   flex-wrap: wrap;
 }
 .crew__item {
   max-width: 223px;
-  padding: 20px;
+  padding: 25px;
+  background: #ffffff;
+  box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
+    0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+  border-radius: 4px;
 }
 .crew__item__photo img {
   width: 137px;
@@ -1025,7 +1087,7 @@ div[data-tab-content="th-cruises"] {
   color: #7e7e7e;
   align-self: end;
 }
-.cruise__list.list_view .cruise__list__item__info__bron{
+.cruise__list.list_view .cruise__list__item__info__bron {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1044,4 +1106,3 @@ div[data-tab-content="th-cruises"] {
   text-align: center;
   cursor: pointer;
 }
-

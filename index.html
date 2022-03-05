@@ -17,11 +17,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
         integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <script src="https://kit.fontawesome.com/39c6f8a859.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.4.31/example1/colorbox.min.css"
-        integrity="sha512-qDmL8zJf49wqgbTQEr0nsThYpyQkjc+ulm2zAjRXd/MCoUBuvd19fP2ugx7dnxtvMOzSJ1weNdSE+jbSnA4eWw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
         integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -30,9 +27,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.4.31/jquery.colorbox-min.js"
-        integrity="sha512-vIQFGcvtyG7utDhKtdtJB8gZLnFdQramGsSaRNQ7yNWAnvRYAks5H2IQgvXzR8xzaSeqdcss6ZrzebbHdLECLQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
         integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -41,7 +36,7 @@
 
 <body>
     <div class="th__image" style="
-        background-image:linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%), url('//img/photo_th.png');
+        background-image:linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%), url('/img/photo_th.png');
         background-size: cover;
         background-position: center center;
       ">
@@ -79,12 +74,8 @@
             </div>
             <div class="th__about__content">
                 <div id="about__th">
-                    <span class="header__1">О теплоходе</span>
                     <div class="about__th__blocks__list">
                         <div class="about__th__block__item">
-                            <div class="about__th__block__icon">
-                                <img src="/img/about__th1.png" alt="">
-                            </div>
                             <div class="about__th__block__title">
                                 Судно прошло полную реконструкцию в 2003 и 2019 годах.
                             </div>
@@ -93,11 +84,45 @@
                                 помещения будут обновлены, каюты
                                 на шлюпочной палубе будут оборудованы балконами.
                             </div>
+                            <div class="about__th__block__pop__info__icons">
+                                <div class="about__th__block__pop__info__icon">
+                                    <img src="/img/year__last__renovation.png" alt="">
+                                </div>
+                                <div class="about__th__block__pop__info__icon">
+                                    <img src="/img/count__passangers.png" alt="">
+                                </div>
+                                <div class="about__th__block__pop__info__icon">
+                                    <img src="/img/length__th.png" alt="">
+                                </div>
+                            </div>
+                            <div class="about__th__block__pop__info">
+                                <div>
+                                    <div class="about__th__block__pop__info__title">
+                                        2019
+                                    </div>
+                                    <div class="about__th__block__pop__info__short__desc">
+                                        год последней<br>реновации
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="about__th__block__pop__info__title">
+                                        320
+                                    </div>
+                                    <div class="about__th__block__pop__info__short__desc">
+                                        Пассажиров
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="about__th__block__pop__info__title">
+                                        130 м
+                                    </div>
+                                    <div class="about__th__block__pop__info__short__desc">
+                                        Длина судна
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="about__th__block__item">
-                            <div class="about__th__block__icon">
-                                <img src="/img/about__th2.png" alt="">
-                            </div>
                             <div class="about__th__block__title">
                                 «Маленький принц» может принять на борт до 280 гостей
                             </div>
@@ -106,12 +131,131 @@
                                 ежедневных занятий с профессиональным инструктором по одному из
                                 направлений фитнеса – пилатес, йога, степаэробик, до мастер-классов по рукоделию и
                                 концертных программ.
+                                <br>
+                                <br>
+                                На теплоходе-пансионате «Маленький принц» вас ждет не только разнообразный, но и
+                                полезный отдых.
+                                <br>
+                                <br>
+                                Профессиональные инструкторы каждое утро проводят утреннюю зарядку, организуют занятия
+                                йогой и пилатесом. На палубе стоят тренажеры, на которых вы можете позаниматься в любое
+                                время. А в ресторане и баре вам предложат фиточай и кислородный коктейль.
+                            </div>
+                            <div class="th__on__board">
+                                <div class="th__on__board__item">
+                                    <img src="/img/i1__fluent_music-note-2-24-regular.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i2__carbon_cafe.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i3__carbon_bar.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i4__unknown__1.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i5__unknown__2.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i6__cil_bath.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i7__restaurant.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i8__fluent_movies-and-tv-16-regular.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i9__cil_golf.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i10__cil_tv.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i11__healthicons_clinical-fe-outline.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i12__cil_bike.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i13__jam_wifi.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i14__ironing__board.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i15__concert__hall.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i16__icon-park_music-rhythm.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i17__mdi_solar-power.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
+                                <div class="th__on__board__item">
+                                    <img src="/img/i18__Playground.png" alt="">
+                                    <div class="th__on__board__item__tooltip">
+                                        lorem ipsum
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="services">
-                    <span class="header__1">Услуги и сервис</span>
+                    <span class="header__1">Услуги</span>
                     <div class="th__accordion">
                         <div class="th__accordion__item">
                             <div class="th__accordion__item__title">
@@ -190,63 +334,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="th__on__board">
-                        <div class="th__on__board__item">
-                            <img src="/img/i1__fluent_music-note-2-24-regular.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i2__carbon_cafe.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i3__carbon_bar.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i4__unknown__1.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i5__unknown__2.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i6__cil_bath.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i7__restaurant.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i8__fluent_movies-and-tv-16-regular.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i9__cil_golf.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i10__cil_tv.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i11__healthicons_clinical-fe-outline.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i12__cil_bike.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i13__jam_wifi.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i14__ironing__board.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i15__concert__hall.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i16__icon-park_music-rhythm.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i17__mdi_solar-power.png" alt="">
-                        </div>
-                        <div class="th__on__board__item">
-                            <img src="/img/i18__Playground.png" alt="">
-                        </div>
-                    </div>
                     <div class="service__on__board">
+                        <span class="header__1">Сервис</span>
                         <div class="service__on__board__accordeon">
                             <div class="service__on__board__accordeon__block">
                                 <div class="service__on__board__accordeon__block__title">
@@ -488,27 +577,35 @@
                     </div>
                     <div id="cabins" class="th__cabins">
                         <div class="header__1">Каюты теплохода “Лунная Соната”</div>
-                        <div class="deck__title">Подбор каюты</div>
+                        <!-- <div class="deck__title">Подбор каюты</div>
                         <div class="cabin__filter">
                             <div>
                                 Колличество пассажиров
                             </div>
                             <div>
-                                Взрослых <i class="bi bi-dash-circle"></i> 1 <i class="bi bi-plus-circle"></i>
+                                Взрослых 
+                                <i class="bi bi-dash-circle"></i>
+                                <span class="count">0</span>
+                                <i class="bi bi-plus-circle"></i>
                             </div>
                             <div>
-                                Детей (2-11 лет) <i class="bi bi-dash-circle"></i> 1 <i
-                                    class="bi bi-plus-circle"></i></i>
+                                Детей (2-11 лет) 
+                                <i class="bi bi-dash-circle"></i>
+                                <span class="count">0</span>
+                                <i class="bi bi-plus-circle"></i>
                             </div>
                             <div>
-                                Детей (12-17 лет) <i class="bi bi-dash-circle"></i> 1 <i class="bi bi-plus-circle"></i>
+                                Детей (12-17 лет) 
+                                <i class="bi bi-dash-circle"></i>
+                                <span class="count">0</span>
+                                <i class="bi bi-plus-circle"></i>
                             </div>
                             <div>
                                 <div class="filter__btn">
                                     ПОДОБРАТЬ
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="cabins__list">
                             <div class="cabin__item">
                                 <div class="cabin__photo__gallery">
@@ -669,7 +766,7 @@
                             <div class="cabin__item">
                                 <div class="cabin__photo__gallery">
                                     <div class="photo__gallery__large">
-                                        <a href="/img/cabin__photo1.jpg" class="colorbox" data-fancybox><img
+                                        <a href="/img/cabin__photo1.jpg" data-fancybox="gallery21"><img
                                                 src="/img/cabin__photo1.jpg" alt=""></a>
 
                                     </div>
@@ -726,27 +823,27 @@
                         Фотогалерея «Лунной сонаты»
                     </div>
                     <div class="th__photo__gallery__list">
-                        <a href="/img/slider1.png" class="colorbox" data-fancybox>
+                        <a href="/img/slider1.png" data-fancybox="th__gallery">
                             <div class="th__photo__gallery__item" style="background-image: url('/img/slider1.png');">
                             </div>
                         </a>
-                        <a href="/img/slider2.jpeg" class="colorbox" data-fancybox>
+                        <a href="/img/slider2.jpeg"data-fancybox="th__gallery">
                             <div class="th__photo__gallery__item" style="background-image: url('/img/slider2.jpeg');">
                             </div>
                         </a>
-                        <a href="/img/slider3.jpeg" class="colorbox" data-fancybox>
+                        <a href="/img/slider3.jpeg" data-fancybox="th__gallery">
                             <div class="th__photo__gallery__item" style="background-image: url('/img/slider3.jpeg');">
                             </div>
                         </a>
-                        <a href="/img/slider4.jpeg" class="colorbox" data-fancybox>
+                        <a href="/img/slider4.jpeg" data-fancybox="th__gallery">
                             <div class="th__photo__gallery__item" style="background-image: url('/img/slider4.jpeg');">
                             </div>
                         </a>
-                        <a href="/img/slider5.png" class="colorbox" data-fancybox>
+                        <a href="/img/slider5.png" data-fancybox="th__gallery">
                             <div class="th__photo__gallery__item" style="background-image: url('/img/slider5.png');">
                             </div>
                         </a>
-                        <a href="/img/slider6.jpeg" class="colorbox" data-fancybox>
+                        <a href="/img/slider6.jpeg" data-fancybox="th__gallery">
                             <div class="th__photo__gallery__item" style="background-image: url('/img/slider6.jpeg');">
                             </div>
                         </a>
