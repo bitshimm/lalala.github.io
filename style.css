@@ -115,21 +115,11 @@ body {
   flex-wrap: wrap;
   margin-top: 100px;
 }
-.about__th__block__item {
-  width: 45%;
+.about__th__block__item:last-child {
+  width: 75%;
   color: #343434;
 }
-@media (max-width: 960px) {
-  .about__th__block__item {
-    width: 47%;
-  }
-}
-@media (max-width: 540px) {
-  .about__th__block__item {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
+
 .about__th__block__title {
   font-family: Montserrat;
   font-style: normal;
@@ -146,14 +136,17 @@ body {
   margin-bottom: 48px;
 }
 .about__th__block__pop__info__icons {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   text-align: center;
-  align-items: center;
-  margin-bottom: 16px;
+  /* align-items: center;
+  margin-bottom: 16px; */
 }
 .about__th__block__pop__info__icons > div {
   min-width: 94px;
+}
+.about__th__block__pop__info__icon {
+  margin-bottom: 48px;
 }
 .about__th__block__pop__info {
   display: flex;
@@ -161,7 +154,7 @@ body {
   flex-wrap: wrap;
   text-align: center;
 }
-.about__th__block__pop__info .about__th__block__pop__info__title {
+.about__th__block__pop__info__title {
   font-family: Raleway;
   font-style: normal;
   font-weight: 600;
@@ -169,7 +162,7 @@ body {
   color: #343434;
   font-feature-settings: "pnum" on, "lnum" on;
 }
-.about__th__block__pop__info .about__th__block__pop__info__short__desc {
+.about__th__block__pop__info__short__desc {
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -238,7 +231,6 @@ div[data-tab-content="th-cruises"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 600px;
   margin: 0 auto;
   margin-bottom: 1rem;
 }
@@ -251,7 +243,6 @@ div[data-tab-content="th-cruises"] {
   font-size: 20px;
   position: relative;
   font-feature-settings: "pnum" on, "lnum" on;
-  text-align: center;
 }
 .th__on__board__item .th__on__board__item__tooltip {
   position: absolute;
@@ -260,7 +251,7 @@ div[data-tab-content="th-cruises"] {
     0px 10px 32px -4px rgba(24, 39, 75, 0.1);
   border-radius: 2px;
   z-index: 1;
-  right: -100px;
+  right: -40px;
   bottom: 0;
   padding: 8px 16px;
   background-color: #fff;
@@ -541,7 +532,6 @@ div[data-tab-content="th-cruises"] {
 }
 .cabin__photo__gallery,
 .cabin__item__type,
-.cabin__item__short__desc,
 .cabin__item__desc__btn__show,
 .cabin__item__full__desc {
   padding: 0 16px;
@@ -580,6 +570,26 @@ div[data-tab-content="th-cruises"] {
   color: #242424;
   font-feature-settings: "pnum" on, "lnum" on;
 }
+.cabin__item__facilities {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  align-items: center;
+}
+.cabin__item__count__title {
+  color: #343434;
+}
+.cabin__item__count__categoties {
+  color: #7e7e7e;
+}
+.cabin__item__facilities__icons img {
+  width: 24px;
+  /* height: 24px; */
+}
 .cabin__item__short__desc {
   font-family: Open Sans;
   font-style: normal;
@@ -608,10 +618,14 @@ div[data-tab-content="th-cruises"] {
   box-shadow: 0px 6px 14px -6px rgb(24 39 75 / 12%),
     0px 10px 32px -4px rgb(24 39 75 / 10%);
   z-index: 2;
+  margin-top: 10px;
 }
 .cabin__item__full__desc li,
 .th__accordion__content li {
   list-style-position: inside;
+}
+.cabin__item__desc__btn__show {
+  margin-top: 10px;
 }
 .cabin__item__desc__btn__show,
 .cabin__item__desc__btn__hide,
@@ -657,6 +671,11 @@ div[data-tab-content="th-cruises"] {
   font-size: 20px;
   color: #343434;
   font-feature-settings: "pnum" on, "lnum" on;
+  display: flex;
+  align-items: center;
+}
+.th__sales__title > div:last-child img{
+  margin-left: 19px;
 }
 .th__sales__list {
   display: flex;
@@ -725,8 +744,8 @@ div[data-tab-content="th-cruises"] {
 /* старый вид скидок */
 
 .th__sale__item {
-  padding: 24px;
-  background-image: linear-gradient(
+  padding: 24px 0;
+  /* background-image: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
@@ -734,13 +753,17 @@ div[data-tab-content="th-cruises"] {
     url("img/bg_sale.jpeg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: cover; */
+  background: #ffffff;
+  box-shadow: 0px 10px 36px rgba(67, 96, 248, 0.1);
   height: 163px;
   width: 32%;
   display: flex;
   align-content: flex-end;
   flex-wrap: wrap;
   margin-bottom: 16px;
+  cursor: pointer;
+  position: relative;
 }
 @media (max-width: 960px) {
   .th__sale__item {
@@ -752,6 +775,31 @@ div[data-tab-content="th-cruises"] {
     width: 99%;
   }
 }
+.th__sale__item__close {
+  position: absolute;
+  right: 21px;
+  top: 21px;
+  width: 21px;
+  height: 21px;
+  display: none;
+  cursor: pointer;
+  z-index: 2;
+}
+.th__sale__item__close:before,
+.th__sale__item__close:after {
+  position: absolute;
+  left: 10px;
+  content: " ";
+  height: 21px;
+  width: 1.5px;
+  background-color: #343434;
+}
+.th__sale__item__close:before {
+  transform: rotate(45deg);
+}
+.th__sale__item__close:after {
+  transform: rotate(-45deg);
+}
 .th__sale__item__title {
   font-family: Raleway;
   font-style: normal;
@@ -759,6 +807,7 @@ div[data-tab-content="th-cruises"] {
   font-size: 20px;
   color: #242424;
   font-feature-settings: "pnum" on, "lnum" on;
+  padding: 0 24px;
 }
 .th__sale__item__period {
   font-family: Open Sans;
@@ -766,7 +815,40 @@ div[data-tab-content="th-cruises"] {
   font-weight: normal;
   font-size: 16px;
   color: #343434;
+  margin-top: 8px;
+  position: relative;
+  width: 100%;
+}
+.th__sale__item__period__title {
   max-width: 250px;
+  padding: 0 24px;
+}
+.th__sale__item__desc {
+  margin-top: 24px;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  width: 100%;
+  padding: 0 24px 24px 24px;
+  box-shadow: 0 0 0 rgba(67, 96, 248, 0.1);
+}
+.th__sale__item.active {
+  height: auto;
+}
+.th__sale__item.active .th__sale__item__close {
+  display: block;
+  transition: 0.5s;
+}
+.th__sale__item.active .th__sale__item__period {
+  margin-top: 100px;
+}
+.th__sale__item.active .th__sale__item__title {
+  align-self: flex-start;
+  margin-bottom: 100px;
+}
+.th__sale__item.active .th__sale__item__desc {
+  display: block;
 }
 #cboxOverlay {
   background: rgba(0, 0, 0, 1);
@@ -798,12 +880,23 @@ div[data-tab-content="th-cruises"] {
 .slick__next {
   right: 25px;
 }
+.th__cruises__block{
+  margin-top: 96px;
+}
+.th__cruises__block__title__filter{
+  display: flex;
+  justify-content: space-between;
+}
+.th__cruises__block__title__filter .header__1{
+  margin: 0;
+}
 .cruise__year__filter {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .cruise__year__filter > div {
-  padding: 13px 81px;
+  margin-left: 41px;
   font-family: Raleway;
   font-style: normal;
   font-weight: 500;
@@ -812,11 +905,12 @@ div[data-tab-content="th-cruises"] {
   color: #7e7e7e;
   cursor: pointer;
   font-feature-settings: "pnum" on, "lnum" on;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 4px;
 }
 .cruise__year__filter > div.active {
-  background: #e6f8fd;
-  border-radius: 4px;
   color: #000;
+  border-bottom: 1px solid #343434;
 }
 .cruise__other__filter {
   margin: 24px 0 16px 0;
@@ -1005,6 +1099,7 @@ div[data-tab-content="th-cruises"] {
 }
 .cruise__list.grid_view .cruise__list__item__btn {
   background-color: #006ec7;
+  border: 1px solid #2483d8;
   color: #fff;
   text-align: center;
   padding: 14px 30px;
@@ -1015,6 +1110,12 @@ div[data-tab-content="th-cruises"] {
   font-size: 14px;
   border-radius: 4px;
   cursor: pointer;
+  transition: 0.15s;
+}
+.cruise__list.grid_view .cruise__list__item__btn:hover {
+  background-color: transparent;
+  color: #343434;
+  transition: 0.15s;
 }
 .cruise__list.list_view .cruise__list__item {
   box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
@@ -1100,9 +1201,15 @@ div[data-tab-content="th-cruises"] {
   font-weight: bold;
   font-size: 14px;
   background: #006ec7;
+  border: 1px solid #2483d8;
   border-radius: 4px;
   padding: 14px 18px;
   color: #fff;
   text-align: center;
   cursor: pointer;
+}
+.cruise__list.list_view .info__bron__btn:hover {
+  background-color: transparent;
+  color: #343434;
+  transition: 0.15s;
 }

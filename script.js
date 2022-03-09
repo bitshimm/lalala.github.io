@@ -133,28 +133,40 @@ $(function () {
     nextArrow:
       '<button class="slick__next"><i class="fa-solid fa-chevron-right"></i></button>',
   });
-  $(
-    ".photo__gallery__large a.colorbox, .th__photo__gallery__list a.colorbox"
-  ).colorbox({
-    innerHeight: 600,
-  });
-  $(".th__sale__item").click(function () {
-    if (
-      $(this).find(".th__sale__item_desc").hasClass("th__sale__item_desc__hide")
-    ) {
-      $(this)
-        .closest(".th__sales__list")
-        .find(".th__sale__item_desc")
-        .addClass("th__sale__item_desc__hide");
-      $(this)
-        .find(".th__sale__item_desc")
-        .removeClass("th__sale__item_desc__hide");
-    } else {
-      $(this)
-        .find(".th__sale__item_desc")
-        .addClass("th__sale__item_desc__hide");
-    }
-  });
+  $('.infoflot__recomedation__cruises__list').slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    adaptiveHeight: true,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow:
+      '<button class="slick__prev"><i class="fa-solid fa-chevron-left"></i></button>',
+    nextArrow:
+      '<button class="slick__next"><i class="fa-solid fa-chevron-right"></i></button>',
+  })
+  // $(
+  //   ".photo__gallery__large a.colorbox, .th__photo__gallery__list a.colorbox"
+  // ).colorbox({
+  //   innerHeight: 600,
+  // });
+  // $(".th__sale__item").click(function () {
+  //   if (
+  //     $(this).find(".th__sale__item_desc").hasClass("th__sale__item_desc__hide")
+  //   ) {
+  //     $(this)
+  //       .closest(".th__sales__list")
+  //       .find(".th__sale__item_desc")
+  //       .addClass("th__sale__item_desc__hide");
+  //     $(this)
+  //       .find(".th__sale__item_desc")
+  //       .removeClass("th__sale__item_desc__hide");
+  //   } else {
+  //     $(this)
+  //       .find(".th__sale__item_desc")
+  //       .addClass("th__sale__item_desc__hide");
+  //   }
+  // });
   $(".cruise__year__filter > div").click(function () {
     $(this).closest(".cruise__year__filter").find("div").removeClass("active");
     $(this).toggleClass("active");
@@ -178,7 +190,6 @@ $(function () {
   });
   $(".departure__from__dropdown__list__item").click(function () {
     let $selectedCity = $(this).attr("data-departure-from");
-
     $(this)
       .closest(".departure__from__dropdown")
       .find(".departure__from__dropdown__title")
@@ -211,7 +222,8 @@ $(function () {
     }
   });
   $(".cruise__list__view__dropdown__list__item").click(function () {
-    let $selectedCity = $(this).attr("data-departure-from");
+    let $selectedView = $(this).attr("data-type-title");
+    let $selectedViewType = $(this).attr("data-type-view");
 
     $(this)
       .closest(".cruise__list__view__dropdown")
@@ -223,8 +235,28 @@ $(function () {
     $(this)
       .closest(".cruise__list__view__dropdown")
       .find(".cruise__list__view__dropdown__title span")
-      .text($selectedCity);
+      .text($selectedView);
     $(this).closest(".cruise__list__view__dropdown__list").slideToggle();
+    $(this).closest(".th__cruises__block").find(".cruise__list").show();
+    if ($selectedViewType == "grid") {
+      $(this)
+        .closest(".th__cruises__block")
+        .find('div[data-type-view-block="grid"]')
+        .show();
+      $(this)
+        .closest(".th__cruises__block")
+        .find('div[data-type-view-block="list"]')
+        .hide();
+    } else if ($selectedViewType == "list") {
+      $(this)
+        .closest(".th__cruises__block")
+        .find('div[data-type-view-block="list"]')
+        .show();
+      $(this)
+        .closest(".th__cruises__block")
+        .find('div[data-type-view-block="grid"]')
+        .hide();
+    }
   });
   $(".cruise__list__item__price i").mouseover(function () {
     $(this).find(".item__price__tooltip").toggle();
@@ -244,6 +276,14 @@ $(function () {
     if ($currentValue > 0) {
       $currentValue -= 1;
       $(this).siblings(".count").text($currentValue);
+    }
+  });
+  $(".th__sale__item").click(function () {
+    if ($(this).hasClass("active")) {
+      $(this).closest(".th__sale__item").removeClass("active");
+    } else {
+      $(".th__sale__item").removeClass("active");
+      $(this).addClass("active").find(".th__sale__item__desc").fadeIn();
     }
   });
 });
