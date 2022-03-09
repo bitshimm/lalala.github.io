@@ -59,26 +59,27 @@ body {
   text-align: center;
   cursor: pointer;
   font-feature-settings: "pnum" on, "lnum" on;
+  
+}
+.th__tab__item span{
+  border-bottom: 3px solid transparent;
+  padding-bottom: 5px;
 }
 .th__tab__item:hover {
   color: #006ec7;
-  transition: 0.2s linear;
+  transition: 0.15s linear;
 }
-.th__tab__item:last-child {
-  border-radius: 0px 4px 4px 0px;
-}
-.th__tab__item:first-child {
-  border-radius: 4px 0px 0px 4px;
+.th__tab__item:hover span{
+  border-bottom: 2px solid #006ec7;
+  transition: 0.15s linear;
 }
 .th__tab__item.active {
   color: #006ec7;
-  transition: 0.2s linear;
+  transition: 0.15s linear;
 }
-.th__tab__item:first-child.active {
-  border-right: none;
-}
-.th__tab__item:last-child.active {
-  border-left: none;
+.th__tab__item.active span{
+  border-bottom: 2px solid #006ec7;
+  transition: 0.15s linear;
 }
 .th__about__links {
   display: flex;
