@@ -655,15 +655,11 @@ div[data-tab-content="th-cruises"] {
 .th__photo__gallery__list {
   margin-top: 50px;
 }
-.th__photo__gallery__list .slick-list {
-  border-radius: 15px;
-}
 .th__photo__gallery__item {
   height: 250px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 15px;
   margin: 0 10px;
 }
 .fa-circle-chevron-right,
