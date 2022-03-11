@@ -13,7 +13,7 @@ $(function () {
     $(this).addClass("active");
     $("html, body").animate(
       {
-        scrollTop: $(anchor).offset().top,
+        scrollTop: $(anchor).offset().top -200,
       },
       600
     );
