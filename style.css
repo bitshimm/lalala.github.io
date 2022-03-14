@@ -93,6 +93,7 @@ body {
   position: sticky;
   top: 69px;
   z-index: 3;
+  filter: drop-shadow(0 10px 10px rgba(67, 96, 248, 0.1));
 }
 .about__link__item {
   margin: 10px auto;
@@ -169,6 +170,7 @@ body {
   font-size: 40px;
   color: #343434;
   font-feature-settings: "pnum" on, "lnum" on;
+  margin-top: 16px;
 }
 .about__th__block__pop__info__short__desc {
   font-family: Open Sans;
@@ -580,6 +582,9 @@ div[data-tab-content="th-cruises"] {
 }
 .cabin__item__count__categoties {
   color: #7e7e7e;
+}
+.cabin__item__facilities__icons{
+  max-width: 45%;
 }
 .cabin__item__facilities__icons img {
   width: 24px;
