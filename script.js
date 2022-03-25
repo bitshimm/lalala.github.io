@@ -1,11 +1,18 @@
 $(function () {
   $(".th__tab__item").click(function () {
-    let dataTabId = $(this).attr("data-tab"),
-      content = $('.th__tab__content[data-tab-content="' + dataTabId + '"]');
+    // let dataTabId = $(this).attr("data-tab"),
+    //   content = $('.th__tab__content[data-tab-content="' + dataTabId + '"]');
+    let anchor = $(this).find('a').attr("href");
     $(".th__tab__item.active").removeClass("active");
     $(this).addClass("active");
-    $(".th__tab__content").slideUp(200);
-    content.slideDown(200);
+    // $(".th__tab__content").slideUp(200);
+    // content.slideDown(200);
+    $("html, body").animate(
+      {
+        scrollTop: $(anchor).offset().top -200,
+      },
+      600
+    );
   });
   $(".about__link__item a[href^='#']").click(function () {
     let anchor = $(this).attr("href");

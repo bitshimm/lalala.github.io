@@ -6,6 +6,10 @@
 body {
   width: 100%;
 }
+.th__page__content{
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .th__image {
   min-height: 500px;
   width: 100%;
@@ -37,7 +41,6 @@ body {
 .container__fluid {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 0;
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -47,18 +50,31 @@ body {
   top: 0;
   background-color: #fff;
   z-index: 3;
+  flex-wrap: wrap;
 }
 .th__tab__item {
   padding: 20px;
   color: #7e7e7e;
-  width: 100%;
+  width: 50%;
   font-family: Raleway;
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 36px;
   text-align: center;
   cursor: pointer;
   font-feature-settings: "pnum" on, "lnum" on;
+}
+.th__tab__item a{
+  text-decoration: none;
+  color: #7e7e7e;;
+}
+.th__tab__item.active a{
+  color: #006ec7;
+  transition: 0.15s linear
+}
+.th__tab__item:hover a{
+  color: #006ec7;
+  transition: 0.15s linear;
 }
 .th__tab__item span {
   border-bottom: 3px solid transparent;
@@ -88,7 +104,7 @@ body {
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 24px;
   background-color: #fff;
   position: sticky;
   top: 69px;
@@ -98,6 +114,7 @@ body {
 .about__link__item {
   margin: 10px auto;
   border-bottom: 1px solid transparent;
+  padding: 0 15px;
 }
 .about__link__item:hover {
   border-bottom: 1px solid #343434;
@@ -874,10 +891,10 @@ div[data-tab-content="th-cruises"] {
   font-size: 18px;
 }
 .slick__prev {
-  left: -35px;
+  left: 0;
 }
 .slick__next {
-  right: -35px;
+  right: 0;
 }
 .th__cruises__block {
   margin-top: 96px;
@@ -1214,4 +1231,17 @@ div[data-tab-content="th-cruises"] {
   background-color: transparent;
   color: #343434;
   transition: 0.15s;
+}
+@media(max-width:940px){
+  .th__tab__item{
+    width: 100%;
+  }
+  .th__about__links{
+    top: 151px;
+  }
+}
+@media(max-width:470px){
+  .th__about__links{
+    top: 206px;
+  }
 }
