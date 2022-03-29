@@ -6,6 +6,17 @@
 body {
   width: 100%;
 }
+.header__page__th{
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  background-color: #fff;
+  background-image: url('/img/header.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 137px;
+}
 .th__page__content{
   max-width: 1440px;
   margin: 0 auto;
@@ -47,7 +58,7 @@ body {
 .th__tabs {
   display: flex;
   position: sticky;
-  top: 0;
+  top: 137px;
   background-color: #fff;
   z-index: 3;
   flex-wrap: wrap;
@@ -107,7 +118,7 @@ body {
   font-size: 24px;
   background-color: #fff;
   position: sticky;
-  top: 69px;
+  top: 219px;
   z-index: 3;
   filter: drop-shadow(0 10px 10px rgba(67, 96, 248, 0.1));
 }
@@ -211,7 +222,7 @@ div[data-tab-content="th-cruises"] {
   font-feature-settings: "pnum" on, "lnum" on;
 }
 #services {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 .th__accordion {
@@ -327,6 +338,7 @@ div[data-tab-content="th-cruises"] {
   box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
     0px 10px 32px -4px rgba(24, 39, 75, 0.1);
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 .crew__item__photo img {
   width: 137px;
@@ -570,11 +582,6 @@ div[data-tab-content="th-cruises"] {
   object-fit: cover;
   width: 100%;
 }
-@media (max-width: 960px) {
-  .cabins__list .cabin__item {
-    width: 49%;
-  }
-}
 .cabin__item__type {
   margin: 24px 0 16px 0;
   font-family: Raleway;
@@ -601,11 +608,15 @@ div[data-tab-content="th-cruises"] {
   color: #7e7e7e;
 }
 .cabin__item__facilities__icons{
-  max-width: 45%;
+  max-width: 87px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 .cabin__item__facilities__icons img {
   width: 24px;
-  /* height: 24px; */
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
 .cabin__item__short__desc {
   font-family: Open Sans;
@@ -780,16 +791,6 @@ div[data-tab-content="th-cruises"] {
   margin-bottom: 16px;
   cursor: pointer;
   position: relative;
-}
-@media (max-width: 960px) {
-  .th__sale__item {
-    width: 49%;
-  }
-}
-@media (max-width: 540px) {
-  .th__sale__item {
-    width: 99%;
-  }
 }
 .th__sale__item__close {
   position: absolute;
@@ -988,16 +989,6 @@ div[data-tab-content="th-cruises"] {
 }
 .infoflot__recomedation__cruises__list .slick-list .cruise__list__item {
   margin: 0 10px;
-}
-@media (max-width: 960px) {
-  .cruise__list.grid_view .cruise__list__item {
-    width: 45%;
-  }
-}
-@media (max-width: 540px) {
-  .cruise__list.grid_view .cruise__list__item {
-    width: 89%;
-  }
 }
 .cruise__list.grid_view .cruise__list__item__photo {
   background-position: center center;
@@ -1232,16 +1223,38 @@ div[data-tab-content="th-cruises"] {
   color: #343434;
   transition: 0.15s;
 }
+@media (max-width: 960px) {
+  .th__sale__item {
+    width: 49%;
+  }
+  .cabins__list .cabin__item {
+    width: 49%;
+  }
+  .cruise__list.grid_view .cruise__list__item {
+    width: 45%;
+  }
+}
 @media(max-width:940px){
   .th__tab__item{
     width: 100%;
   }
   .th__about__links{
-    top: 151px;
+    top: 288px;
+  }
+}
+@media (max-width: 540px) {
+  .th__sale__item {
+    width: 99%;
+  }
+  .cruise__list.grid_view .cruise__list__item {
+    width: 89%;
+  }
+  .cabins__list .cabin__item {
+    width: 99%;
   }
 }
 @media(max-width:470px){
   .th__about__links{
-    top: 206px;
+    top: 343px;
   }
 }

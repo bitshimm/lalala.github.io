@@ -2,14 +2,14 @@ $(function () {
   $(".th__tab__item").click(function () {
     // let dataTabId = $(this).attr("data-tab"),
     //   content = $('.th__tab__content[data-tab-content="' + dataTabId + '"]');
-    let anchor = $(this).find('a').attr("href");
+    let anchor = $(this).find("a").attr("href");
     $(".th__tab__item.active").removeClass("active");
     $(this).addClass("active");
     // $(".th__tab__content").slideUp(200);
     // content.slideDown(200);
     $("html, body").animate(
       {
-        scrollTop: $(anchor).offset().top -200,
+        scrollTop: $(anchor).offset().top - 340,
       },
       600
     );
@@ -20,7 +20,7 @@ $(function () {
     $(this).addClass("active");
     $("html, body").animate(
       {
-        scrollTop: $(anchor).offset().top -200,
+        scrollTop: $(anchor).offset().top - 340,
       },
       600
     );
@@ -139,8 +139,24 @@ $(function () {
       '<button class="slick__prev"><i class="fa-solid fa-chevron-left"></i></button>',
     nextArrow:
       '<button class="slick__next"><i class="fa-solid fa-chevron-right"></i></button>',
+    responsive: [
+      {
+        breakpoint: 940,
+        settings: {
+          arrows: false,
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 540,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
-  $('.infoflot__recomedation__cruises__list').slick({
+  $(".infoflot__recomedation__cruises__list").slick({
     infinite: true,
     speed: 300,
     slidesToShow: 3,
@@ -151,7 +167,23 @@ $(function () {
       '<button class="slick__prev"><i class="fa-solid fa-chevron-left"></i></button>',
     nextArrow:
       '<button class="slick__next"><i class="fa-solid fa-chevron-right"></i></button>',
-  })
+    responsive: [
+      {
+        breakpoint: 940,
+        settings: {
+          arrows: false,
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 540,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
   // $(
   //   ".photo__gallery__large a.colorbox, .th__photo__gallery__list a.colorbox"
   // ).colorbox({
