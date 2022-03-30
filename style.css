@@ -26,7 +26,7 @@ body {
   width: 100%;
   position: relative;
 }
-.th__burger__menu{
+.th__burger__menu {
   font-size: 40px;
   font-weight: 900;
   position: absolute;
@@ -36,12 +36,12 @@ body {
   padding: 5px 10px 0 10px;
   transition: 0.2s;
 }
-.th__burger__menu:hover{
-  background-color: rgba(255,255,255,0.5);
+.th__burger__menu:hover {
+  background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   transition: 0.2s;
 }
-.th__left__menu{
+.th__left__menu {
   position: absolute;
   z-index: 1000;
   left: 4.5rem;
@@ -175,7 +175,7 @@ body {
   margin-top: 100px;
 }
 .about__th__block__item:last-child {
-  width: 75%;
+  max-width: 794px;
   color: #343434;
   margin-left: 94px;
 }
@@ -294,6 +294,16 @@ div[data-tab-content="th-cruises"] {
   margin: 0 auto;
   margin-bottom: 1rem;
 }
+.th__on__board__title {
+  width: 100%;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  font-feature-settings: "pnum" on, "lnum" on;
+}
 .th__on__board .th__on__board__item {
   flex-basis: 16.5%;
   padding: 20px 0;
@@ -322,6 +332,27 @@ div[data-tab-content="th-cruises"] {
   font-size: 16px;
   color: #7e7e7e;
   min-width: 80px;
+  max-width: 250px;
+  transition: 0.15s;
+}
+.cruise__list.grid_view .cruise__list__item__sales__tooltip {
+  position: absolute;
+  display: none;
+  box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
+    0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+  border-radius: 2px;
+  z-index: 1;
+  left: 40px;
+  right: -40px;
+  bottom: 0;
+  padding: 8px 16px;
+  background-color: #fff;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #7e7e7e;
+  min-width: 140px;
   max-width: 250px;
   transition: 0.15s;
 }
@@ -738,79 +769,13 @@ div[data-tab-content="th-cruises"] {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
-/* старый вид скидок */
-/* .th__sale__item {
-  width: 25%;
-  cursor: pointer;
-  position: relative;
-  margin-bottom: 3em;
-}
-@media (max-width: 960px) {
-  .th__sale__item {
-    width: 30%;
-  }
-}
-@media (max-width: 540px) {
-  .th__sale__item {
-    width: 40%;
-  }
-}
-.th__sale__item .th__sale__item_icon {
-  font-size: 5rem;
-  color: #0590ff;
-}
-.th__sale__item .th__sale__item_title {
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  color: #242424;
-  margin: 29px 0 8px 0;
-}
-.th__sale__item .th__sale__item_desc {
-  position: absolute;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  color: #7e7e7e;
-  background-color: #fff;
-  z-index: 2;
-  padding: 0 2%;
-}
-.th__sale__item_icon,
-.th__sale__item_title {
-  padding: 0 2%;
-}
-.th__sale__item_desc.th__sale__item_desc__hide {
-  overflow: hidden;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: linear-gradient(
-    to bottom,
-    #7e7e7e,
-    #7e7e7e,
-    rgba(0, 0, 0, 0)
-  );
-  height: 44px;
-  z-index: 1;
-} */
-/* старый вид скидок */
-
 .th__sale__item {
   padding: 24px 0;
-  /* background-image: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("img/bg_sale.jpeg");
+  background-image: url("/img/unsplash_78A265wPiO4.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover; */
-  background: #ffffff;
+  background-size: cover;
+  /* background: #ffffff; */
   box-shadow: 0px 10px 36px rgba(67, 96, 248, 0.1);
   height: 163px;
   width: 32%;
@@ -1136,6 +1101,7 @@ div[data-tab-content="th-cruises"] {
   > div {
   padding-left: 10px;
   width: 33%;
+  position: relative;
 }
 .cruise__list.grid_view .cruise__list__item__btn {
   background-color: #006ec7;
@@ -1228,27 +1194,29 @@ div[data-tab-content="th-cruises"] {
   color: #7e7e7e;
   align-self: end;
 }
-.cruise__list.list_view .cruise__list__item__share{
+.cruise__list.list_view .cruise__list__item__share {
   display: flex;
   align-items: flex-end;
 }
-.cruise__list.list_view .cruise__list__item__share img{
+.cruise__list.list_view .cruise__list__item__share img {
   cursor: pointer;
 }
-.cruise__list.list_view .cruise__list__item__share__group{
+.cruise__list.list_view .cruise__list__item__share__group {
   padding: 10px;
   border-radius: 3px;
   position: relative;
   transition: 0.5s;
 }
-.cruise__list.list_view .cruise__list__item__share.active .cruise__list__item__share__group{
+.cruise__list.list_view
+  .cruise__list__item__share.active
+  .cruise__list__item__share__group {
   background-color: #fff;
   transition: 0.15s;
 }
-.cruise__list.list_view .cruise__list__item__share__social{
+.cruise__list.list_view .cruise__list__item__share__social {
   display: none;
 }
-.cruise__list.list_view .cruise__list__item__share_social__list{
+.cruise__list.list_view .cruise__list__item__share_social__list {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -1302,15 +1270,15 @@ div[data-tab-content="th-cruises"] {
     top: 288px;
   }
 }
-@media (max-width: 834px){
-  .about__th__block__item{
+@media (max-width: 834px) {
+  .about__th__block__item {
     width: 100%;
   }
-  .about__th__block__pop__info__icons{
+  .about__th__block__pop__info__icons {
     flex-direction: row;
     justify-content: space-around;
   }
-  .about__th__block__item:last-child{
+  .about__th__block__item:last-child {
     margin-left: none;
     margin: 0 auto;
   }
@@ -1325,7 +1293,7 @@ div[data-tab-content="th-cruises"] {
   .cabins__list .cabin__item {
     width: 99%;
   }
-  .th__on__board .th__on__board__item{
+  .th__on__board .th__on__board__item {
     flex-basis: 20%;
   }
 }
@@ -1333,7 +1301,7 @@ div[data-tab-content="th-cruises"] {
   .th__about__links {
     top: 343px;
   }
-  .th__on__board .th__on__board__item{
+  .th__on__board .th__on__board__item {
     flex-basis: 25%;
   }
 }

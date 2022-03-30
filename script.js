@@ -339,4 +339,10 @@ $(function () {
     $(this).closest('.cruise__list__item__share').toggleClass('active');
     $(this).siblings('.cruise__list__item__share__social').slideToggle(150);
   });
+  $(".cruise__list.grid_view .cruise__list__item__sales img").mouseover(function () {
+    $(this).siblings(".cruise__list__item__sales__tooltip").toggle();
+  });
+  $(".cruise__list.grid_view .cruise__list__item__sales img").mouseout(function () {
+    $(this).siblings(".cruise__list__item__sales__tooltip").toggle();
+  });
 });
