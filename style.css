@@ -52,12 +52,12 @@ body {
   max-width: 500px;
   position: absolute;
   bottom: 15%;
-  right: 12%;
+  left: 12%;
 }
 .th__name {
   font-family: Montserrat;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 40px;
   font-feature-settings: "pnum" on, "lnum" on;
   color: #fff;
@@ -65,7 +65,7 @@ body {
 .th__short__desc {
   font-family: Open Sans;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
   color: #fff;
   max-width: 70%;
@@ -89,7 +89,7 @@ body {
   padding: 20px;
   color: #7e7e7e;
   width: 50%;
-  font-family: Raleway;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
@@ -201,6 +201,9 @@ body {
   text-align: center;
   /* align-items: center;
   margin-bottom: 16px; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .about__th__block__pop__info__icons > div {
   min-width: 94px;
@@ -288,12 +291,11 @@ div[data-tab-content="th-cruises"] {
 .th__on__board {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0 auto;
   margin-bottom: 1rem;
 }
 .th__on__board .th__on__board__item {
-  flex-basis: 15%;
+  flex-basis: 16.5%;
   padding: 20px 0;
   font-family: Raleway;
   font-style: normal;
@@ -319,6 +321,7 @@ div[data-tab-content="th-cruises"] {
   font-weight: normal;
   font-size: 16px;
   color: #7e7e7e;
+  min-width: 80px;
   max-width: 250px;
   transition: 0.15s;
 }
@@ -1269,6 +1272,19 @@ div[data-tab-content="th-cruises"] {
     top: 288px;
   }
 }
+@media (max-width: 834px){
+  .about__th__block__item{
+    width: 100%;
+  }
+  .about__th__block__pop__info__icons{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .about__th__block__item:last-child{
+    margin-left: none;
+    margin: 0 auto;
+  }
+}
 @media (max-width: 540px) {
   .th__sale__item {
     width: 99%;
@@ -1279,9 +1295,15 @@ div[data-tab-content="th-cruises"] {
   .cabins__list .cabin__item {
     width: 99%;
   }
+  .th__on__board .th__on__board__item{
+    flex-basis: 20%;
+  }
 }
 @media (max-width: 470px) {
   .th__about__links {
     top: 343px;
+  }
+  .th__on__board .th__on__board__item{
+    flex-basis: 25%;
   }
 }
