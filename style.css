@@ -1228,6 +1228,36 @@ div[data-tab-content="th-cruises"] {
   color: #7e7e7e;
   align-self: end;
 }
+.cruise__list.list_view .cruise__list__item__share{
+  display: flex;
+  align-items: flex-end;
+}
+.cruise__list.list_view .cruise__list__item__share img{
+  cursor: pointer;
+}
+.cruise__list.list_view .cruise__list__item__share__group{
+  padding: 10px;
+  border-radius: 3px;
+  position: relative;
+  transition: 0.5s;
+}
+.cruise__list.list_view .cruise__list__item__share.active .cruise__list__item__share__group{
+  background-color: #fff;
+  transition: 0.15s;
+}
+.cruise__list.list_view .cruise__list__item__share__social{
+  display: none;
+}
+.cruise__list.list_view .cruise__list__item__share_social__list{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  left: 0;
+  right: 0;
+  border-radius: 0 0 3px 3px;
+}
 .cruise__list.list_view .cruise__list__item__info__bron {
   display: flex;
   flex-direction: column;

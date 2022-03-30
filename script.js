@@ -332,7 +332,11 @@ $(function () {
     //   $(".th__left__menu").show("slide", { direction: "right" }, 1000);
     //   $(this).addClass('active')
     // }
-    $(".th__left__menu").animate({'width': 'toggle'});
+    $(".th__left__menu").animate({ width: "toggle" });
     // $(".th__left__menu").slideToggle();
-  })
+  });
+  $(".cruise__list.list_view .cruise__list__item__share img").click(function () {
+    $(this).closest('.cruise__list__item__share').toggleClass('active');
+    $(this).siblings('.cruise__list__item__share__social').slideToggle(150);
+  });
 });
