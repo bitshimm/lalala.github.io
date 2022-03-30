@@ -6,18 +6,18 @@
 body {
   width: 100%;
 }
-.header__page__th{
+.header__page__th {
   position: sticky;
   top: 0;
   z-index: 4;
   background-color: #fff;
-  background-image: url('/img/header.png');
+  background-image: url("/img/header.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   height: 137px;
 }
-.th__page__content{
+.th__page__content {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -25,6 +25,28 @@ body {
   min-height: 500px;
   width: 100%;
   position: relative;
+}
+.th__burger__menu{
+  font-size: 40px;
+  font-weight: 900;
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  color: #fff;
+  padding: 5px 10px 0 10px;
+  transition: 0.2s;
+}
+.th__burger__menu:hover{
+  background-color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.th__left__menu{
+  position: absolute;
+  z-index: 1000;
+  left: 4.5rem;
+  top: 1.2rem;
+  display: none;
 }
 .th__title {
   max-width: 500px;
@@ -75,15 +97,15 @@ body {
   cursor: pointer;
   font-feature-settings: "pnum" on, "lnum" on;
 }
-.th__tab__item a{
+.th__tab__item a {
   text-decoration: none;
-  color: #7e7e7e;;
+  color: #7e7e7e;
 }
-.th__tab__item.active a{
+.th__tab__item.active a {
   color: #006ec7;
-  transition: 0.15s linear
+  transition: 0.15s linear;
 }
-.th__tab__item:hover a{
+.th__tab__item:hover a {
   color: #006ec7;
   transition: 0.15s linear;
 }
@@ -148,13 +170,14 @@ body {
 }
 .about__th__blocks__list {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
   margin-top: 100px;
 }
 .about__th__block__item:last-child {
   width: 75%;
   color: #343434;
+  margin-left: 94px;
 }
 
 .about__th__block__title {
@@ -286,6 +309,7 @@ div[data-tab-content="th-cruises"] {
     0px 10px 32px -4px rgba(24, 39, 75, 0.1);
   border-radius: 2px;
   z-index: 1;
+  left: 40px;
   right: -40px;
   bottom: 0;
   padding: 8px 16px;
@@ -295,6 +319,8 @@ div[data-tab-content="th-cruises"] {
   font-weight: normal;
   font-size: 16px;
   color: #7e7e7e;
+  max-width: 250px;
+  transition: 0.15s;
 }
 .service__on__board {
   max-width: 600px;
@@ -607,7 +633,7 @@ div[data-tab-content="th-cruises"] {
 .cabin__item__count__categoties {
   color: #7e7e7e;
 }
-.cabin__item__facilities__icons{
+.cabin__item__facilities__icons {
   max-width: 87px;
   display: flex;
   flex-wrap: wrap;
@@ -1106,6 +1132,7 @@ div[data-tab-content="th-cruises"] {
   .cruise__list__item__sales
   > div {
   padding-left: 10px;
+  width: 33%;
 }
 .cruise__list.grid_view .cruise__list__item__btn {
   background-color: #006ec7;
@@ -1234,11 +1261,11 @@ div[data-tab-content="th-cruises"] {
     width: 45%;
   }
 }
-@media(max-width:940px){
-  .th__tab__item{
+@media (max-width: 940px) {
+  .th__tab__item {
     width: 100%;
   }
-  .th__about__links{
+  .th__about__links {
     top: 288px;
   }
 }
@@ -1253,8 +1280,8 @@ div[data-tab-content="th-cruises"] {
     width: 99%;
   }
 }
-@media(max-width:470px){
-  .th__about__links{
+@media (max-width: 470px) {
+  .th__about__links {
     top: 343px;
   }
 }

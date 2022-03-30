@@ -325,4 +325,14 @@ $(function () {
       $(this).addClass("active").find(".th__sale__item__desc").fadeIn();
     }
   });
+  $(".th__burger__menu").click(function () {
+    // if($(this).hasClass('active')){
+    //   $(".th__left__menu").hide("slide", { direction: "left" }, 1000);
+    // }else{
+    //   $(".th__left__menu").show("slide", { direction: "right" }, 1000);
+    //   $(this).addClass('active')
+    // }
+    $(".th__left__menu").animate({'width': 'toggle'});
+    // $(".th__left__menu").slideToggle();
+  })
 });
