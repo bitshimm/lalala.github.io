@@ -317,14 +317,14 @@ $(function () {
       $(this).siblings(".count").text($currentValue);
     }
   });
-  $(".th__sale__item").click(function () {
-    if ($(this).hasClass("active")) {
-      $(this).closest(".th__sale__item").removeClass("active");
-    } else {
-      $(".th__sale__item").removeClass("active");
-      $(this).addClass("active").find(".th__sale__item__desc").fadeIn();
-    }
-  });
+  // $(".th__sale__item").click(function () {
+  //   if ($(this).hasClass("active")) {
+  //     $(this).closest(".th__sale__item").removeClass("active");
+  //   } else {
+  //     $(".th__sale__item").removeClass("active");
+  //     $(this).addClass("active").find(".th__sale__item__desc").fadeIn();
+  //   }
+  // });
   $(".th__burger__menu").click(function () {
     // if($(this).hasClass('active')){
     //   $(".th__left__menu").hide("slide", { direction: "left" }, 1000);
