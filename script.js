@@ -14,22 +14,28 @@ $(function () {
       600
     );
   });
-  $(".about__link__item a[href^='#']").click(function () {
-    let anchor = $(this).attr("href");
-    $(".about__link__item a.active").removeClass("active");
-    $(this).addClass("active");
-    $("html, body").animate(
-      {
-        scrollTop: $(anchor).offset().top - 340,
-      },
-      600
-    );
-  });
+  // $(".about__link__item a[href^='#']").click(function () {
+  //   let anchor = $(this).attr("href");
+  //   $(".about__link__item.active").removeClass("active");
+  //   $(this).closest(".about__link__item").addClass("active");
+  //   $("html, body").animate(
+  //     {
+  //       scrollTop: $(anchor).offset().top - 340,
+  //     },
+  //     600
+  //   );
+  // });
   $(".th__on__board__item img").mouseover(function () {
     $(this).siblings(".th__on__board__item__tooltip").show();
   });
   $(".th__on__board__item img").mouseout(function () {
     $(this).siblings(".th__on__board__item__tooltip").hide();
+  });
+  $(".cabin__item__facilities__icons__item img").mouseover(function () {
+    $(this).siblings(".cabin__item__facilities__icons__item__tooltip").show();
+  });
+  $(".cabin__item__facilities__icons__item img").mouseout(function () {
+    $(this).siblings(".cabin__item__facilities__icons__item__tooltip").hide();
   });
   $(".th__accordion .th__accordion__item__title").click(function () {
     if ($(this).hasClass("active")) {
@@ -335,14 +341,53 @@ $(function () {
     $(".th__left__menu").animate({ width: "toggle" });
     // $(".th__left__menu").slideToggle();
   });
-  $(".cruise__list.list_view .cruise__list__item__share img").click(function () {
-    $(this).closest('.cruise__list__item__share').toggleClass('active');
-    $(this).siblings('.cruise__list__item__share__social').slideToggle(150);
+  $(".cruise__list.list_view .cruise__list__item__share img").click(
+    function () {
+      $(this).closest(".cruise__list__item__share").toggleClass("active");
+      $(this).siblings(".cruise__list__item__share__social").slideToggle(150);
+    }
+  );
+  $(".cruise__list.grid_view .cruise__list__item__sales img").mouseover(
+    function () {
+      $(this).siblings(".cruise__list__item__sales__tooltip").toggle();
+    }
+  );
+  $(".cruise__list.grid_view .cruise__list__item__sales img").mouseout(
+    function () {
+      $(this).siblings(".cruise__list__item__sales__tooltip").toggle();
+    }
+  );
+  let scrollSection = $(".th__section"),
+    thAboutLinks = $(".th__about__links"),
+    thAboutLinksHeight = thAboutLinks.outerHeight();
+
+  $(window).on("scroll", function () {
+    var cur_pos = $(this).scrollTop();
+
+    scrollSection.each(function () {
+      var top = $(this).offset().top - 340,
+        bottom = top + $(this).outerHeight();
+
+      if (cur_pos >= top && cur_pos <= bottom) {
+        thAboutLinks.find(".about__link__item").removeClass("active");
+        scrollSection.removeClass("active");
+
+        $(this).closest('.about__link__item').addClass("active");
+        thAboutLinks
+          .find('a[href="#' + $(this).attr("id") + '"]')
+          .closest('.about__link__item')
+          .addClass("active");
+      }
+    });
   });
-  $(".cruise__list.grid_view .cruise__list__item__sales img").mouseover(function () {
-    $(this).siblings(".cruise__list__item__sales__tooltip").toggle();
-  });
-  $(".cruise__list.grid_view .cruise__list__item__sales img").mouseout(function () {
-    $(this).siblings(".cruise__list__item__sales__tooltip").toggle();
+  thAboutLinks.find('a').on('click', function () {
+    let $el = $(this)
+      , id = $el.attr('href');
+    
+    $('html, body').animate({
+      scrollTop: $(id).offset().top - 340
+    }, 500);
+    
+    return false;
   });
 });
