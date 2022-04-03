@@ -358,36 +358,40 @@ $(function () {
     }
   );
   let scrollSection = $(".th__section"),
-    thAboutLinks = $(".th__about__links"),
+    thAboutLinks = $(".th__anchor__scroll__group"),
+    thAboutTabs = $(".th__tabs"),
     thAboutLinksHeight = thAboutLinks.outerHeight();
 
   $(window).on("scroll", function () {
     var cur_pos = $(this).scrollTop();
 
     scrollSection.each(function () {
-      var top = $(this).offset().top - 340,
+      var top = $(this).offset().top - 345,
         bottom = top + $(this).outerHeight();
 
       if (cur_pos >= top && cur_pos <= bottom) {
-        thAboutLinks.find(".about__link__item").removeClass("active");
+        thAboutLinks.find(".th__anchor__scroll").removeClass("active");
         scrollSection.removeClass("active");
 
-        $(this).closest('.about__link__item').addClass("active");
+        $(this).closest(".th__anchor__scroll").addClass("active");
         thAboutLinks
           .find('a[href="#' + $(this).attr("id") + '"]')
-          .closest('.about__link__item')
+          .closest(".th__anchor__scroll")
           .addClass("active");
       }
     });
   });
-  thAboutLinks.find('a').on('click', function () {
-    let $el = $(this)
-      , id = $el.attr('href');
-    
-    $('html, body').animate({
-      scrollTop: $(id).offset().top - 340
-    }, 500);
-    
+  thAboutLinks.find("a").on("click", function () {
+    let $el = $(this),
+      id = $el.attr("href");
+
+    $("html, body").animate(
+      {
+        scrollTop: $(id).offset().top - 340,
+      },
+      500
+    );
+
     return false;
   });
 });
