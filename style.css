@@ -85,6 +85,9 @@ body {
   z-index: 4;
   flex-wrap: wrap;
 }
+.th__tabs div:last-child a {
+  margin-right: 70px;
+}
 .th__tab__item {
   padding: 20px;
   color: #7e7e7e;
@@ -219,7 +222,7 @@ body {
   text-align: center;
 }
 .about__th__block__pop__info__title {
-  font-family: Raleway;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
@@ -239,7 +242,7 @@ div[data-tab-content="th-cruises"] {
 }
 .th__about__content .header__1,
 .th__cruises__content .header__1 {
-  font-family: Raleway;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
@@ -257,7 +260,7 @@ div[data-tab-content="th-cruises"] {
 }
 .th__accordion__item,
 .service__on__board__accordeon__block {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .th__accordion__item,
 .th__accordion__content {
@@ -308,7 +311,7 @@ div[data-tab-content="th-cruises"] {
 .th__on__board .th__on__board__item {
   flex-basis: 16.5%;
   padding: 20px 0;
-  font-family: Raleway;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -367,7 +370,7 @@ div[data-tab-content="th-cruises"] {
   color: #919191;
 }
 .service__on__board__accordeon__block__sub__title {
-  font-family: Raleway;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -379,6 +382,9 @@ div[data-tab-content="th-cruises"] {
   font-feature-settings: "pnum" on, "lnum" on;
   margin-top: 16px;
 }
+.service__on__board__accordeon__block__sub__title div:first-child {
+  max-width: 347px;
+}
 .service__on__board__accardeon__item__content {
   display: none;
   padding-bottom: 30px;
@@ -388,7 +394,7 @@ div[data-tab-content="th-cruises"] {
 }
 .crew__items {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 20px;
   flex-wrap: wrap;
 }
@@ -400,6 +406,8 @@ div[data-tab-content="th-cruises"] {
     0px 10px 32px -4px rgba(24, 39, 75, 0.1);
   border-radius: 4px;
   margin-bottom: 10px;
+  margin-right: 41px;
+  margin-left: 41px;
 }
 .crew__item__photo img {
   width: 137px;
@@ -408,7 +416,7 @@ div[data-tab-content="th-cruises"] {
 }
 .crew__item__position {
   margin: 24px 0 16px 0;
-  font-family: Raleway;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -444,8 +452,11 @@ div[data-tab-content="th-cruises"] {
   align-content: center;
   vertical-align: middle;
 }
+.conventions__item div:last-child {
+  max-width: 340px;
+}
 .conventions__item:first-child {
-  font-family: Raleway;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -472,7 +483,7 @@ div[data-tab-content="th-cruises"] {
   border-bottom: 1px solid #e3e3e3;
 }
 .deck__title {
-  font-family: Raleway;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -503,7 +514,7 @@ div[data-tab-content="th-cruises"] {
 }
 .cabin__types__title {
   width: 25%;
-  font-family: Raleway;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -605,7 +616,6 @@ div[data-tab-content="th-cruises"] {
 }
 .cabins__list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 24px;
 }
@@ -616,6 +626,7 @@ div[data-tab-content="th-cruises"] {
   padding: 16px 0 24px 0;
   width: 32%;
   margin-bottom: 1em;
+  margin-right: 1%;
 }
 .cabin__photo__gallery,
 .cabin__item__type,
@@ -633,7 +644,7 @@ div[data-tab-content="th-cruises"] {
   justify-content: space-between;
 }
 .photo__gallery__thumb__item {
-  width: 24%;
+  width: 23.3%;
 }
 .photo__gallery__thumb__item img {
   height: 72px;
@@ -645,6 +656,8 @@ div[data-tab-content="th-cruises"] {
 }
 .th__cabins .cabin__item__facilities__icons__item {
   position: relative;
+  margin-left: 16px;
+  margin-bottom: 16px;
 }
 .th__cabins .cabin__item__facilities__icons__item__tooltip {
   position: absolute;
@@ -669,7 +682,7 @@ div[data-tab-content="th-cruises"] {
 }
 .cabin__item__type {
   margin: 24px 0 16px 0;
-  font-family: Raleway;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -693,15 +706,13 @@ div[data-tab-content="th-cruises"] {
   color: #7e7e7e;
 }
 .cabin__item__facilities__icons {
-  max-width: 87px;
+  max-width: 121px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 .cabin__item__facilities__icons img {
   width: 24px;
-  margin-left: 5px;
-  margin-bottom: 5px;
 }
 .cabin__item__short__desc {
   font-family: Open Sans;
@@ -770,7 +781,7 @@ div[data-tab-content="th-cruises"] {
   margin: 0 10px;
 }
 .th__photo__gallery__item__desc {
-  margin: 5px 10px;
+  margin: 25px 10px 5px 10px;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
@@ -788,7 +799,7 @@ div[data-tab-content="th-cruises"] {
 }
 .th__sales__title > div:last-child {
   margin: 90px 0 30px 0;
-  font-family: Raleway;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -822,6 +833,8 @@ div[data-tab-content="th-cruises"] {
   cursor: pointer;
   position: relative;
   text-decoration: none;
+  width: 360px;
+  height: 240px;
 }
 .th__sale__item__close {
   position: absolute;
@@ -849,7 +862,7 @@ div[data-tab-content="th-cruises"] {
   transform: rotate(-45deg);
 }
 .th__sale__item__title {
-  font-family: Raleway;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -906,7 +919,7 @@ div[data-tab-content="th-cruises"] {
 } */
 .slick-arrow {
   position: absolute;
-  top: 50%;
+  top: 135px;
   display: block;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
@@ -945,7 +958,7 @@ div[data-tab-content="th-cruises"] {
 }
 .cruise__year__filter > div {
   margin-left: 41px;
-  font-family: Raleway;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -984,6 +997,9 @@ div[data-tab-content="th-cruises"] {
 .cruise__list__view__dropdown__title {
   padding: 0 16px;
   cursor: pointer;
+  width: 277px;
+  display: flex;
+  justify-content: space-between;
 }
 .departure__from__dropdown__title i,
 .cruise__list__view__dropdown__title i {
@@ -1017,6 +1033,9 @@ div[data-tab-content="th-cruises"] {
     0px 10px 32px -4px rgba(24, 39, 75, 0.1);
   padding: 16px 16px 24px 16px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .infoflot__recomedation__cruises__list .slick-list .cruise__list__item {
   margin: 0 10px;
@@ -1109,7 +1128,7 @@ div[data-tab-content="th-cruises"] {
 .cruise__list.grid_view
   .cruise__list__item__price__sales
   .cruise__list__item__price {
-  font-family: Raleway;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -1140,13 +1159,27 @@ div[data-tab-content="th-cruises"] {
   width: 33%;
   position: relative;
 }
+.cruise__list.grid_view .cruise__list__item__bonus__klk {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.cruise__list.grid_view .cruise__list__item__bonus__klk__title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #919191;
+  margin-left: 10px;
+}
 .cruise__list.grid_view .cruise__list__item__btn {
   background-color: #006ec7;
   border: 1px solid #2483d8;
   color: #fff;
   text-align: center;
   padding: 14px 30px;
-  margin-top: 48px;
+  margin-top: auto;
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;

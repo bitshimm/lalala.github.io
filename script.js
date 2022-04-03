@@ -125,7 +125,16 @@ $(function () {
       .siblings(".cabin__item__full__desc")
       .slideToggle(150);
   });
-  $(".cabin__item__desc__btn__hide").click(function () {
+  // $(".cabin__item__desc__btn__hide").click(function () {
+  //   $(this)
+  //     .closest(".cabin__item")
+  //     .find(".cabin__item__desc__btn__show")
+  //     .removeClass("active")
+  //     .show()
+  //     .siblings(".cabin__item__full__desc")
+  //     .slideToggle(150);
+  // });
+  $(".cabin__item__full__desc").click(function () {
     $(this)
       .closest(".cabin__item")
       .find(".cabin__item__desc__btn__show")
@@ -323,23 +332,8 @@ $(function () {
       $(this).siblings(".count").text($currentValue);
     }
   });
-  // $(".th__sale__item").click(function () {
-  //   if ($(this).hasClass("active")) {
-  //     $(this).closest(".th__sale__item").removeClass("active");
-  //   } else {
-  //     $(".th__sale__item").removeClass("active");
-  //     $(this).addClass("active").find(".th__sale__item__desc").fadeIn();
-  //   }
-  // });
   $(".th__burger__menu").click(function () {
-    // if($(this).hasClass('active')){
-    //   $(".th__left__menu").hide("slide", { direction: "left" }, 1000);
-    // }else{
-    //   $(".th__left__menu").show("slide", { direction: "right" }, 1000);
-    //   $(this).addClass('active')
-    // }
     $(".th__left__menu").animate({ width: "toggle" });
-    // $(".th__left__menu").slideToggle();
   });
   $(".cruise__list.list_view .cruise__list__item__share img").click(
     function () {
@@ -361,12 +355,12 @@ $(function () {
     thAboutLinks = $(".th__anchor__scroll__group"),
     thAboutTabs = $(".th__tabs"),
     thAboutLinksHeight = thAboutLinks.outerHeight();
-
+  let counter = 0;
   $(window).on("scroll", function () {
-    var cur_pos = $(this).scrollTop();
+    let cur_pos = $(this).scrollTop();
 
     scrollSection.each(function () {
-      var top = $(this).offset().top - 345,
+      let top = $(this).offset().top - 345,
         bottom = top + $(this).outerHeight();
 
       if (cur_pos >= top && cur_pos <= bottom) {
@@ -380,6 +374,12 @@ $(function () {
           .addClass("active");
       }
     });
+    let anchorsTopOffset = thAboutTabs.offset().top - 137;
+    if (scroll > anchorsTopOffset && counter == 0) {
+      console.log("test");
+      $(".th__tab__item").css("padding", "10px");
+      counter = 1;
+    }
   });
   thAboutLinks.find("a").on("click", function () {
     let $el = $(this),
@@ -393,5 +393,15 @@ $(function () {
     );
 
     return false;
+  });
+  $("body").click(function (e) {
+    let $menu = $(".th__left__menu"),
+      $target = $(e.target);
+    if (
+      !$menu.find($target).length &&
+      !$(".th__burger__menu").find($target).length
+    ) {
+      $menu.hide(200);
+    }
   });
 });
