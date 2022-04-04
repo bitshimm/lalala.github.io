@@ -355,14 +355,14 @@ $(function () {
     thAboutLinks = $(".th__anchor__scroll__group"),
     thAboutTabs = $(".th__tabs"),
     thAboutLinksHeight = thAboutLinks.outerHeight();
-  let counter = 0;
+ 
   $(window).on("scroll", function () {
     let cur_pos = $(this).scrollTop();
-
+    let scrollwindow = $(this).scrollTop();
     scrollSection.each(function () {
       let top = $(this).offset().top - 345,
         bottom = top + $(this).outerHeight();
-
+      let anchorsTopOffset = thAboutTabs.offset().top - 137;
       if (cur_pos >= top && cur_pos <= bottom) {
         thAboutLinks.find(".th__anchor__scroll").removeClass("active");
         scrollSection.removeClass("active");
@@ -373,13 +373,22 @@ $(function () {
           .closest(".th__anchor__scroll")
           .addClass("active");
       }
+      if (scrollwindow >= anchorsTopOffset) {
+        console.log("test");
+        $(".th__tab__item").css({"padding": "10px"});
+        $(".th__about__links").css({"padding": "10px 0"});
+        if ($(this).width() > 1136) {
+          $(".th__about__links").css({"top": "200px"});
+        }else if ($(this).width() > 588) {
+          $(".th__about__links").css({"top": "244px"});
+        }else if ($(this).width() < 589) {
+          $(".th__about__links").css({"top": "265px"});
+        }
+      }else{
+        $(".th__tab__item").css({"padding": "20px"});
+        $(".th__about__links").css({"padding": "30px 0"})
+      }
     });
-    let anchorsTopOffset = thAboutTabs.offset().top - 137;
-    if (scroll > anchorsTopOffset && counter == 0) {
-      console.log("test");
-      $(".th__tab__item").css("padding", "10px");
-      counter = 1;
-    }
   });
   thAboutLinks.find("a").on("click", function () {
     let $el = $(this),
