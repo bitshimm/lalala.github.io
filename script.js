@@ -194,7 +194,7 @@ $(function () {
       },
     ],
   });
-  $(".infoflot__recomedation__cruises__list").slick({
+  $(".th__infoflot__recomedation").slick({
     infinite: true,
     speed: 300,
     slidesToShow: 3,

@@ -27,22 +27,24 @@ body {
   position: relative;
 }
 .th__burger__menu {
-  font-size: 40px;
+  font-size: 23px;
   font-weight: 900;
   position: absolute;
-  left: 0.5rem;
-  top: 0.5rem;
-  color: #fff;
-  padding: 5px 10px 0 10px;
+  left: 42px;
+  top: 24px;
+  color: #000;
+  padding: 6px 8px 3px 8px;
   transition: 0.2s;
+  background-color: #fff;
+  border-radius: 4px;
 }
-.th__burger__menu__clone{
+.th__burger__menu__clone {
   font-size: 40px;
   font-weight: 900;
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
-  color: #7E7E7E;
+  color: #7e7e7e;
   padding: 5px 10px 0 10px;
   transition: 0.2s;
   display: none;
@@ -307,7 +309,7 @@ div[data-tab-content="th-cruises"] {
   color: #343434;
   cursor: pointer;
 }
-.service__on__board__accardeon__items{
+.service__on__board__accardeon__items {
   display: none;
 }
 .th__accordion__item__title i,
@@ -835,126 +837,107 @@ div[data-tab-content="th-cruises"] {
   justify-content: space-between;
   align-items: center;
 }
-.th__sales__title > div:last-child {
-  margin: 90px 0 30px 0;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  color: #343434;
-  font-feature-settings: "pnum" on, "lnum" on;
-  display: flex;
-  align-items: center;
-}
-.th__sales__title > div:last-child img {
-  margin-left: 19px;
-}
 .th__sales__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 .th__sale__item {
-  padding: 24px 0;
   background-image: url("/img/unsplash_78A265wPiO4.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* background: #ffffff; */
-  box-shadow: 0px 10px 36px rgba(67, 96, 248, 0.1);
-  height: 163px;
-  width: 32%;
   display: flex;
-  align-content: flex-end;
-  flex-wrap: wrap;
   margin-bottom: 16px;
   cursor: pointer;
-  position: relative;
   text-decoration: none;
-  width: 360px;
+  width: 32%;
+  margin-right: 16px;
   height: 240px;
+  align-items: flex-end;
 }
-.th__sale__item__close {
-  position: absolute;
-  right: 21px;
-  top: 21px;
-  width: 21px;
-  height: 21px;
-  display: none;
-  cursor: pointer;
-  z-index: 2;
-}
-.th__sale__item__close:before,
-.th__sale__item__close:after {
-  position: absolute;
-  left: 10px;
-  content: " ";
-  height: 21px;
-  width: 1.5px;
-  background-color: #343434;
-}
-.th__sale__item__close:before {
-  transform: rotate(45deg);
-}
-.th__sale__item__close:after {
-  transform: rotate(-45deg);
+.th__sale__item__info {
+  width: 100%;
+  padding: 8px 0 22px 27px;
+  background: rgba(24, 39, 75, 0.4);
+  color: #fff;
 }
 .th__sale__item__title {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  color: #242424;
   font-feature-settings: "pnum" on, "lnum" on;
-  padding: 0 24px;
 }
 .th__sale__item__period {
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  color: #343434;
   margin-top: 8px;
   position: relative;
-  width: 100%;
-}
-.th__sale__item__period__title {
   max-width: 260px;
-  padding: 0 24px;
 }
-.th__sale__item__desc {
-  margin-top: 24px;
-  display: none;
-  position: absolute;
-  z-index: 1;
+.th__more__sales {
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  color: #343434;
+  cursor: pointer;
+  margin-top: 34px;
+}
+.th__more__sales i {
+  color: #006ec7;
+  font-size: 16px;
+  margin-left: 10px;
+}
+.th__infoflot__recomedation__item {
+  padding: 16px 20px 24px 20px;
+  box-shadow: 0px 6px 14px -6px rgb(24 39 75 / 12%),
+    0px 10px 32px -4px rgb(24 39 75 / 10%);
+  margin: 20px 10px;
+}
+.th__infoflot__recomedation__item__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 207px;
+}
+.th__infoflot__recomedation__item__name {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #242424;
+  margin: 22px 0 24px 0;
+}
+.th__infoflot__recomedation__item__btn {
+  text-decoration: none;
+  display: block;
+  padding: 14px 0;
+  text-align: center;
+  color: #fff;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  border: 1px solid #006ec7;
+  background-color: #006ec7;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.th__infoflot__recomedation__item__btn:hover{
   background-color: #fff;
-  width: 100%;
-  padding: 0 24px 24px 24px;
-  box-shadow: 0 0 0 rgba(67, 96, 248, 0.1);
+  color: #006ec7;
+  transition: 0.2s;
 }
-.th__sale__item.active {
-  height: auto;
-}
-.th__sale__item.active .th__sale__item__close {
-  display: block;
-  transition: 0.5s;
-}
-.th__sale__item.active .th__sale__item__period {
-  margin-top: 100px;
-}
-.th__sale__item.active .th__sale__item__title {
-  align-self: flex-start;
-  margin-bottom: 100px;
-}
-.th__sale__item.active .th__sale__item__desc {
-  display: block;
+.th__infoflot__recomedation .slick-arrow{
+  top: 196px;
 }
 #cboxOverlay {
   background: rgba(0, 0, 0, 1);
 }
-/* .slick-arrow::before {
-  color: #000;
-} */
 .slick-arrow {
   position: absolute;
   top: 135px;
@@ -1232,39 +1215,133 @@ div[data-tab-content="th-cruises"] {
   transition: 0.15s;
 }
 .cruise__list.list_view .cruise__list__item {
-  box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
-    0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+  box-shadow: 0px 6px 14px -6px rgb(24 39 75 / 12%),
+    0px 10px 32px -4px rgb(24 39 75 / 10%);
   background: #f8f8f8;
-  padding: 16px 32px 25px 32px;
   margin: 10px 0;
   font-family: Open Sans;
   font-style: normal;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cruise__list.list_view .cruise__list__item__left__block {
+  padding: 24px 0;
+  width: 416px;
+}
+.cruise__list.list_view .cruise__list__item__title,
+.cruise__list.list_view .cruise__list__item__info__date {
+  padding-left: 31px;
+}
+.cruise__list.list_view .cruise__list__item__title {
+  display: flex;
+  margin-bottom: 12px;
+  align-items: center;
 }
 .cruise__list.list_view .cruise__list__item__th__name {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   color: #000;
 }
-.cruise__list.list_view .cruise__list__item__header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-.cruise__list__item__free__cabins {
-  font-weight: normal;
-  font-size: 14px;
-  color: #242424;
-}
-.cruise__list.list_view .cruise__list__item__info {
-  display: flex;
-  justify-content: space-between;
+.cruise__list.list_view .cruise__list__item__cruise__name {
+  font-weight: 400;
+  font-size: 12px;
+  color: #bbbbbb;
+  margin-left: 8px;
 }
 .cruise__list.list_view .cruise__list__item__info__date {
   display: flex;
   justify-content: space-between;
-  font-family: Open Sans;
-  font-style: normal;
   font-weight: normal;
+  margin-bottom: 25px;
+}
+.cruise__list.list_view .cruise__list__item__places__klk {
+  display: flex;
+}
+.cruise__list.list_view .cruise__list__item__places {
+  background-color: #d42e12;
+  color: #fff;
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-size: 13px;
+  padding-left: 32px;
+  padding-right: 12px;
+  border-radius: 0 5px 0 0;
+}
+.cruise__list.list_view .cruise__list__item__places__count {
+  font-size: 16px;
+}
+.cruise__list.list_view .cruise__list__item__klk {
+  margin-left: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #0071ad;
+}
+.cruise__list.list_view .cruise__list__item__middle__block {
+  width: 452px;
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.cruise__list.list_view .cruise__list__item__route {
+  max-width: 480px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #7e7e7e;
+}
+.cruise__list.list_view .cruise__list__item__accommodation__sales {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.cruise__list.list_view .cruise__list__item__sales__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+.cruise__list.list_view .cruise__list__item__sales__list > div {
+  margin-right: 10px;
+}
+.cruise__list.list_view .cruise__list__item__right__block {
+  width: 222px;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 22px;
+  padding-right: 16px;
+}
+.cruise__list.list_view .cruise__list__item__price {
+  font-weight: 700;
+  font-size: 24px;
+  color: #242424;
+  text-align: right;
+}
+.cruise__list.list_view .cruise__list__item__btn__share {
+  display: flex;
+  align-items: center;
+}
+.cruise__list.list_view .cruise__list__item__share {
+  margin-right: 12px;
+}
+.cruise__list.list_view .cruise__list__item__btn {
+  padding: 13px 17px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  background-color: #006ec7;
+  cursor: pointer;
+  border: 1px solid #006ec7;
+  transition: 0.2s;
+}
+.cruise__list.list_view .cruise__list__item__btn:hover {
+  color: #006ec7;
+  background-color: #fff;
+  transition: 0.2s;
 }
 .cruise__list.list_view .date__start__title {
   font-size: 12px;
@@ -1333,31 +1410,6 @@ div[data-tab-content="th-cruises"] {
   left: 0;
   right: 0;
   border-radius: 0 0 3px 3px;
-}
-.cruise__list.list_view .cruise__list__item__info__bron {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.cruise__list.list_view .info__bron__title {
-  font-size: 12px;
-  color: #919191;
-}
-.cruise__list.list_view .info__bron__btn {
-  font-weight: bold;
-  font-size: 14px;
-  background: #006ec7;
-  border: 1px solid #2483d8;
-  border-radius: 4px;
-  padding: 14px 18px;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-}
-.cruise__list.list_view .info__bron__btn:hover {
-  background-color: transparent;
-  color: #343434;
-  transition: 0.15s;
 }
 .th__footer__infoflot {
   max-width: 1200px;
