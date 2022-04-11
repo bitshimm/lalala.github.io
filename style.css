@@ -112,7 +112,7 @@ body {
   margin-right: 70px;
 }
 .th__tab__item {
-  padding: 20px;
+  padding: 10px;
   color: #7e7e7e;
   width: 50%;
   font-family: Montserrat;
@@ -159,14 +159,14 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 30px 0;
+  padding: 10px 0;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   background-color: #fff;
   position: sticky;
-  top: 219px;
+  top: 200px;
   z-index: 3;
   filter: drop-shadow(0 10px 10px rgba(67, 96, 248, 0.1));
 }
@@ -927,12 +927,12 @@ div[data-tab-content="th-cruises"] {
   border-radius: 4px;
   transition: 0.2s;
 }
-.th__infoflot__recomedation__item__btn:hover{
+.th__infoflot__recomedation__item__btn:hover {
   background-color: #fff;
   color: #006ec7;
   transition: 0.2s;
 }
-.th__infoflot__recomedation .slick-arrow{
+.th__infoflot__recomedation .slick-arrow {
   top: 196px;
 }
 #cboxOverlay {
@@ -1412,13 +1412,154 @@ div[data-tab-content="th-cruises"] {
   border-radius: 0 0 3px 3px;
 }
 .th__footer__infoflot {
-  max-width: 1200px;
-  margin: 0 auto;
+  /* max-width: 1200px;
+  margin: 0 auto; */
+  background-color: #0071ad;
+  color: #fff;
+  padding: 6px 51px 48px 51px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
 }
 .th__footer__infoflot img {
+  width: 212px;
+}
+.footer__contact__information {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-feature-settings: "pnum" on, "lnum" on;
+  font-size: 16px;
+  padding-left: 19px;
+  padding-top: 58px;
+}
+.footer__contact__information__block {
+  margin-bottom: 23px;
+}
+.footer__contact__information .footer__contact__information__block:last-child {
+  margin-bottom: 0;
+}
+.footer__contact__information__block a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer__middle__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 28px;
+  font-family: "Open Sans";
+  font-style: normal;
+}
+.footer__middle__block__title {
+  font-weight: 700;
+  font-size: 16px;
+  font-feature-settings: "pnum" on, "lnum" on;
+}
+.footer__pages__list {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 23px;
+}
+.footer__contact__information .footer__contact__information__14px {
+  font-size: 14px;
+}
+.footer__right__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__right__block form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 23px;
+}
+.footer__head__form__input {
+  height: 53px;
+  color: #0071ad;
+  width: 62%;
+}
+.footer__head__form__input input {
+  width: 100%;
+  padding: 0 21px;
+  height: 100%;
+  border: none;
+}
+.footer__head__form__input input::placeholder {
+  color: #0071ad;
+}
+.footer__head__form__btn {
+  font-feature-settings: "pnum" on, "lnum" on;
+  height: 53px;
+  width: 37%;
+}
+.footer__head__form__btn button {
+  height: 100%;
+  width: 100%;
+  background: #d42e12;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+}
+.footer__head__form__checkobox {
+  margin-top: 12px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+.footer__head__form__checkobox input[type="checkbox"] {
+  display: none;
+}
+.footer__head__form__checkobox label {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  text-align: center;
+  line-height: 16px;
+  color: #fff;
+  margin-right: 9px;
+}
+.footer__head__form__checkobox input[type="checkbox"]:checked + label:after {
+  content: "\2714";
+}
+.footer__right__block__bottom {
+  display: flex;
+  font-family: "Open Sans";
+  font-style: normal;
+}
+.footer__right__block__bottom .footer__pages__list{
+  margin-bottom: 23px;
+}
+.footer__social__list {
+  margin-left: 238px;
+}
+.footer__social__list__title {
+  font-weight: 700;
+  font-size: 16px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  margin-bottom: 12px;
+}
+.footer__social__list__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__social__list__items div {
+  width: 32px;
+  margin-right: 28px;
+}
+.footer__social__list__items div img {
   width: 100%;
 }
-@media (max-width: 960px) {
+/* .th__footer__infoflot img {
+  width: 100%;
+} */
+.footer__head__logo @media (max-width: 960px) {
   .th__sale__item {
     width: 49%;
   }
@@ -1433,9 +1574,9 @@ div[data-tab-content="th-cruises"] {
   .th__tab__item {
     width: 100%;
   }
-  .th__about__links {
+  /* .th__about__links {
     top: 288px;
-  }
+  } */
 }
 /* @media (max-width: 996px) {
   .about__th__block__item {
@@ -1454,6 +1595,14 @@ div[data-tab-content="th-cruises"] {
     margin-left: none;
     margin: 0 auto;
   }
+  .th__about__links {
+    top: 245px;
+  }
+}
+@media (max-width: 940px) {
+  .th__about__links {
+    top: 265px;
+  }
 }
 @media (max-width: 540px) {
   .th__sale__item {
@@ -1469,10 +1618,15 @@ div[data-tab-content="th-cruises"] {
     flex-basis: 20%;
   }
 }
-@media (max-width: 470px) {
+@media (max-width: 498px) {
   .th__about__links {
-    top: 343px;
+    top: 309px;
   }
+}
+@media (max-width: 470px) {
+  /* .th__about__links {
+    top: 343px;
+  } */
   .th__on__board .th__on__board__item {
     flex-basis: 25%;
   }

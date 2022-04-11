@@ -404,16 +404,16 @@ $(function () {
         $(".th__tab__item").css({ padding: "10px" });
         $(".th__about__links").css({ padding: "10px 0" });
         $(".th__burger__menu__clone").show();
-        if ($(window).width() > 1136) {
-          $(".th__about__links").css({ top: "200px" });
-        } else if ($(window).width() > 588) {
-          $(".th__about__links").css({ top: "244px" });
-        } else if ($(window).width() < 589) {
-          $(".th__about__links").css({ top: "265px" });
-        }
+        // if ($(window).width() > 1136) {
+        //   $(".th__about__links").css({ top: "200px" });
+        // } else if ($(window).width() > 588) {
+        //   $(".th__about__links").css({ top: "244px" });
+        // } else if ($(window).width() < 589) {
+        //   $(".th__about__links").css({ top: "265px" });
+        // }
       } else {
-        $(".th__tab__item").css({ padding: "20px" });
-        $(".th__about__links").css({ padding: "30px 0" });
+        // $(".th__tab__item").css({ padding: "20px" });
+        // $(".th__about__links").css({ padding: "30px 0" });
         $(".th__burger__menu__clone").hide();
         $(".th__left__menu__clone").hide();
       }
