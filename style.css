@@ -1418,7 +1418,7 @@ div[data-tab-content="th-cruises"] {
   color: #fff;
   padding: 6px 51px 48px 51px;
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 0.9fr 0.9fr 2fr;
 }
 .th__footer__infoflot img {
   width: 212px;
@@ -1437,6 +1437,10 @@ div[data-tab-content="th-cruises"] {
 }
 .footer__contact__information .footer__contact__information__block:last-child {
   margin-bottom: 0;
+  font-size: 14px;
+}
+.footer__contact__information__block:nth-last-child(n+2){
+  font-size: 14px;
 }
 .footer__contact__information__block a {
   text-decoration: none;
