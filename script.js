@@ -134,10 +134,7 @@ $(function () {
   });
 
   $(".cabin__item__desc__btn__show").click(function () {
-    $(this)
-      .closest(".cabins__list")
-      .find(".cabin__item__full__desc")
-      .hide(1);
+    $(this).closest(".cabins__list").find(".cabin__item__full__desc").hide();
     $(this)
       .closest(".cabins__list")
       .find(".cabin__item__desc__btn__show")
@@ -145,25 +142,18 @@ $(function () {
     $(this)
       .addClass("active")
       .hide()
-      .siblings(".cabin__item__full__desc")
+      .closest(".cabin__item")
+      .find(".cabin__item__full__desc")
       .show();
   });
-  // $(".cabin__item__desc__btn__hide").click(function () {
-  //   $(this)
-  //     .closest(".cabin__item")
-  //     .find(".cabin__item__desc__btn__show")
-  //     .removeClass("active")
-  //     .show()
-  //     .siblings(".cabin__item__full__desc")
-  //     .slideToggle(150);
-  // });
   $(".cabin__item__full__desc").click(function () {
     $(this)
       .closest(".cabin__item")
       .find(".cabin__item__desc__btn__show")
       .removeClass("active")
       .show()
-      .siblings(".cabin__item__full__desc")
+      .closest(".cabin__item")
+      .find(".cabin__item__full__desc")
       .slideToggle(0);
   });
   $(".th__photo__gallery__list").slick({
@@ -361,10 +351,10 @@ $(function () {
   $(".th__burger__menu__clone").click(function () {
     $(".th__left__menu__clone").animate({ width: "toggle" });
   });
-  $(".cruise__list.list_view .cruise__list__item__share img").click(
+  $(".cruise__list.list_view .cruise__list__item__share:not(.active) img").click(
     function () {
-      $(this).closest(".cruise__list__item__share").toggleClass("active");
-      $(this).siblings(".cruise__list__item__share__social").slideToggle(150);
+      $(this).closest(".cruise__list__item__share").addClass("active");
+      $(this).siblings(".cruise__list__item__share__social").show(150);
     }
   );
   $(".cruise__list.grid_view .cruise__list__item__sales img").mouseover(
@@ -375,6 +365,16 @@ $(function () {
   $(".cruise__list.grid_view .cruise__list__item__sales img").mouseout(
     function () {
       $(this).siblings(".cruise__list__item__sales__tooltip").toggle();
+    }
+  );
+  $(".cruise__list.list_view .cruise__list__item__sale__item img").mouseover(
+    function () {
+      $(this).siblings(".cruise__list__item__sale__item__tooltip").toggle();
+    }
+  );
+  $(".cruise__list.list_view .cruise__list__item__sale__item img").mouseout(
+    function () {
+      $(this).siblings(".cruise__list__item__sale__item__tooltip").toggle();
     }
   );
   let scrollSection = $(".th__section, .cruise__section"),
@@ -435,11 +435,43 @@ $(function () {
   $("body").click(function (e) {
     let $menu = $(".th__left__menu"),
       $target = $(e.target);
+    let $shareBlock = $(".cruise__list__item__share__social");
     if (
       !$menu.find($target).length &&
       !$(".th__burger__menu").find($target).length
     ) {
       $menu.hide(200);
+    }
+    if (
+      !$shareBlock.find($target).length &&
+      !$(".cruise__list__item__btn__share").find($target).length
+    ) {
+      $shareBlock.hide(200);
+    }
+  });
+  
+  $(".th__more__sales").click(function () {
+    if ($(this).hasClass("active")) {
+      $(this)
+        .removeClass("active")
+        .closest(".th__sales")
+        .find(".th__more__sales__list")
+        .hide(200);
+      $(this)
+        .find("i")
+        .removeClass("fa-chevron-up")
+        .addClass("fa-chevron-down");
+    } else {
+      $(this)
+        .addClass("active")
+        .closest(".th__sales")
+        .find(".th__more__sales__list")
+        .show(200)
+        .css({ display: "flex" });
+      $(this)
+        .find("i")
+        .removeClass("fa-chevron-down")
+        .addClass("fa-chevron-up");
     }
   });
 });
