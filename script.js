@@ -14,6 +14,13 @@ $(function () {
     //   },
     //   100
     // );
+    $("body,html").animate(
+      {
+        scrollTop: 500,
+      },
+      300
+    );
+    return false;
   });
   $(".service__on__board__accordeon__block__title").click(function () {
     // $(".service__on__board__accardeon__items").slideToggle();
@@ -346,17 +353,24 @@ $(function () {
     }
   });
   $(".th__burger__menu").click(function () {
-    $(".th__left__menu").animate({ width: "toggle" });
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      $(".th__left__menu").animate({ width: "toggle" });
+    } else {
+      $(this).addClass("active");
+      $(".th__left__menu").animate({ width: "toggle" });
+    }
+    // $(".th__left__menu").animate({ width: "toggle" });
   });
   $(".th__burger__menu__clone").click(function () {
     $(".th__left__menu__clone").animate({ width: "toggle" });
   });
-  $(".cruise__list.list_view .cruise__list__item__share:not(.active) img").click(
-    function () {
-      $(this).closest(".cruise__list__item__share").addClass("active");
-      $(this).siblings(".cruise__list__item__share__social").show(150);
-    }
-  );
+  $(
+    ".cruise__list.list_view .cruise__list__item__share:not(.active) img"
+  ).click(function () {
+    $(this).closest(".cruise__list__item__share").addClass("active");
+    $(this).siblings(".cruise__list__item__share__social").show(150);
+  });
   $(".cruise__list.grid_view .cruise__list__item__sales img").mouseover(
     function () {
       $(this).siblings(".cruise__list__item__sales__tooltip").toggle();
@@ -434,6 +448,7 @@ $(function () {
   });
   $("body").click(function (e) {
     let $menu = $(".th__left__menu"),
+      $menuBtn = $(".th__burger__menu"),
       $target = $(e.target);
     let $shareBlock = $(".cruise__list__item__share__social");
     if (
@@ -449,7 +464,7 @@ $(function () {
       $shareBlock.hide(200);
     }
   });
-  
+
   $(".th__more__sales").click(function () {
     if ($(this).hasClass("active")) {
       $(this)
