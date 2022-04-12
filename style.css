@@ -27,16 +27,19 @@ body {
   position: relative;
 }
 .th__burger__menu {
-  font-size: 23px;
-  font-weight: 900;
   position: absolute;
   left: 42px;
   top: 24px;
-  color: #000;
   padding: 6px 8px 3px 8px;
   transition: 0.2s;
   background-color: #fff;
   border-radius: 4px;
+  height: 32px;
+  width: 32px;
+  background-image: url('/img/burger_btn.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .th__burger__menu__clone {
   font-size: 40px;
