@@ -3,7 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+body,
+html {
+  width: 100%;
+}
 .navbar__fixed__top {
   background-color: #4798ca;
   color: #fff;
@@ -24,6 +27,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .nav__mediabuttons {
   display: flex;
@@ -48,6 +52,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   text-transform: uppercase;
 }
 .header__item {
@@ -97,7 +102,7 @@
   font-size: 18px;
 }
 .ship__anchors {
-  margin: 14px 0;
+  padding: 14px 0;
   position: sticky;
   background-color: #fff;
   top: 34px;
@@ -115,9 +120,10 @@
   text-decoration: none;
   color: #7e7e7e;
   text-transform: uppercase;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .ship__anchors__top__item {
-  width: 50%;
   text-align: center;
 }
 .ship__anchors__top a {
@@ -153,7 +159,7 @@
 }
 .ship__rclw {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(167px, 1fr));
   margin-top: 65px;
   justify-items: center;
   gap: 1em 14%;
@@ -165,6 +171,7 @@
   font-weight: 400;
   font-size: 14px;
   align-items: center;
+  width: 169px;
 }
 .ship__rclw__item span {
   display: block;
@@ -178,11 +185,13 @@
   font-size: 36px;
 }
 .ship__info__section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(575px, 1fr));
+  display: flex;
+  /* flex-wrap: wrap; */
   margin-top: 48px;
-  justify-items: center;
-  gap: 1em 40px;
+  justify-content: space-between;
+}
+.ship__info__section > div {
+  width: 48%;
 }
 .ship__info__title {
   font-family: "Montserrat";
@@ -208,14 +217,15 @@
 }
 .ship__crew__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(183px, 1fr));
   text-align: center;
+  justify-items: center;
 }
 .ship__crew__item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 183px;
 }
 .ship__crew__post {
   font-family: "Montserrat";
@@ -243,13 +253,17 @@
 }
 .ship__on__board {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(62.39px, 1fr));
-  gap: 32px 64px;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 28px calc(6%);
   align-items: center;
   margin-bottom: 69px;
 }
 .ship__on__board__item {
   position: relative;
+  width: 50px;
+}
+.ship__on__board__item img {
+  display: block;
 }
 .ship__on__board__desc {
   opacity: 0;
@@ -260,7 +274,6 @@
   border-radius: 2px;
   top: -30px;
   right: 0;
-  left: 0;
   margin: auto;
   height: auto;
   padding: 6.5px 29px;
@@ -279,6 +292,7 @@
   display: flex;
   gap: 12px;
   margin-bottom: 25px;
+  flex-wrap: wrap;
 }
 .ship__services__tabs > div {
   font-family: "Open Sans";
@@ -307,12 +321,14 @@
 }
 .ship__service__widget {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 36px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 10px 3%;
   font-family: "Open Sans";
   font-style: normal;
   color: #343434;
   margin-bottom: 47px;
+}
+.ship__service__widget > div {
 }
 .ship__service__widget img {
   width: 100%;
@@ -329,6 +345,7 @@
 .ship__cabin__types {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
@@ -347,6 +364,7 @@
   font-weight: 500;
   font-size: 20px;
   margin-bottom: 9px;
+  width: 190px;
 }
 .ship__cabin__types__list {
   display: grid;
@@ -364,8 +382,10 @@
 }
 .ship__cabin__types__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(387px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 23px 19.5px;
+  margin-bottom: 63px;
+  /* justify-items: center; */
 }
 .ship__cabin__type__card {
   padding: 16px;
@@ -374,7 +394,27 @@
     0px 10px 32px -4px rgba(24, 39, 75, 0.1);
   position: relative;
 }
+.ship__cabin__type__card:nth-child(n + 7) {
+  display: none;
+}
+.cabin__types__pag {
+  cursor: pointer;
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  display: flex;
+  justify-self: center;
+}
+.cabin__types__pag img {
+  display: block;
+  margin: auto 0;
+}
 .cabin__type__card__bigimg img {
+  display: block;
+  width: 100%;
   margin-bottom: 8px;
 }
 .cabin__type__card__smallimgs {
@@ -383,13 +423,13 @@
 .cabin__type__card__smallimgs a {
   display: block;
 }
-.slick-slide {
+.cabin__type__card__smallimgs .slick-slide {
   margin: 0 4.5px;
 }
-.slick-list {
+.cabin__type__card__smallimgs .slick-list {
   margin: 0 -4.5px !important;
 }
-.slick-track {
+.cabin__type__card__smallimgs .slick-track {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
@@ -401,11 +441,14 @@
   top: 0;
   bottom: 0;
 }
-.slick__prev {
+.cabin__type__card__smallimgs .slick__prev {
   left: -12px;
 }
-.slick__next {
+.cabin__type__card__smallimgs .slick__next {
   right: -12px;
+}
+.slick-disabled {
+  display: none !important;
 }
 .cabin__type__card__title {
   font-family: "Montserrat";
@@ -456,13 +499,14 @@
   position: absolute;
   background-color: #fff;
   z-index: 2;
-  box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12);
+  box-shadow: 0px 30px 30px -10px rgb(24 39 75 / 12%);
   margin: auto;
   right: 0;
   left: 0;
   top: 0;
   width: auto;
   margin: 0 -16px;
+  padding: 0 16px;
   padding-bottom: 16px;
 }
 .cabin__type__card__slide__title {
@@ -472,7 +516,6 @@
   cursor: pointer;
 }
 .cabin__type__card__slide__content__title {
-  padding: 0 16px;
   margin-bottom: 16px;
 }
 .cabin__type__card__slide__content__text {
@@ -484,4 +527,44 @@
 }
 .cabin__type__card__slide__content__text li {
   margin-bottom: 8px;
+}
+.ship__gallery {
+  margin: 0 auto;
+  margin-bottom: 48px;
+  padding: 0 44px;
+}
+.ship__gallery__item {
+  text-decoration: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #343434;
+  display: block;
+}
+.fancybox__caption {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  max-width: 600px !important;
+}
+.ship__gallery__item img {
+  display: block;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.ship__gallery .slick__prev {
+  left: -20px;
+  cursor: pointer;
+}
+.ship__gallery .slick__next {
+  right: -20px;
+  cursor: pointer;
+}
+.ship__gallery .slick-slide {
+  margin: 0 8px;
+}
+.ship__gallery .slick-list {
+  margin: 0 -8px !important;
 }
