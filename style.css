@@ -101,6 +101,10 @@ html {
   font-weight: 400;
   font-size: 18px;
 }
+.ship__type,
+.ship__name {
+  text-transform: uppercase;
+}
 .ship__anchors {
   padding: 14px 0;
   position: sticky;
@@ -154,7 +158,7 @@ html {
   font-weight: 700;
 }
 .ship__content {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 .ship__rclw {
@@ -321,8 +325,8 @@ html {
 }
 .ship__service__widget {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 10px 3%;
+  grid-template-columns: repeat(auto-fill, minmax(620px, 1fr));
+  gap: 10px 36px;
   font-family: "Open Sans";
   font-style: normal;
   color: #343434;
@@ -345,13 +349,13 @@ html {
 .ship__cabin__types {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   color: #343434;
-  gap: 73px;
+  /* gap: 73px; */
   margin-bottom: 51px;
 }
 .ship__cabin__types img {
@@ -382,7 +386,7 @@ html {
 }
 .ship__cabin__types__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(387px, 1fr));
   gap: 23px 19.5px;
   margin-bottom: 63px;
   /* justify-items: center; */
@@ -567,4 +571,278 @@ html {
 }
 .ship__gallery .slick-list {
   margin: 0 -8px !important;
+}
+.ship__sales {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  gap: 15px;
+  justify-items: center;
+  margin-bottom: 48px;
+}
+.ship__sale__el {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 247px;
+  width: 390px;
+  display: flex;
+  align-items: flex-end;
+}
+.ship__sale__el:nth-child(n + 4) {
+  display: none;
+}
+.ship__sales__pag {
+  cursor: pointer;
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  display: flex;
+  justify-self: center;
+}
+.ship__sales__pag img {
+  display: block;
+  margin: auto 0;
+}
+.ship__sale__text {
+  display: inline;
+  width: 100%;
+  padding: 8px 0 22px 27px;
+  background: rgba(24, 39, 75, 0.4);
+  color: #fff;
+}
+.ship__sale__title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+}
+.ship__sale__desc {
+  max-width: 232px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+.ship__cruises__years {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 39px;
+}
+.ship__cruises__years .ship__cruises__el {
+  margin: 0 48px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #7e7e7e;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 4px;
+}
+.ship__cruises__years .active {
+  color: #242424;
+  border-color: #242424;
+}
+.ship__cruises__filter {
+  display: flex;
+  align-items: center;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #7e7e7e;
+  margin-bottom: 8px;
+}
+.ship__cruises__filter > div {
+  display: flex;
+}
+.ship__cruises__filter__title {
+  margin-right: 10px;
+}
+.depature__city .ship__depature__list {
+  min-width: 277px;
+}
+.depature__mounth .ship__depature__list {
+  min-width: 135px;
+}
+.cruises__styles__views .ship__depature__list {
+  min-width: 142px;
+}
+.ship__depature__list {
+  position: relative;
+  border-radius: 2px;
+  margin-right: 10px;
+  padding: 2px 16px;
+  cursor: pointer;
+  z-index: 1;
+}
+.ship__depature__list.active {
+  box-shadow: 0px 10px 30px rgba(8, 43, 221, 0.1);
+}
+.ship__depature__list.active .ship__depature__dropdown {
+  display: block;
+  /* overflow: scroll;
+  height: 140px; */
+}
+.ship__depature__list li {
+  list-style: none;
+  margin-top: 8px;
+}
+.ship__depature__dropdown__active:after {
+  content: url("/images/dropdown__down__gray.png");
+  position: absolute;
+  right: 12px;
+}
+/* .ship__depature__list.active:after {
+  content: url("/images/dropdown__down__gray.png");
+} */
+.ship__depature__dropdown {
+  position: absolute;
+  display: none;
+  background-color: #fff;
+  margin: 0 -16px;
+  padding: 0 16px;
+  width: 100%;
+  padding-bottom: 14px;
+}
+.ship__cruises__filter__submit {
+  color: #0071ad;
+  border: 1px solid #0071ad;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.ship__cruises__filter__submit:hover {
+  background-color: #0071ad;
+  color: #fff;
+  transition: 0.15s;
+}
+.cruises__styles__views {
+  margin-left: auto;
+}
+/* test card__type*/
+.ship__cruises {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px 24px;
+}
+.ship__cruise {
+  padding: 16px;
+  box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
+    0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+  font-family: "Open Sans";
+  font-style: normal;
+}
+.cruise__el__img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 207px;
+  margin-bottom: 12px;
+  position: relative;
+}
+.cruise__places__left {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 4px 22.17px 6px 22.17px;
+  border-radius: 0px 4px 0px 0px;
+  color: #fff;
+}
+.cruise__places__left span {
+  font-size: 16px;
+}
+.cruise__name {
+  font-weight: 700;
+  font-size: 16px;
+  color: #0071ad;
+  margin-bottom: 2px;
+}
+.cruise__ship {
+  font-weight: 400;
+  font-size: 16px;
+  color: #0071ad;
+  margin-bottom: 8px;
+}
+.cruise__route {
+  font-size: 13px;
+  color: #343434;
+  margin-bottom: 9.5px;
+}
+.cruise__dates {
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: 4px;
+  color: #0071ad;
+}
+.cruise__days {
+  font-weight: 400;
+  font-size: 14px;
+  color: #0071ad;
+}
+.cruise__share {
+  margin-left: auto;
+}
+.cruise__price {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #242424;
+  margin-bottom: 6px;
+}
+.cruise__bonus__klk {
+  display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  color: #919191;
+  margin-bottom: 12px;
+}
+.cruise__bonus__klk img {
+  display: block;
+  margin: auto 0;
+}
+.cruise__suggestions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(36px, 1fr));
+  gap: 16px 28px;
+  margin: 18px 0;
+}
+.cruise__sugg__el {
+  height: 36px;
+  width: 36px;
+}
+.cruise__sugg__desc {
+  display: none;
+}
+.cruise__btn {
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  text-align: center;
+  padding: 14px 0;
+  background: #0071ad;
+  border-radius: 4px;
+  color: #fff;
+  margin-top: 12px;
+  cursor: pointer;
+}
+/* test card__type*/
+.cruise__places__left.left__red {
+  background: #f23200;
+}
+.cruise__places__left.left__yellow {
+  background: #f2ae00;
+}
+.cruise__places__left.left__green {
+  background: #3bb900;
 }

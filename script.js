@@ -52,6 +52,7 @@ $(function () {
   $(document).mouseup(function (e) {
     //элементы скрытия
     let cabinTypes = $(".cabin__type__card__slide__content"); // тут указываем ID элемента
+    let cruiseFilterDropdown = $(".ship__depature__dropdown__active");
     // элементы скрытия
 
     // если клик был не по нашему блоку
@@ -59,6 +60,12 @@ $(function () {
     if (!cabinTypes.is(e.target) && cabinTypes.has(e.target).length === 0) {
       $(".cabin__type__card__slide__title").removeClass("active");
       cabinTypes.slideUp(100);
+    }
+    if (
+      !cruiseFilterDropdown.is(e.target) &&
+      cruiseFilterDropdown.has(e.target).length === 0
+    ) {
+      $(".ship__depature__list").removeClass("active");
     }
   });
   $(".cabin__types__pag").click(function () {
@@ -77,5 +84,27 @@ $(function () {
         .addClass("active");
       $(".ship__cabin__type__card:nth-child(n + 7)").slideDown(100);
     }
+  });
+  $(".ship__sales__pag").click(function () {
+    if ($(this).hasClass("active")) {
+      $(this)
+        .html(
+          'Больше акций&nbsp;<img width="14" src="/images/chevron__down__blue.png" alt="">'
+        )
+        .removeClass("active");
+      $(".ship__sale__el:nth-child(n + 4)").slideUp(100);
+    } else {
+      $(this)
+        .html(
+          'Скрыть&nbsp;<img width="14" src="/images/chevron__up__blue.png" alt="">'
+        )
+        .addClass("active");
+      $(".ship__sale__el:nth-child(n + 4)")
+        .slideDown(100)
+        .css("display", "flex");
+    }
+  });
+  $(".ship__depature__dropdown__active").click(function () {
+    $(this).closest(".ship__depature__list").toggleClass("active");
   });
 });
