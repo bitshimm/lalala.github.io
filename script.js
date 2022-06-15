@@ -22,6 +22,22 @@ $(function () {
       '<img class="slick__prev" src="/images/ship__gallery__arrow_l.png">',
     nextArrow:
       '<img class="slick__next" src="/images/ship__gallery__arrow_r.png">',
+    responsive: [
+      {
+        breakpoint: 940,
+        settings: {
+          arrows: false,
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 540,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
   $(".cabin__type__card__smallimgs").slick({
     lazyLoad: "ondemand",
@@ -106,5 +122,31 @@ $(function () {
   });
   $(".ship__depature__dropdown__active").click(function () {
     $(this).closest(".ship__depature__list").toggleClass("active");
+  });
+  $(".cruise__type__view__list li").click(function () {
+    let SelectedType = $(this).attr("data-type-view");
+    if (SelectedType == "list") {
+      $(".ship__cruises").removeClass("card__view").addClass("list__view");
+      $('.cruise__type__view__list li[data-type-view="list"]').css(
+        "display",
+        "none"
+      );
+      $('.cruise__type__view__list li[data-type-view="card"]').css(
+        "display",
+        "block"
+      );
+      $(".cruise__type__view__active").text("Списком");
+    } else if (SelectedType == "card") {
+      $(".ship__cruises").removeClass("list__view").addClass("card__view");
+      $('.cruise__type__view__list li[data-type-view="card"]').css(
+        "display",
+        "none"
+      );
+      $('.cruise__type__view__list li[data-type-view="list"]').css(
+        "display",
+        "block"
+      );
+      $(".cruise__type__view__active").text("Сеткой");
+    }
   });
 });

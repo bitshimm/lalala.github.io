@@ -161,6 +161,23 @@ html {
   max-width: 1280px;
   margin: 0 auto;
 }
+.ship__rclw,
+.ship__info__section,
+.ship__on__board,
+.ship__services,
+.ship__cabin__types,
+.svg__schema {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.ship__cabin__types__cards,
+.ship__gallery,
+.ship__sales,
+.ship__cruises__filter,
+.ship__cruises {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .ship__rclw {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(167px, 1fr));
@@ -332,8 +349,6 @@ html {
   color: #343434;
   margin-bottom: 47px;
 }
-.ship__service__widget > div {
-}
 .ship__service__widget img {
   width: 100%;
 }
@@ -386,12 +401,13 @@ html {
 }
 .ship__cabin__types__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(387px, 1fr));
-  gap: 23px 19.5px;
+  grid-template-columns: repeat(auto-fill, minmax(387px, 1fr));
+  gap: 39px 19.5px;
   margin-bottom: 63px;
-  /* justify-items: center; */
+  justify-items: center;
 }
 .ship__cabin__type__card {
+  max-width: 387px;
   padding: 16px;
   background: #ffffff;
   box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
@@ -574,7 +590,7 @@ html {
 }
 .ship__sales {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
   gap: 15px;
   justify-items: center;
   margin-bottom: 48px;
@@ -649,6 +665,7 @@ html {
 .ship__cruises__filter {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
@@ -724,20 +741,21 @@ html {
 .cruises__styles__views {
   margin-left: auto;
 }
-/* test card__type*/
-.ship__cruises {
+/* CARD VIEW */
+.ship__cruises.card__view {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 20px 24px;
+  grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+  gap: 24px 15px;
+  justify-items: center;
 }
-.ship__cruise {
+.ship__cruise.card__view {
   padding: 16px;
   box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
     0px 10px 32px -4px rgba(24, 39, 75, 0.1);
   font-family: "Open Sans";
   font-style: normal;
 }
-.cruise__el__img {
+.ship__cruise.card__view .cruise__el__img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -745,7 +763,7 @@ html {
   margin-bottom: 12px;
   position: relative;
 }
-.cruise__places__left {
+.ship__cruise.card__view .cruise__places__left {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
@@ -757,41 +775,41 @@ html {
   border-radius: 0px 4px 0px 0px;
   color: #fff;
 }
-.cruise__places__left span {
+.ship__cruise.card__view .cruise__places__left span {
   font-size: 16px;
 }
-.cruise__name {
+.ship__cruise.card__view .cruise__name {
   font-weight: 700;
   font-size: 16px;
   color: #0071ad;
   margin-bottom: 2px;
 }
-.cruise__ship {
+.ship__cruise.card__view .cruise__ship {
   font-weight: 400;
   font-size: 16px;
   color: #0071ad;
   margin-bottom: 8px;
 }
-.cruise__route {
+.ship__cruise.card__view .cruise__route {
   font-size: 13px;
   color: #343434;
   margin-bottom: 9.5px;
 }
-.cruise__dates {
+.ship__cruise.card__view .cruise__dates {
   font-weight: 700;
   font-size: 14px;
   margin-right: 4px;
   color: #0071ad;
 }
-.cruise__days {
+.ship__cruise.card__view .cruise__days {
   font-weight: 400;
   font-size: 14px;
   color: #0071ad;
 }
-.cruise__share {
+.ship__cruise.card__view .cruise__share {
   margin-left: auto;
 }
-.cruise__price {
+.ship__cruise.card__view .cruise__price {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -800,31 +818,31 @@ html {
   color: #242424;
   margin-bottom: 6px;
 }
-.cruise__bonus__klk {
+.ship__cruise.card__view .cruise__bonus__klk {
   display: flex;
   font-weight: 400;
   font-size: 12px;
   color: #919191;
   margin-bottom: 12px;
 }
-.cruise__bonus__klk img {
+.ship__cruise.card__view .cruise__bonus__klk img {
   display: block;
   margin: auto 0;
 }
-.cruise__suggestions {
+.ship__cruise.card__view .cruise__suggestions {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(36px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
   gap: 16px 28px;
   margin: 18px 0;
 }
-.cruise__sugg__el {
+.ship__cruise.card__view .cruise__sugg__el {
   height: 36px;
   width: 36px;
 }
-.cruise__sugg__desc {
+.ship__cruise.card__view .cruise__sugg__desc {
   display: none;
 }
-.cruise__btn {
+.ship__cruise.card__view .cruise__btn {
   font-weight: 700;
   font-size: 14px;
   text-align: center;
@@ -836,7 +854,203 @@ html {
   margin-top: 12px;
   cursor: pointer;
 }
-/* test card__type*/
+/* CARD VIEW */
+/* LIST VIEW */
+.ship__cruises.list__view {
+  font-family: "Open Sans";
+  font-style: normal;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.ship__cruise.list__view {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 14px 0 28px 42px;
+  display: flex;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.ship__cruise.list__view .top__left__block {
+  width: 73.583%;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "cruise-name cruise-name ship-name ship-name"
+    "cruise-dates cruise-dates cruise-route cruise-route"
+    "cruise-share cruise-sugg cruise-sugg cruise-sugg";
+  gap: 13px 0;
+}
+.ship__cruise.list__view .cruise__name {
+  grid-area: cruise-name;
+  font-weight: 700;
+  font-size: 20px;
+  color: #0071ad;
+}
+.ship__cruise.list__view .ship__name {
+  grid-area: ship-name;
+  font-weight: 400;
+  font-size: 16px;
+  color: #0071ad;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: none;
+}
+.ship__cruise.list__view .ship__name img {
+  margin-right: 6px;
+}
+.ship__cruise.list__view .cruise__dates {
+  grid-area: cruise-dates;
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  color: #242424;
+}
+.ship__cruise.list__view .cruise__dates > div {
+  margin-right: 18px;
+}
+.ship__cruise.list__view .depature__gray {
+  font-size: 12px;
+  color: #919191;
+  margin-bottom: 8px;
+}
+.ship__cruise.list__view .depature__date {
+  font-weight: 700;
+  font-size: 16px;
+}
+.ship__cruise.list__view .cruise__days__nights {
+  color: #7e7e7e;
+  line-height: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.ship__cruise.list__view .cruise__route {
+  grid-area: cruise-route;
+  text-align: center;
+  font-size: 14px;
+  color: #343434;
+}
+.ship__cruise.list__view .cruise__share {
+  grid-area: cruise-share;
+  margin-top: 11px;
+  display: flex;
+  align-items: center;
+}
+.ship__cruise.list__view .cruise__suggestions {
+  grid-area: cruise-sugg;
+  display: flex;
+  margin-top: 11px;
+}
+.ship__cruise.list__view .cruise__suggestions img {
+  margin-right: 27px;
+}
+.ship__cruise.list__view .top__right__block {
+  margin-left: auto;
+}
+.ship__cruise.list__view .top__right__block img {
+  display: block;
+}
+.ship__cruise.list__view .cruise__price {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  color: #242424;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  margin-right: 18px;
+}
+.ship__cruise.list__view .cruise__bonus__klk {
+  font-weight: 400;
+  font-size: 12px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 13px;
+  margin-right: 18px;
+  color: #919191;
+}
+.ship__cruise.list__view .cruise__places__left {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 2px 0 4px 12px;
+  color: #fff;
+  margin-bottom: 13px;
+}
+.ship__cruise.list__view .cruise__places__left span {
+  font-size: 16px;
+}
+.ship__cruise.list__view .cruise__btn {
+  text-align: center;
+  background: #0071ad;
+  border-radius: 4px;
+  padding: 12px 24px;
+  color: #fff;
+  margin-right: 21px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  cursor: pointer;
+}
+.ship__cruise.list__view .bottom__block {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+}
+.ship__cruise.list__view .cruise__category__cabin__title {
+  font-weight: 400;
+  font-size: 12px;
+  margin-right: 21px;
+  color: #0071ad;
+  width: 100px;
+}
+.ship__cruise.list__view
+  .cruise__category__cabin__title
+  > div:not(:last-child) {
+  margin-bottom: 12px;
+}
+.ship__cruise.list__view .cruise__categories__cabins {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ship__cruise.list__view .cruise__category__el {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #343434;
+  margin-right: 20px;
+  height: 78px;
+  margin-bottom: 10px;
+}
+.ship__cruise.list__view .cruise__category__el__places {
+  color: #0071ad;
+}
+.ship__cruise.list__view .cruise__category__el__price {
+  font-weight: 700;
+}
+/* LIST VIEW */
+
+.ship__cruises.card__view .ship__cruise.card__view {
+  display: block;
+}
+.ship__cruises.card__view .ship__cruise.list__view {
+  display: none;
+}
+.ship__cruises.list__view .ship__cruise.list__view {
+  display: flex;
+}
+.ship__cruises.list__view .ship__cruise.card__view {
+  display: none;
+}
 .cruise__places__left.left__red {
   background: #f23200;
 }

@@ -1120,24 +1120,626 @@
                         <div class="ship__cruises__filter__title">
                             Вид:
                         </div>
-                        <div class="ship__depature__list">
-                            <div class="ship__depature__dropdown__active">
-                                Списком
+                        <div class="ship__depature__list cruise__type__view">
+                            <div class="ship__depature__dropdown__active cruise__type__view__active"
+                                data-active-view="list">
+                                Сеткой
                             </div>
-                            <ul class="ship__depature__dropdown">
-                                <li>Таблицей</li>
+                            <ul class="ship__depature__dropdown cruise__type__view__list">
+                                <li data-type-view="list">Списком</li>
+                                <li data-type-view="card" style="display: none;">Сеткой</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="ship__cruises card_veiw">
-                    <div class="ship__cruise">
+                <div class="ship__cruises card__view">
+                    <div class="ship__cruise list__view">
+                        <div class="top__left__block">
+                            <div class="cruise__name">
+                                «Волжские жемчужины и река Сура»
+                            </div>
+                            <div class="ship__name">
+                                <img src="/images/ship__icon.png" alt=""> Лунная Соната
+                            </div>
+                            <div class="cruise__dates">
+                                <div>
+                                    <div class="depature__gray">Отправление</div>
+                                    <div class="depature__date">22 июн 2022</div>
+                                    <div class="depature__time">пятница, 9:30</div>
+                                </div>
+                                <div class="cruise__days__nights">
+                                    <div class="cruise__days">3 дня</div>
+                                    <img src="/images/cruise__days__arrow.png" alt="" style="display: block;">
+                                    <div class="cruise__nights">2 ночи</div>
+                                </div>
+                                <div>
+                                    <div class="depature__gray">Прибытие</div>
+                                    <div class="depature__date">24 июн 2022</div>
+                                    <div class="depature__time">воскресенье, 19:30</div>
+                                </div>
+                            </div>
+                            <div class="cruise__route">
+                                <b>Москва</b> – Калязин – <b>Ярославль</b> – Нижний Новгород – Казань – <b>Чебоксары</b>
+                                –
+                                Козьмодемьянск – Нижний Новгород – Чкаловск – <b>Кострома</b> – Дубна – <b>Москва</b>
+                            </div>
+                            <div class="cruise__share">
+                                <img src="/images/cruise__share.png" alt="" style="display: block;">
+                            </div>
+                            <div class="cruise__suggestions">
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__1.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__2.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__3.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__4.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__5.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__6.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__7.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__8.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__9.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top__right__block">
+                            <div class="cruise__price">
+                                от 20990 ₽/чел.<img src="/images/cruise__bonus__klk__question.png" alt=""
+                                    style="margin-left:8px;">
+                            </div>
+                            <div class="cruise__bonus__klk">
+                                <img src="/images/cruise__bonus__klk__gift.png" alt="" style="margin-right:4px;">Вы
+                                получите 1000 баллов КЛК
+                            </div>
+                            <div class="cruise__places__left left__red">
+                                осталось <span>3</span> места
+                            </div>
+                            <div class="cruise__btn">
+                                Подробности<br>
+                                и бронирование
+                            </div>
+                        </div>
+                        <div class="bottom__block">
+                            <div class="cruise__category__cabin__title">
+                                <div>КАТЕГОРИЯ</div>
+                                <div>СВОБ. МЕСТ</div>
+                                <div>РУБ.\ЧЕЛ.</div>
+                            </div>
+                            <div class="cruise__categories__cabins">
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ship__cruise list__view">
+                        <div class="top__left__block">
+                            <div class="cruise__name">
+                                «Волжские жемчужины и река Сура»
+                            </div>
+                            <div class="ship__name">
+                                <img src="/images/ship__icon.png" alt=""> Лунная Соната
+                            </div>
+                            <div class="cruise__dates">
+                                <div>
+                                    <div class="depature__gray">Отправление</div>
+                                    <div class="depature__date">22 июн 2022</div>
+                                    <div class="depature__time">пятница, 9:30</div>
+                                </div>
+                                <div class="cruise__days__nights">
+                                    <div class="cruise__days">3 дня</div>
+                                    <img src="/images/cruise__days__arrow.png" alt="" style="display: block;">
+                                    <div class="cruise__nights">2 ночи</div>
+                                </div>
+                                <div>
+                                    <div class="depature__gray">Прибытие</div>
+                                    <div class="depature__date">24 июн 2022</div>
+                                    <div class="depature__time">воскресенье, 19:30</div>
+                                </div>
+                            </div>
+                            <div class="cruise__route">
+                                <b>Москва</b> – Калязин – <b>Ярославль</b> – Нижний Новгород – Казань – <b>Чебоксары</b>
+                                –
+                                Козьмодемьянск – Нижний Новгород – Чкаловск – <b>Кострома</b> – Дубна – <b>Москва</b>
+                            </div>
+                            <div class="cruise__share">
+                                <img src="/images/cruise__share.png" alt="" style="display: block;">
+                            </div>
+                            <div class="cruise__suggestions">
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__1.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__2.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__3.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__4.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__5.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__6.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__7.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__8.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__9.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top__right__block">
+                            <div class="cruise__price">
+                                от 20990 ₽/чел.<img src="/images/cruise__bonus__klk__question.png" alt=""
+                                    style="margin-left:8px;">
+                            </div>
+                            <div class="cruise__bonus__klk">
+                                <img src="/images/cruise__bonus__klk__gift.png" alt="" style="margin-right:4px;">Вы
+                                получите 1000 баллов КЛК
+                            </div>
+                            <div class="cruise__places__left left__red">
+                                осталось <span>3</span> места
+                            </div>
+                            <div class="cruise__btn">
+                                Подробности<br>
+                                и бронирование
+                            </div>
+                        </div>
+                        <div class="bottom__block">
+                            <div class="cruise__category__cabin__title">
+                                <div>КАТЕГОРИЯ</div>
+                                <div>СВОБ. МЕСТ</div>
+                                <div>РУБ.\ЧЕЛ.</div>
+                            </div>
+                            <div class="cruise__categories__cabins">
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ship__cruise list__view">
+                        <div class="top__left__block">
+                            <div class="cruise__name">
+                                «Волжские жемчужины и река Сура»
+                            </div>
+                            <div class="ship__name">
+                                <img src="/images/ship__icon.png" alt=""> Лунная Соната
+                            </div>
+                            <div class="cruise__dates">
+                                <div>
+                                    <div class="depature__gray">Отправление</div>
+                                    <div class="depature__date">22 июн 2022</div>
+                                    <div class="depature__time">пятница, 9:30</div>
+                                </div>
+                                <div class="cruise__days__nights">
+                                    <div class="cruise__days">3 дня</div>
+                                    <img src="/images/cruise__days__arrow.png" alt="" style="display: block;">
+                                    <div class="cruise__nights">2 ночи</div>
+                                </div>
+                                <div>
+                                    <div class="depature__gray">Прибытие</div>
+                                    <div class="depature__date">24 июн 2022</div>
+                                    <div class="depature__time">воскресенье, 19:30</div>
+                                </div>
+                            </div>
+                            <div class="cruise__route">
+                                <b>Москва</b> – Калязин – <b>Ярославль</b> – Нижний Новгород – Казань – <b>Чебоксары</b>
+                                –
+                                Козьмодемьянск – Нижний Новгород – Чкаловск – <b>Кострома</b> – Дубна – <b>Москва</b>
+                            </div>
+                            <div class="cruise__share">
+                                <img src="/images/cruise__share.png" alt="" style="display: block;">
+                            </div>
+                            <div class="cruise__suggestions">
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__1.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__2.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__3.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__4.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__5.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__6.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__7.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__8.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__9.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top__right__block">
+                            <div class="cruise__price">
+                                от 20990 ₽/чел.<img src="/images/cruise__bonus__klk__question.png" alt=""
+                                    style="margin-left:8px;">
+                            </div>
+                            <div class="cruise__bonus__klk">
+                                <img src="/images/cruise__bonus__klk__gift.png" alt="" style="margin-right:4px;">Вы
+                                получите 1000 баллов КЛК
+                            </div>
+                            <div class="cruise__places__left left__red">
+                                осталось <span>3</span> места
+                            </div>
+                            <div class="cruise__btn">
+                                Подробности<br>
+                                и бронирование
+                            </div>
+                        </div>
+                        <div class="bottom__block">
+                            <div class="cruise__category__cabin__title">
+                                <div>КАТЕГОРИЯ</div>
+                                <div>СВОБ. МЕСТ</div>
+                                <div>РУБ.\ЧЕЛ.</div>
+                            </div>
+                            <div class="cruise__categories__cabins">
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ship__cruise list__view">
+                        <div class="top__left__block">
+                            <div class="cruise__name">
+                                «Волжские жемчужины и река Сура»
+                            </div>
+                            <div class="ship__name">
+                                <img src="/images/ship__icon.png" alt=""> Лунная Соната
+                            </div>
+                            <div class="cruise__dates">
+                                <div>
+                                    <div class="depature__gray">Отправление</div>
+                                    <div class="depature__date">22 июн 2022</div>
+                                    <div class="depature__time">пятница, 9:30</div>
+                                </div>
+                                <div class="cruise__days__nights">
+                                    <div class="cruise__days">3 дня</div>
+                                    <img src="/images/cruise__days__arrow.png" alt="" style="display: block;">
+                                    <div class="cruise__nights">2 ночи</div>
+                                </div>
+                                <div>
+                                    <div class="depature__gray">Прибытие</div>
+                                    <div class="depature__date">24 июн 2022</div>
+                                    <div class="depature__time">воскресенье, 19:30</div>
+                                </div>
+                            </div>
+                            <div class="cruise__route">
+                                <b>Москва</b> – Калязин – <b>Ярославль</b> – Нижний Новгород – Казань – <b>Чебоксары</b>
+                                –
+                                Козьмодемьянск – Нижний Новгород – Чкаловск – <b>Кострома</b> – Дубна – <b>Москва</b>
+                            </div>
+                            <div class="cruise__share">
+                                <img src="/images/cruise__share.png" alt="" style="display: block;">
+                            </div>
+                            <div class="cruise__suggestions">
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__1.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__2.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__3.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__4.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__5.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__6.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__7.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__8.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__9.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top__right__block">
+                            <div class="cruise__price">
+                                от 20990 ₽/чел.<img src="/images/cruise__bonus__klk__question.png" alt=""
+                                    style="margin-left:8px;">
+                            </div>
+                            <div class="cruise__bonus__klk">
+                                <img src="/images/cruise__bonus__klk__gift.png" alt="" style="margin-right:4px;">Вы
+                                получите 1000 баллов КЛК
+                            </div>
+                            <div class="cruise__places__left left__red">
+                                осталось <span>3</span> места
+                            </div>
+                            <div class="cruise__btn">
+                                Подробности<br>
+                                и бронирование
+                            </div>
+                        </div>
+                        <div class="bottom__block">
+                            <div class="cruise__category__cabin__title">
+                                <div>КАТЕГОРИЯ</div>
+                                <div>СВОБ. МЕСТ</div>
+                                <div>РУБ.\ЧЕЛ.</div>
+                            </div>
+                            <div class="cruise__categories__cabins">
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ship__cruise list__view">
+                        <div class="top__left__block">
+                            <div class="cruise__name">
+                                «Волжские жемчужины и река Сура»
+                            </div>
+                            <div class="ship__name">
+                                <img src="/images/ship__icon.png" alt=""> Лунная Соната
+                            </div>
+                            <div class="cruise__dates">
+                                <div>
+                                    <div class="depature__gray">Отправление</div>
+                                    <div class="depature__date">22 июн 2022</div>
+                                    <div class="depature__time">пятница, 9:30</div>
+                                </div>
+                                <div class="cruise__days__nights">
+                                    <div class="cruise__days">3 дня</div>
+                                    <img src="/images/cruise__days__arrow.png" alt="" style="display: block;">
+                                    <div class="cruise__nights">2 ночи</div>
+                                </div>
+                                <div>
+                                    <div class="depature__gray">Прибытие</div>
+                                    <div class="depature__date">24 июн 2022</div>
+                                    <div class="depature__time">воскресенье, 19:30</div>
+                                </div>
+                            </div>
+                            <div class="cruise__route">
+                                <b>Москва</b> – Калязин – <b>Ярославль</b> – Нижний Новгород – Казань – <b>Чебоксары</b>
+                                –
+                                Козьмодемьянск – Нижний Новгород – Чкаловск – <b>Кострома</b> – Дубна – <b>Москва</b>
+                            </div>
+                            <div class="cruise__share">
+                                <img src="/images/cruise__share.png" alt="" style="display: block;">
+                            </div>
+                            <div class="cruise__suggestions">
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__1.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__2.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__3.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__4.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__5.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__6.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__7.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__8.png" alt="">
+                                </div>
+                                <div class="cruise__sugg__el">
+                                    <img src="/images/cruise__sugg__9.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top__right__block">
+                            <div class="cruise__price">
+                                от 20990 ₽/чел.<img src="/images/cruise__bonus__klk__question.png" alt=""
+                                    style="margin-left:8px;">
+                            </div>
+                            <div class="cruise__bonus__klk">
+                                <img src="/images/cruise__bonus__klk__gift.png" alt="" style="margin-right:4px;">Вы
+                                получите 1000 баллов КЛК
+                            </div>
+                            <div class="cruise__places__left left__red">
+                                осталось <span>3</span> места
+                            </div>
+                            <div class="cruise__btn">
+                                Подробности<br>
+                                и бронирование
+                            </div>
+                        </div>
+                        <div class="bottom__block">
+                            <div class="cruise__category__cabin__title">
+                                <div>КАТЕГОРИЯ</div>
+                                <div>СВОБ. МЕСТ</div>
+                                <div>РУБ.\ЧЕЛ.</div>
+                            </div>
+                            <div class="cruise__categories__cabins">
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                                <div class="cruise__category__el">
+                                    <div class="cruise__category__el__name">Люкс с балконом</div>
+                                    <div class="cruise__category__el__places">по запросу</div>
+                                    <div class="cruise__category__el__price">74 790 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ship__cruise card__view">
                         <div class="cruise__el__img" style="background-image: url('/images/cruise__img.png');">
                             <div class="cruise__places__left left__red">
                                 осталось<br><span>3</span> места
                             </div>
                         </div>
-                        <div class="cruise__name">
+                        <div class="cruise__name ">
                             «Волжские жемчужины и река Сура»
                         </div>
                         <div class="cruise__ship">
@@ -1214,179 +1816,13 @@
                             Подробности и бронирование
                         </div>
                     </div>
-                    <div class="ship__cruise">
-                        <div class="cruise__el__img" style="background-image: url('/images/cruise__img.png');">
-                            <div class="cruise__places__left left__yellow">
-                                осталось<br><span>12</span> мест
-                            </div>
-                        </div>
-                        <div class="cruise__name">
-                            «Волжские жемчужины и река Сура»
-                        </div>
-                        <div class="cruise__ship">
-                            теплоход: «Лунная Соната»
-                        </div>
-                        <div class="cruise__route">
-                            <b>Москва</b> – Калязин – <b>Ярославль</b> – Нижний Новгород – Казань – <b>Чебоксары</b> –
-                            Козьмодемьянск – Нижний Новгород – Чкаловск – <b>Кострома</b> – Дубна – <b>Москва</b>
-                        </div>
-                        <div style="display: flex;">
-                            <div class="cruise__dates">
-                                13 сен — 26 сен 2023
-                            </div>
-                            <div class="cruise__days">
-                                (13 дней/12 ночей)
-                            </div>
-                            <div class="cruise__share">
-                                <img src="/images/cruise__share.png" alt="">
-                            </div>
-                        </div>
-                        <div class="cruise__price">
-                            от 20990 ₽/чел.
-                        </div>
-                        <div class="cruise__bonus__klk">
-                            <img src="/images/cruise__bonus__klk__gift.png" alt="">
-                            <div>&nbsp;Вы получите 1000 баллов КЛК&nbsp;</div><img
-                                src="/images/cruise__bonus__klk__question.png" alt="">
-                        </div>
-                        <div class="cruise__suggestions">
-                            <div class="cruise__sugg__el">
-                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__1.png" alt="">
-                                <div class="cruise__sugg__desc">
-                                    «Мюзик Холл»
-                                </div>
-                            </div>
-                            <div class="cruise__sugg__el">
-                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__2.png" alt="">
-                                <div class="cruise__sugg__desc">
-                                    «Мюзик Холл»
-                                </div>
-                            </div>
-                            <div class="cruise__sugg__el">
-                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__3.png" alt="">
-                                <div class="cruise__sugg__desc">
-                                    «Мюзик Холл»
-                                </div>
-                            </div>
-                            <div class="cruise__sugg__el">
-                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__4.png" alt="">
-                                <div class="cruise__sugg__desc">
-                                    «Мюзик Холл»
-                                </div>
-                            </div>
-                            <div class="cruise__sugg__el">
-                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__5.png" alt="">
-                                <div class="cruise__sugg__desc">
-                                    «Мюзик Холл»
-                                </div>
-                            </div>
-                            <div class="cruise__sugg__el">
-                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__6.png" alt="">
-                                <div class="cruise__sugg__desc">
-                                    «Мюзик Холл»
-                                </div>
-                            </div>
-                            <div class="cruise__sugg__el">
-                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__7.png" alt="">
-                                <div class="cruise__sugg__desc">
-                                    «Мюзик Холл»
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cruise__btn">
-                            Подробности и бронирование
-                        </div>
-                    </div>
-                    <div class="ship__cruise">
-                        <div class="cruise__el__img" style="background-image: url('/images/cruise__img.png');">
-                            <div class="cruise__places__left left__green">
-                                осталось<br><span>24</span> места
-                            </div>
-                        </div>
-                        <div class="cruise__name">
-                            «Волжские жемчужины и река Сура»
-                        </div>
-                        <div class="cruise__ship">
-                            теплоход: «Лунная Соната»
-                        </div>
-                        <div class="cruise__route">
-                            <b>Москва</b> – Калязин – <b>Ярославль</b> – Нижний Новгород – Казань – <b>Чебоксары</b> –
-                            Козьмодемьянск – Нижний Новгород – Чкаловск – <b>Кострома</b> – Дубна – <b>Москва</b>
-                        </div>
-                        <div style="display: flex;">
-                            <div class="cruise__dates">
-                                13 сен — 26 сен 2023
-                            </div>
-                            <div class="cruise__days">
-                                (13 дней/12 ночей)
-                            </div>
-                            <div class="cruise__share">
-                                <img src="/images/cruise__share.png" alt="">
-                            </div>
-                        </div>
-                        <div class="cruise__price">
-                            от 20990 ₽/чел.
-                        </div>
-                        <div class="cruise__bonus__klk">
-                            <img src="/images/cruise__bonus__klk__gift.png" alt="">
-                            <div>&nbsp;Вы получите 1000 баллов КЛК&nbsp;</div><img
-                                src="/images/cruise__bonus__klk__question.png" alt="">
-                        </div>
-                        <div class="cruise__suggestions">
-                            <div class="cruise__sugg__el">
-                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__1.png" alt="">
-                                <div class="cruise__sugg__desc">
-                                    «Мюзик Холл»
-                                </div>
-                            </div>
-                            <div class="cruise__sugg__el">
-                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__2.png" alt="">
-                                <div class="cruise__sugg__desc">
-                                    «Мюзик Холл»
-                                </div>
-                            </div>
-                            <div class="cruise__sugg__el">
-                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__3.png" alt="">
-                                <div class="cruise__sugg__desc">
-                                    «Мюзик Холл»
-                                </div>
-                            </div>
-                            <div class="cruise__sugg__el">
-                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__4.png" alt="">
-                                <div class="cruise__sugg__desc">
-                                    «Мюзик Холл»
-                                </div>
-                            </div>
-                            <div class="cruise__sugg__el">
-                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__5.png" alt="">
-                                <div class="cruise__sugg__desc">
-                                    «Мюзик Холл»
-                                </div>
-                            </div>
-                            <div class="cruise__sugg__el">
-                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__6.png" alt="">
-                                <div class="cruise__sugg__desc">
-                                    «Мюзик Холл»
-                                </div>
-                            </div>
-                            <div class="cruise__sugg__el">
-                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__7.png" alt="">
-                                <div class="cruise__sugg__desc">
-                                    «Мюзик Холл»
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cruise__btn">
-                            Подробности и бронирование
-                        </div>
-                    </div>
-                    <div class="ship__cruise">
+                    <div class="ship__cruise card__view">
                         <div class="cruise__el__img" style="background-image: url('/images/cruise__img.png');">
                             <div class="cruise__places__left left__red">
                                 осталось<br><span>3</span> места
                             </div>
                         </div>
-                        <div class="cruise__name">
+                        <div class="cruise__name ">
                             «Волжские жемчужины и река Сура»
                         </div>
                         <div class="cruise__ship">
@@ -1463,13 +1899,13 @@
                             Подробности и бронирование
                         </div>
                     </div>
-                    <div class="ship__cruise">
+                    <div class="ship__cruise card__view">
                         <div class="cruise__el__img" style="background-image: url('/images/cruise__img.png');">
                             <div class="cruise__places__left left__red">
                                 осталось<br><span>3</span> места
                             </div>
                         </div>
-                        <div class="cruise__name">
+                        <div class="cruise__name ">
                             «Волжские жемчужины и река Сура»
                         </div>
                         <div class="cruise__ship">
@@ -1546,9 +1982,255 @@
                             Подробности и бронирование
                         </div>
                     </div>
-
-
-
+                    <div class="ship__cruise card__view">
+                        <div class="cruise__el__img" style="background-image: url('/images/cruise__img.png');">
+                            <div class="cruise__places__left left__red">
+                                осталось<br><span>3</span> места
+                            </div>
+                        </div>
+                        <div class="cruise__name ">
+                            «Волжские жемчужины и река Сура»
+                        </div>
+                        <div class="cruise__ship">
+                            теплоход: «Лунная Соната»
+                        </div>
+                        <div class="cruise__route">
+                            <b>Москва</b> – Калязин – <b>Ярославль</b> – Нижний Новгород – Казань – <b>Чебоксары</b> –
+                            Козьмодемьянск – Нижний Новгород – Чкаловск – <b>Кострома</b> – Дубна – <b>Москва</b>
+                        </div>
+                        <div style="display: flex;">
+                            <div class="cruise__dates">
+                                13 сен — 26 сен 2023
+                            </div>
+                            <div class="cruise__days">
+                                (13 дней/12 ночей)
+                            </div>
+                            <div class="cruise__share">
+                                <img src="/images/cruise__share.png" alt="">
+                            </div>
+                        </div>
+                        <div class="cruise__price">
+                            от 20990 ₽/чел.
+                        </div>
+                        <div class="cruise__bonus__klk">
+                            <img src="/images/cruise__bonus__klk__gift.png" alt="">
+                            <div>&nbsp;Вы получите 1000 баллов КЛК&nbsp;</div><img
+                                src="/images/cruise__bonus__klk__question.png" alt="">
+                        </div>
+                        <div class="cruise__suggestions">
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__1.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__2.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__3.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__4.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__5.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__6.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__7.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cruise__btn">
+                            Подробности и бронирование
+                        </div>
+                    </div>
+                    <div class="ship__cruise card__view">
+                        <div class="cruise__el__img" style="background-image: url('/images/cruise__img.png');">
+                            <div class="cruise__places__left left__red">
+                                осталось<br><span>3</span> места
+                            </div>
+                        </div>
+                        <div class="cruise__name ">
+                            «Волжские жемчужины и река Сура»
+                        </div>
+                        <div class="cruise__ship">
+                            теплоход: «Лунная Соната»
+                        </div>
+                        <div class="cruise__route">
+                            <b>Москва</b> – Калязин – <b>Ярославль</b> – Нижний Новгород – Казань – <b>Чебоксары</b> –
+                            Козьмодемьянск – Нижний Новгород – Чкаловск – <b>Кострома</b> – Дубна – <b>Москва</b>
+                        </div>
+                        <div style="display: flex;">
+                            <div class="cruise__dates">
+                                13 сен — 26 сен 2023
+                            </div>
+                            <div class="cruise__days">
+                                (13 дней/12 ночей)
+                            </div>
+                            <div class="cruise__share">
+                                <img src="/images/cruise__share.png" alt="">
+                            </div>
+                        </div>
+                        <div class="cruise__price">
+                            от 20990 ₽/чел.
+                        </div>
+                        <div class="cruise__bonus__klk">
+                            <img src="/images/cruise__bonus__klk__gift.png" alt="">
+                            <div>&nbsp;Вы получите 1000 баллов КЛК&nbsp;</div><img
+                                src="/images/cruise__bonus__klk__question.png" alt="">
+                        </div>
+                        <div class="cruise__suggestions">
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__1.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__2.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__3.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__4.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__5.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__6.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__7.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cruise__btn">
+                            Подробности и бронирование
+                        </div>
+                    </div>
+                    <div class="ship__cruise card__view">
+                        <div class="cruise__el__img" style="background-image: url('/images/cruise__img.png');">
+                            <div class="cruise__places__left left__red">
+                                осталось<br><span>3</span> места
+                            </div>
+                        </div>
+                        <div class="cruise__name ">
+                            «Волжские жемчужины и река Сура»
+                        </div>
+                        <div class="cruise__ship">
+                            теплоход: «Лунная Соната»
+                        </div>
+                        <div class="cruise__route">
+                            <b>Москва</b> – Калязин – <b>Ярославль</b> – Нижний Новгород – Казань – <b>Чебоксары</b> –
+                            Козьмодемьянск – Нижний Новгород – Чкаловск – <b>Кострома</b> – Дубна – <b>Москва</b>
+                        </div>
+                        <div style="display: flex;">
+                            <div class="cruise__dates">
+                                13 сен — 26 сен 2023
+                            </div>
+                            <div class="cruise__days">
+                                (13 дней/12 ночей)
+                            </div>
+                            <div class="cruise__share">
+                                <img src="/images/cruise__share.png" alt="">
+                            </div>
+                        </div>
+                        <div class="cruise__price">
+                            от 20990 ₽/чел.
+                        </div>
+                        <div class="cruise__bonus__klk">
+                            <img src="/images/cruise__bonus__klk__gift.png" alt="">
+                            <div>&nbsp;Вы получите 1000 баллов КЛК&nbsp;</div><img
+                                src="/images/cruise__bonus__klk__question.png" alt="">
+                        </div>
+                        <div class="cruise__suggestions">
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__1.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__2.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__3.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__4.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__5.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__6.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                            <div class="cruise__sugg__el">
+                                <img class="cruise__sugg__icon" src="/images/cruise__sugg__7.png" alt="">
+                                <div class="cruise__sugg__desc">
+                                    «Мюзик Холл»
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cruise__btn">
+                            Подробности и бронирование
+                        </div>
+                    </div>
                 </div>
             </div>
             <div>
