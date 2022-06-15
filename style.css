@@ -944,6 +944,7 @@ html {
   grid-area: cruise-sugg;
   display: flex;
   margin-top: 11px;
+  flex-wrap: wrap;
 }
 .ship__cruise.list__view .cruise__suggestions img {
   margin-right: 27px;
