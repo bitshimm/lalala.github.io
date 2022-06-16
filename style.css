@@ -29,6 +29,13 @@ html {
   align-items: center;
   flex-wrap: wrap;
 }
+.navbar__fixed__el {
+  display: flex;
+}
+.navbar__fixed__el img {
+  display: block;
+  margin: auto;
+}
 .nav__mediabuttons {
   display: flex;
   gap: 6px;
@@ -109,7 +116,7 @@ html {
   padding: 14px 0;
   position: sticky;
   background-color: #fff;
-  top: 34px;
+  top: 30px;
   z-index: 4;
 }
 .ship__anchors a {
@@ -388,7 +395,7 @@ html {
 .ship__cabin__types__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 100%;
+  gap: 0 73px;
 }
 .ship__cabin__types__list .ship__cabin__type__el {
   display: flex;
@@ -748,14 +755,14 @@ html {
   gap: 24px 15px;
   justify-items: center;
 }
-.ship__cruise.card__view {
+.ship__cruise__card {
   padding: 16px;
   box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
     0px 10px 32px -4px rgba(24, 39, 75, 0.1);
   font-family: "Open Sans";
   font-style: normal;
 }
-.ship__cruise.card__view .cruise__el__img {
+.ship__cruise__card .cruise__el__img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -763,7 +770,7 @@ html {
   margin-bottom: 12px;
   position: relative;
 }
-.ship__cruise.card__view .cruise__places__left {
+.ship__cruise__card .cruise__places__left {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
@@ -775,41 +782,41 @@ html {
   border-radius: 0px 4px 0px 0px;
   color: #fff;
 }
-.ship__cruise.card__view .cruise__places__left span {
+.ship__cruise__card .cruise__places__left span {
   font-size: 16px;
 }
-.ship__cruise.card__view .cruise__name {
+.ship__cruise__card .cruise__name {
   font-weight: 700;
   font-size: 16px;
   color: #0071ad;
   margin-bottom: 2px;
 }
-.ship__cruise.card__view .cruise__ship {
+.ship__cruise__card .cruise__ship {
   font-weight: 400;
   font-size: 16px;
   color: #0071ad;
   margin-bottom: 8px;
 }
-.ship__cruise.card__view .cruise__route {
+.ship__cruise__card .cruise__route {
   font-size: 13px;
   color: #343434;
   margin-bottom: 9.5px;
 }
-.ship__cruise.card__view .cruise__dates {
+.ship__cruise__card .cruise__dates {
   font-weight: 700;
   font-size: 14px;
   margin-right: 4px;
   color: #0071ad;
 }
-.ship__cruise.card__view .cruise__days {
+.ship__cruise__card .cruise__days {
   font-weight: 400;
   font-size: 14px;
   color: #0071ad;
 }
-.ship__cruise.card__view .cruise__share {
+.ship__cruise__card .cruise__share {
   margin-left: auto;
 }
-.ship__cruise.card__view .cruise__price {
+.ship__cruise__card .cruise__price {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -818,31 +825,31 @@ html {
   color: #242424;
   margin-bottom: 6px;
 }
-.ship__cruise.card__view .cruise__bonus__klk {
+.ship__cruise__card .cruise__bonus__klk {
   display: flex;
   font-weight: 400;
   font-size: 12px;
   color: #919191;
   margin-bottom: 12px;
 }
-.ship__cruise.card__view .cruise__bonus__klk img {
+.ship__cruise__card .cruise__bonus__klk img {
   display: block;
   margin: auto 0;
 }
-.ship__cruise.card__view .cruise__suggestions {
+.ship__cruise__card .cruise__suggestions {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
   gap: 16px 28px;
   margin: 18px 0;
 }
-.ship__cruise.card__view .cruise__sugg__el {
+.ship__cruise__card .cruise__sugg__el {
   height: 36px;
   width: 36px;
 }
-.ship__cruise.card__view .cruise__sugg__desc {
+.ship__cruise__card .cruise__sugg__desc {
   display: none;
 }
-.ship__cruise.card__view .cruise__btn {
+.ship__cruise__card .cruise__btn {
   font-weight: 700;
   font-size: 14px;
   text-align: center;
@@ -862,7 +869,7 @@ html {
   display: grid;
   grid-template-columns: 1fr;
 }
-.ship__cruise.list__view {
+.ship__cruise__list {
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 14px 0 28px 42px;
@@ -870,7 +877,7 @@ html {
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
-.ship__cruise.list__view .top__left__block {
+.ship__cruise__list .top__left__block {
   width: 73.583%;
   display: grid;
   grid-template-columns: repeat(4, 25%);
@@ -881,13 +888,13 @@ html {
     "cruise-share cruise-sugg cruise-sugg cruise-sugg";
   gap: 13px 0;
 }
-.ship__cruise.list__view .cruise__name {
+.ship__cruise__list .cruise__name {
   grid-area: cruise-name;
   font-weight: 700;
   font-size: 20px;
   color: #0071ad;
 }
-.ship__cruise.list__view .ship__name {
+.ship__cruise__list .ship__name {
   grid-area: ship-name;
   font-weight: 400;
   font-size: 16px;
@@ -898,29 +905,29 @@ html {
   align-items: center;
   text-transform: none;
 }
-.ship__cruise.list__view .ship__name img {
+.ship__cruise__list .ship__name img {
   margin-right: 6px;
 }
-.ship__cruise.list__view .cruise__dates {
+.ship__cruise__list .cruise__dates {
   grid-area: cruise-dates;
   display: flex;
   font-weight: 400;
   font-size: 14px;
   color: #242424;
 }
-.ship__cruise.list__view .cruise__dates > div {
+.ship__cruise__list .cruise__dates > div {
   margin-right: 18px;
 }
-.ship__cruise.list__view .depature__gray {
+.ship__cruise__list .depature__gray {
   font-size: 12px;
   color: #919191;
   margin-bottom: 8px;
 }
-.ship__cruise.list__view .depature__date {
+.ship__cruise__list .depature__date {
   font-weight: 700;
   font-size: 16px;
 }
-.ship__cruise.list__view .cruise__days__nights {
+.ship__cruise__list .cruise__days__nights {
   color: #7e7e7e;
   line-height: 10px;
   display: flex;
@@ -928,34 +935,34 @@ html {
   justify-content: flex-end;
   align-items: center;
 }
-.ship__cruise.list__view .cruise__route {
+.ship__cruise__list .cruise__route {
   grid-area: cruise-route;
   text-align: center;
   font-size: 14px;
   color: #343434;
 }
-.ship__cruise.list__view .cruise__share {
+.ship__cruise__list .cruise__share {
   grid-area: cruise-share;
   margin-top: 11px;
   display: flex;
   align-items: center;
 }
-.ship__cruise.list__view .cruise__suggestions {
+.ship__cruise__list .cruise__suggestions {
   grid-area: cruise-sugg;
   display: flex;
   margin-top: 11px;
   flex-wrap: wrap;
 }
-.ship__cruise.list__view .cruise__suggestions img {
+.ship__cruise__list .cruise__suggestions img {
   margin-right: 27px;
 }
-.ship__cruise.list__view .top__right__block {
+.ship__cruise__list .top__right__block {
   margin-left: auto;
 }
-.ship__cruise.list__view .top__right__block img {
+.ship__cruise__list .top__right__block img {
   display: block;
 }
-.ship__cruise.list__view .cruise__price {
+.ship__cruise__list .cruise__price {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -966,7 +973,7 @@ html {
   margin-bottom: 8px;
   margin-right: 18px;
 }
-.ship__cruise.list__view .cruise__bonus__klk {
+.ship__cruise__list .cruise__bonus__klk {
   font-weight: 400;
   font-size: 12px;
   display: flex;
@@ -975,7 +982,7 @@ html {
   margin-right: 18px;
   color: #919191;
 }
-.ship__cruise.list__view .cruise__places__left {
+.ship__cruise__list .cruise__places__left {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
@@ -984,10 +991,10 @@ html {
   color: #fff;
   margin-bottom: 13px;
 }
-.ship__cruise.list__view .cruise__places__left span {
+.ship__cruise__list .cruise__places__left span {
   font-size: 16px;
 }
-.ship__cruise.list__view .cruise__btn {
+.ship__cruise__list .cruise__btn {
   text-align: center;
   background: #0071ad;
   border-radius: 4px;
@@ -999,28 +1006,26 @@ html {
   line-height: 16px;
   cursor: pointer;
 }
-.ship__cruise.list__view .bottom__block {
+.ship__cruise__list .bottom__block {
   width: 100%;
   margin-top: 25px;
   display: flex;
 }
-.ship__cruise.list__view .cruise__category__cabin__title {
+.ship__cruise__list .cruise__category__cabin__title {
   font-weight: 400;
   font-size: 12px;
   margin-right: 21px;
   color: #0071ad;
   width: 100px;
 }
-.ship__cruise.list__view
-  .cruise__category__cabin__title
-  > div:not(:last-child) {
+.ship__cruise__list .cruise__category__cabin__title > div:not(:last-child) {
   margin-bottom: 12px;
 }
-.ship__cruise.list__view .cruise__categories__cabins {
+.ship__cruise__list .cruise__categories__cabins {
   display: flex;
   flex-wrap: wrap;
 }
-.ship__cruise.list__view .cruise__category__el {
+.ship__cruise__list .cruise__category__el {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1032,26 +1037,14 @@ html {
   height: 78px;
   margin-bottom: 10px;
 }
-.ship__cruise.list__view .cruise__category__el__places {
+.ship__cruise__list .cruise__category__el__places {
   color: #0071ad;
 }
-.ship__cruise.list__view .cruise__category__el__price {
+.ship__cruise__list .cruise__category__el__price {
   font-weight: 700;
 }
 /* LIST VIEW */
 
-.ship__cruises.card__view .ship__cruise.card__view {
-  display: block;
-}
-.ship__cruises.card__view .ship__cruise.list__view {
-  display: none;
-}
-.ship__cruises.list__view .ship__cruise.list__view {
-  display: flex;
-}
-.ship__cruises.list__view .ship__cruise.card__view {
-  display: none;
-}
 .cruise__places__left.left__red {
   background: #f23200;
 }
@@ -1060,4 +1053,113 @@ html {
 }
 .cruise__places__left.left__green {
   background: #3bb900;
+}
+.ship__cruise__list:nth-child(n + 6) {
+  display: none;
+}
+.ship__cruise__card:nth-child(n + 6) {
+  display: none;
+}
+.ship__cruises__pag {
+  cursor: pointer;
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  display: flex;
+  justify-self: center;
+}
+.ship__cruises__pag img {
+  display: block;
+  margin: auto 0;
+}
+.ship__recommendations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 16px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.ship__recommendation__el {
+  padding: 16px 17px 20px 17px;
+  box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
+    0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.ship__recommendation__el img {
+  width: 100%;
+}
+.recommendation__title {
+  margin: 16px 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #242424;
+}
+.recommendation__btn {
+  text-align: center;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  background: #0071ad;
+  border-radius: 4px;
+  padding: 14px 0;
+}
+.ship__recommendations .slick-slide {
+  margin: 0 8px;
+}
+.ship__recommendations .slick-list {
+  margin: 0 -8px !important;
+}
+.ship__recommendations .slick-track {
+  padding-bottom: 48px;
+}
+.ship__recommendations .slick__prev {
+  left: -70px;
+  cursor: pointer;
+}
+.ship__recommendations .slick__next {
+  right: -70px;
+  cursor: pointer;
+}
+.footer__wrapper {
+  width: 100%;
+  background: #0071ad;
+}
+.footer__content {
+  width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 20% 20% 30% 30%;
+  grid-template-areas:
+    "footer-logo footer-title footer-form footer-form"
+    "footer-contacts footer-links1 footer-links2 footer-social";
+  gap: 0 60px;
+  color: #fff;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+}
+.footer__content a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer__logo {
+  grid-area: footer-logo;
+}
+.footer__title {
+  grid-area: footer-title;
+  font-weight: 600;
+  align-self: center;
+}
+.footer__form {
+  grid-area: footer-form;
 }

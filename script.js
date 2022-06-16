@@ -48,6 +48,32 @@ $(function () {
     nextArrow:
       '<img class="slick__next" src="/images/slick__arrow__right.png">',
   });
+  $(".ship__recommendations").slick({
+    lazyLoad: "ondemand",
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow:
+      '<img class="slick__prev" src="/images/ship__gallery__arrow_l.png">',
+    nextArrow:
+      '<img class="slick__next" src="/images/ship__gallery__arrow_r.png">',
+    responsive: [
+      {
+        breakpoint: 940,
+        settings: {
+          arrows: false,
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 540,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
   $(".cabin__type__card__slide__title").click(function () {
     if ($(this).hasClass("active")) {
       $(this)
@@ -123,30 +149,26 @@ $(function () {
   $(".ship__depature__dropdown__active").click(function () {
     $(this).closest(".ship__depature__list").toggleClass("active");
   });
+  function ActiveCruiseView() {
+    let activeView = $(".cruise__type__view__active").attr("data-active-view");
+    if (activeView == "list") {
+      $(".ship__cruise__card").hide();
+      $(".ship__cruise__list").css("display", "flex");
+      $(".ship__cruises").removeClass("card__view").addClass("list__view");
+    } else {
+      $(".ship__cruise__list").hide();
+      $(".ship__cruise__card").show();
+      $(".ship__cruises").removeClass("list__view").addClass("card__view");
+    }
+  }
+  ActiveCruiseView();
   $(".cruise__type__view__list li").click(function () {
     let SelectedType = $(this).attr("data-type-view");
-    if (SelectedType == "list") {
-      $(".ship__cruises").removeClass("card__view").addClass("list__view");
-      $('.cruise__type__view__list li[data-type-view="list"]').css(
-        "display",
-        "none"
-      );
-      $('.cruise__type__view__list li[data-type-view="card"]').css(
-        "display",
-        "block"
-      );
-      $(".cruise__type__view__active").text("Списком");
-    } else if (SelectedType == "card") {
-      $(".ship__cruises").removeClass("list__view").addClass("card__view");
-      $('.cruise__type__view__list li[data-type-view="card"]').css(
-        "display",
-        "none"
-      );
-      $('.cruise__type__view__list li[data-type-view="list"]').css(
-        "display",
-        "block"
-      );
-      $(".cruise__type__view__active").text("Сеткой");
-    }
+    $(".cruise__type__view__list li").show();
+    $(this).hide();
+    $(".cruise__type__view__active")
+      .attr("data-active-view", SelectedType)
+      .text($(this).text());
+    ActiveCruiseView();
   });
 });
