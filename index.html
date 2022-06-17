@@ -20,7 +20,9 @@
 
 </head>
 
-<body>
+
+<body style="position: relative;">
+
     <div class="navbar__fixed__top">
         <div class="navbar__fixed">
             <div class="navbar__fixed__el">
@@ -44,12 +46,42 @@
             <div class="navbar__fixed__el">
                 Для турагентств: +8 (800) 707-50-35
             </div>
-            <div class="navbar__fixed__el">
+            <div class="navbar__fixed__el login__modal__btn" style="cursor: pointer;">
                 <img src="/images/user__cabinet__icon.png" alt="">&nbsp;Личный кабинет&nbsp;<img
                     src="/images/chevron__down.png" alt="">
             </div>
             <div class="navbar__fixed__el">
                 <img src="/images/flag.png" alt="">
+            </div>
+        </div>
+        <div class="login__modal">
+            <div class="login__modal__content">
+                <div class="login__modal__close">
+                    &#9587;
+                </div>
+                <div class="login__modal__title">
+                    Вход на сайт
+                </div>
+                <form action="">
+                    <input class="login__input" type="login" placeholder="Введите ваш логин">
+                    <input class="pass__input" type="password" placeholder="Введите пароль">
+                    <div style="display: flex; justify-content: space-between; margin-top: 9px;align-items: flex-end;">
+                        <div>
+                            <a href="#">Забыли пароль?</a>
+                        </div>
+                        <div>
+                            <label for="rememberMe">Запомнить меня</label>
+                            <input type="checkbox" name="rememberMe">
+                        </div>
+                    </div>
+                    <div style="margin: 52px 0 63px 0;">
+                        <input class="btn__input" type="submit" value="Войти">
+                    </div>
+                    <div style="text-align: center; font-size:16px;">
+                        <span style="color: #343434; font-weight:700;">У вас еще нет аккаунта?</span> <a
+                            href="#">Регистрация</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

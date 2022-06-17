@@ -171,4 +171,26 @@ $(function () {
       .text($(this).text());
     ActiveCruiseView();
   });
+  $(".login__modal__btn").click(function () {
+    $(".login__modal").fadeIn();
+    return false;
+  });
+
+  $(".login__modal__close").click(function () {
+    $(this).parents(".login__modal").fadeOut();
+    return false;
+  });
+
+  $(document).keydown(function (e) {
+    if (e.keyCode === 27) {
+      e.stopPropagation();
+      $(".login__modal").fadeOut();
+    }
+  });
+
+  $(".login__modal").click(function (e) {
+    if ($(e.target).closest(".login__modal__content").length == 0) {
+      $(this).fadeOut();
+    }
+  });
 });

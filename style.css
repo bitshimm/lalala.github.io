@@ -7,6 +7,79 @@ body,
 html {
   width: 100%;
 }
+.login__modal {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+.login__modal__content {
+  position: relative;
+  top: 135px;
+  left: 0;
+  right: 0;
+  padding: 59px 76px;
+  width: 478px;
+  background: #fff;
+  border: 1px solid #4798ca;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  position: relative;
+  color: #343434;
+  margin: 0 auto;
+}
+.login__modal__close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+  font-weight: 900;
+}
+.login__modal__content a {
+  color: #4798ca;
+  letter-spacing: 0.01em;
+  text-decoration-line: ;
+}
+.login__modal__content input::placeholder {
+  color: #7e7e7e;
+}
+.login__modal__content input:focus {
+  outline: none;
+}
+.login__modal__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 90%;
+  text-align: center;
+  margin-bottom: 9px;
+}
+.login__input,
+.pass__input {
+  width: 100%;
+  border: 1px solid #4798ca;
+  border-radius: 6px;
+  padding-top: 21px;
+  padding-bottom: 22px;
+  margin-top: 20px;
+  text-align: center;
+}
+.btn__input {
+  cursor: pointer;
+  display: block;
+  padding: 21px 59px;
+  color: #fff;
+  background: #4798ca;
+  border-radius: 4px;
+  border: none;
+  margin: 0 auto;
+}
 .navbar__fixed__top {
   background-color: #4798ca;
   color: #fff;
