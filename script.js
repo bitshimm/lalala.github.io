@@ -91,25 +91,7 @@ $(function () {
         .slideDown(100);
     }
   });
-  $(document).mouseup(function (e) {
-    //элементы скрытия
-    let cabinTypes = $(".cabin__type__card__slide__content"); // тут указываем ID элемента
-    let cruiseFilterDropdown = $(".ship__depature__dropdown__active");
-    // элементы скрытия
 
-    // если клик был не по нашему блоку
-    // скрываем его
-    if (!cabinTypes.is(e.target) && cabinTypes.has(e.target).length === 0) {
-      $(".cabin__type__card__slide__title").removeClass("active");
-      cabinTypes.slideUp(100);
-    }
-    if (
-      !cruiseFilterDropdown.is(e.target) &&
-      cruiseFilterDropdown.has(e.target).length === 0
-    ) {
-      $(".ship__depature__list").removeClass("active");
-    }
-  });
   $(".cabin__types__pag").click(function () {
     if ($(this).hasClass("active")) {
       $(this)
@@ -191,6 +173,109 @@ $(function () {
   $(".login__modal").click(function (e) {
     if ($(e.target).closest(".login__modal__content").length == 0) {
       $(this).fadeOut();
+    }
+  });
+  $(".ship__cruise__list .slide__cabin__prices").click(function () {
+    $(this).toggleClass("active");
+    if ($(this).hasClass("active")) {
+      $(this)
+        .closest(".ship__cruise__list")
+        .find(".bottom__block")
+        .slideDown(200)
+        .css("display", "flex");
+    } else {
+      $(this)
+        .closest(".ship__cruise__list")
+        .find(".bottom__block")
+        .slideUp(200);
+    }
+  });
+  $(".ship__cruise__card .slide__cabin__prices").click(function () {
+    if ($(this).hasClass("active")) {
+      $(this)
+        .closest(".ship__cruise__card")
+        .find(".cruise__categories__block")
+        .fadeOut(200);
+      $(this).removeClass("active");
+    } else {
+      $(".ship__cruise__card .slide__cabin__prices").removeClass("active");
+      $(".cruise__categories__block").fadeOut(200);
+      $(this)
+        .addClass("active")
+        .closest(".ship__cruise__card")
+        .find(".cruise__categories__block")
+        .fadeIn(200)
+        .css("display", "flex");
+    }
+  });
+  $(".cruise__categories__close").click(function () {
+    $(".ship__cruise__card .slide__cabin__prices").removeClass("active");
+    $(this)
+      .closest(".ship__cruise__card")
+      .find(".cruise__categories__block")
+      .fadeOut(200);
+  });
+  $(".header__item[header-nav]").click(function () {
+    let headerNavAttr = $(this).attr("header-nav");
+    if ($(this).hasClass("active")) {
+      $(".header__slide").slideUp(100);
+      $(".header__item").removeClass("active");
+    } else {
+      $(".header__item").removeClass("active");
+      $(this).addClass("active");
+      $(".header__slide").slideUp(100);
+      $('.header__slide[header-nav="' + headerNavAttr + '"]')
+        .slideDown(100)
+        .css("display", "flex");
+    }
+  });
+  $(".header__slide .tab__btn").click(function () {
+    let headerTabAttr = $(this).attr("header-tab");
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      $(".header__slide .tab__content").fadeOut();
+    } else {
+      $(".header__slide .tab__btn").removeClass("active");
+      $(this).addClass("active");
+      $(".header__slide .tab__content").fadeOut();
+      $('.header__slide .tab__content[header-tab="' + headerTabAttr + '"]')
+        .fadeIn()
+        .css("display", "grid");
+    }
+  });
+  // $(".offices__btn").click(function () {
+  //   $(this).toggleClass("active");
+  // });
+  $(document).mouseup(function (e) {
+    //элементы скрытия
+    let officesList = $(".list__offices");
+    let officesBtn = $(".offices__btn");
+    let headerNav = $(".header__slide");
+    let cabinTypes = $(".cabin__type__card__slide__content"); // тут указываем ID элемента
+    let cruiseFilterDropdown = $(".ship__depature__dropdown__active");
+    // элементы скрытия
+
+    // если клик был не по нашему блоку
+    // скрываем его
+    if (!officesList.is(e.target) && officesList.has(e.target).length === 0) {
+      officesBtn.removeClass("active");
+    }
+    if (officesBtn.is(e.target)) {
+      officesBtn.toggleClass("active");
+    }
+    if (!headerNav.is(e.target) && headerNav.has(e.target).length === 0) {
+      $(".header__item").removeClass("active");
+      headerNav.slideUp(100);
+    }
+    if (!cabinTypes.is(e.target) && cabinTypes.has(e.target).length === 0) {
+      $(".cabin__type__card__slide__title").removeClass("active");
+      cabinTypes.slideUp(100);
+    }
+    if (
+      !cruiseFilterDropdown.is(e.target) &&
+      cruiseFilterDropdown.has(e.target).length === 0
+    ) {
+      $(".ship__depature__list").removeClass("active");
     }
   });
 });
