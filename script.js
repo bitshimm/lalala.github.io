@@ -1,4 +1,46 @@
 $(function () {
+  $(document).mouseup(function (e) {
+    //элементы скрытия
+    let officesList = $(".list__offices");
+    let officesBtn = $(".offices__btn");
+
+    let headerNav = $(".header__slide");
+    let headerItem = $(".header__item");
+
+    let cabinTypes = $(".cabin__type__card__slide__content"); // тут указываем ID элемента
+    let cruiseFilterDropdown = $(".ship__depature__dropdown__active");
+    // элементы скрытия
+
+    // если клик был не по нашему блоку или не по кнопке открывающей его
+    // скрываем его
+    if (
+      !officesList.is(e.target) &&
+      officesList.has(e.target).length === 0 &&
+      !officesBtn.is(e.target) &&
+      officesBtn.has(e.target).length === 0
+    ) {
+      officesBtn.removeClass("active");
+    }
+    if (
+      !headerNav.is(e.target) &&
+      headerNav.has(e.target).length === 0 &&
+      !headerItem.is(e.target) &&
+      headerItem.has(e.target).length === 0
+    ) {
+      $(".header__item").removeClass("active");
+      headerNav.slideUp(100);
+    }
+    if (!cabinTypes.is(e.target) && cabinTypes.has(e.target).length === 0) {
+      $(".cabin__type__card__slide__title").removeClass("active");
+      cabinTypes.slideUp(100);
+    }
+    if (
+      !cruiseFilterDropdown.is(e.target) &&
+      cruiseFilterDropdown.has(e.target).length === 0
+    ) {
+      $(".ship__depature__list").removeClass("active");
+    }
+  });
   $(".ship__services__tabs div").first().addClass("active");
   updateServicetab();
   function updateServicetab(params) {
@@ -233,49 +275,26 @@ $(function () {
     let headerTabAttr = $(this).attr("header-tab");
     if ($(this).hasClass("active")) {
       $(this).removeClass("active");
-      $(".header__slide .tab__content").fadeOut();
+      $(".header__slide .tab__content").slideUp(100);
     } else {
       $(".header__slide .tab__btn").removeClass("active");
       $(this).addClass("active");
-      $(".header__slide .tab__content").fadeOut();
-      $('.header__slide .tab__content[header-tab="' + headerTabAttr + '"]')
-        .fadeIn()
-        .css("display", "grid");
+      $(".header__slide .tab__content").slideUp(100);
+      $(
+        '.header__slide .tab__content[header-tab="' + headerTabAttr + '"]'
+      ).slideDown(100);
+      if (headerTabAttr == "other-russian-cruises") {
+        $(
+          '.header__slide .tab__content[header-tab="' + headerTabAttr + '"]'
+        ).css("display", "grid");
+      } else {
+        $(
+          '.header__slide .tab__content[header-tab="' + headerTabAttr + '"]'
+        ).css("display", "flex");
+      }
     }
   });
-  // $(".offices__btn").click(function () {
-  //   $(this).toggleClass("active");
-  // });
-  $(document).mouseup(function (e) {
-    //элементы скрытия
-    let officesList = $(".list__offices");
-    let officesBtn = $(".offices__btn");
-    let headerNav = $(".header__slide");
-    let cabinTypes = $(".cabin__type__card__slide__content"); // тут указываем ID элемента
-    let cruiseFilterDropdown = $(".ship__depature__dropdown__active");
-    // элементы скрытия
-
-    // если клик был не по нашему блоку
-    // скрываем его
-    if (!officesList.is(e.target) && officesList.has(e.target).length === 0) {
-      officesBtn.removeClass("active");
-    }
-    if (officesBtn.is(e.target)) {
-      officesBtn.toggleClass("active");
-    }
-    if (!headerNav.is(e.target) && headerNav.has(e.target).length === 0) {
-      $(".header__item").removeClass("active");
-      headerNav.slideUp(100);
-    }
-    if (!cabinTypes.is(e.target) && cabinTypes.has(e.target).length === 0) {
-      $(".cabin__type__card__slide__title").removeClass("active");
-      cabinTypes.slideUp(100);
-    }
-    if (
-      !cruiseFilterDropdown.is(e.target) &&
-      cruiseFilterDropdown.has(e.target).length === 0
-    ) {
-      $(".ship__depature__list").removeClass("active");
-    }
+  $(".offices__btn").click(function () {
+    $(this).toggleClass("active");
   });
 });
