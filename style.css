@@ -1154,6 +1154,9 @@ html {
 .cruises__styles__views {
   margin-left: auto;
 }
+.ship__cruises {
+  margin-bottom: 78px;
+}
 /* CARD VIEW */
 .ship__cruises.card__view {
   display: grid;
