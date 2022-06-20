@@ -241,7 +241,8 @@ html {
   font-family: "Open Sans";
   font-style: normal;
   display: flex;
-  z-index: 1;
+  z-index: 5;
+  text-transform: none;
 }
 .header__slide {
   width: 100%;
@@ -257,7 +258,6 @@ html {
 .about__company {
   border: 1px solid #0071ad;
   border-radius: 4px;
-  text-transform: none;
   background-color: #fff;
   padding: 9px 27px 20px 29px;
   margin-bottom: 12px;
@@ -301,7 +301,6 @@ html {
   margin-top: -3px;
 }
 .header__slide .tab__btn {
-  text-transform: none;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
@@ -376,7 +375,6 @@ html {
   color: #343434;
   height: auto;
   line-height: 24px;
-  text-transform: none;
 }
 .header__slide .tab__content a:hover {
   color: #4798ca;
@@ -432,6 +430,9 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  position: sticky;
+  top: 30px;
+  z-index: 4;
 }
 .filter__wrapper > div:not(.btn) {
   background: #ffffff;
@@ -522,8 +523,8 @@ html {
   padding: 14px 0;
   position: sticky;
   background-color: #fff;
-  top: 30px;
-  z-index: 4;
+  top: 92px;
+  z-index: 3;
 }
 .ship__anchors a {
   text-decoration: none;
