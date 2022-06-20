@@ -241,6 +241,7 @@ html {
   font-family: "Open Sans";
   font-style: normal;
   display: flex;
+  z-index: 1;
 }
 .header__slide {
   width: 100%;
@@ -286,13 +287,13 @@ html {
   content: "";
   border: solid transparent;
   position: absolute;
-  top: -13px;
+  top: -14px;
   right: 59px;
 }
 .about__company:after {
   border-bottom-color: #fff;
   border-width: 14px;
-  margin-top: -2px;
+  margin-top: -1px;
 }
 .about__company:before {
   border-bottom-color: #4798ca;
@@ -418,6 +419,71 @@ html {
   font-size: 18px;
   color: #0071ad;
   margin-bottom: 6px;
+}
+.filter__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  background: #e6f2f7;
+  padding: 6px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+.filter__wrapper > div:not(.btn) {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: relative;
+  height: 50px;
+  display: flex;
+  align-items: flex-end;
+  color: #343434;
+}
+.filter__wrapper > div:not(.btn) .filter__label {
+  font-size: 10px;
+  color: #7e7e7e;
+  position: absolute;
+  top: 6px;
+  left: 8px;
+}
+.filter__wrapper .btn {
+  text-align: center;
+  padding: 14.5px 0;
+  font-weight: 700;
+  color: #fff;
+  background: #4798ca;
+  border-radius: 4px;
+}
+.filter__wrapper .depature__city::after,
+.filter__wrapper .route::after,
+.filter__wrapper .days__count::after,
+.filter__wrapper .ship::after {
+  content: "";
+  background-image: url("/images/filter__icon__chevron.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 13.41px;
+  height: 7.29px;
+  position: absolute;
+  right: 13.29px;
+  top: 28.21px;
+}
+.filter__wrapper .depature__date::after,
+.filter__wrapper .arrival__date::after,
+.filter__wrapper .days__count::after {
+  content: "";
+  background-image: url("/images/filter__icon__calendar.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 8px;
+  top: 24px;
 }
 .sample__wrapper {
   max-width: 1440px;
@@ -1102,6 +1168,7 @@ html {
     0px 10px 32px -4px rgba(24, 39, 75, 0.1);
   font-family: "Open Sans";
   font-style: normal;
+  display: none;
 }
 .ship__cruise__card .cruise__el__img {
   background-repeat: no-repeat;
@@ -1285,9 +1352,9 @@ html {
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 14px 0 28px 42px;
-  display: flex;
   margin-bottom: 20px;
   flex-wrap: wrap;
+  display: none;
 }
 .ship__cruise__list .top__left__block {
   width: 73.583%;
@@ -1482,12 +1549,12 @@ html {
 .cruise__places__left.left__green {
   background: #3bb900;
 }
-.ship__cruise__list:nth-child(n + 6) {
+/* .ship__cruise__list:nth-child(n + 6) {
   display: none;
 }
 .ship__cruise__card:nth-child(n + 6) {
   display: none;
-}
+} */
 .ship__cruises__pag {
   cursor: pointer;
   grid-column: 1 / -1;

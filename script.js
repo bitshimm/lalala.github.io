@@ -179,10 +179,12 @@ $(function () {
       $(".ship__cruise__card").hide();
       $(".ship__cruise__list").css("display", "flex");
       $(".ship__cruises").removeClass("card__view").addClass("list__view");
+      $(".ship__cruise__list.cruise__el__pag").css("display", "none");
     } else {
       $(".ship__cruise__list").hide();
       $(".ship__cruise__card").show();
       $(".ship__cruises").removeClass("list__view").addClass("card__view");
+      $(".ship__cruise__card.cruise__el__pag").css("display", "none");
     }
   }
   ActiveCruiseView();
@@ -194,10 +196,41 @@ $(function () {
       .attr("data-active-view", SelectedType)
       .text($(this).text());
     ActiveCruiseView();
+    $(".ship__cruises__pag")
+      .removeClass("active")
+      .html(
+        'Больше круизов&nbsp;<img width="14" src="/images/chevron__down__blue.png" alt="">'
+      );
   });
   $(".login__modal__btn").click(function () {
     $(".login__modal").fadeIn();
     return false;
+  });
+  $(".ship__cruises__pag").click(function () {
+    let SelectedView = $(".cruise__type__view__active").attr(
+      "data-active-view"
+    );
+    if ($(this).hasClass("active")) {
+      $(this)
+        .removeClass("active")
+        .html(
+          'Больше круизов&nbsp;<img width="14" src="/images/chevron__down__blue.png" alt="">'
+        );
+      $(".cruise__el__pag").slideUp(100);
+    } else {
+      $(this)
+        .html(
+          'Скрыть&nbsp;<img width="14" src="/images/chevron__up__blue.png" alt="">'
+        )
+        .addClass("active");
+      if (SelectedView == "list") {
+        $(".ship__cruise__list.cruise__el__pag")
+          .slideDown(100)
+          .css("display", "flex");
+      } else {
+        $(".ship__cruise__card.cruise__el__pag").slideDown(100);
+      }
+    }
   });
 
   $(".login__modal__close").click(function () {
