@@ -6,7 +6,7 @@ $(function () {
 
     let headerNav = $(".header__slide");
     let headerItem = $(".header__item");
-
+    let cruiseCategoriesBlockCard = $(".cruise__categories__block");
     let cabinTypes = $(".cabin__type__card__slide__content"); // тут указываем ID элемента
     let cruiseFilterDropdown = $(".ship__depature__dropdown__active");
     // элементы скрытия
@@ -30,9 +30,18 @@ $(function () {
       $(".header__item").removeClass("active");
       headerNav.slideUp(100);
     }
+    if (
+      !cruiseCategoriesBlockCard.is(e.target) &&
+      cruiseCategoriesBlockCard.has(e.target).length === 0
+    ) {
+      $(".cruise__categories__bg").fadeOut(100);
+      cruiseCategoriesBlockCard.fadeOut(100);
+    }
     if (!cabinTypes.is(e.target) && cabinTypes.has(e.target).length === 0) {
+      $(".slide__cabin__prices.active").removeClass("active");
       $(".cabin__type__card__slide__title").removeClass("active");
       cabinTypes.slideUp(100);
+      $("body").css("overflow", "auto").css("padding-right", "0");
     }
     if (
       !cruiseFilterDropdown.is(e.target) &&
@@ -272,6 +281,8 @@ $(function () {
         .find(".cruise__categories__block")
         .fadeOut(200);
       $(this).removeClass("active");
+      $(".cruise__categories__bg").hide();
+      $("body").css("overflow", "auto").css("padding-right", "0");
     } else {
       $(".ship__cruise__card .slide__cabin__prices").removeClass("active");
       $(".cruise__categories__block").fadeOut(200);
@@ -281,6 +292,8 @@ $(function () {
         .find(".cruise__categories__block")
         .fadeIn(200)
         .css("display", "flex");
+      $(".cruise__categories__bg").show();
+      $("body").css("overflow", "hidden").css("padding-right", "15px");
     }
   });
   $(".cruise__categories__close").click(function () {
@@ -289,6 +302,8 @@ $(function () {
       .closest(".ship__cruise__card")
       .find(".cruise__categories__block")
       .fadeOut(200);
+    $(".cruise__categories__bg").first().hide();
+    $("body").css("overflow", "auto").css("padding-right", "0");
   });
   $(".header__item[header-nav]").click(function () {
     let headerNavAttr = $(this).attr("header-nav");

@@ -45,7 +45,6 @@ html {
 .login__modal__content a {
   color: #4798ca;
   letter-spacing: 0.01em;
-  text-decoration-line: ;
 }
 .login__modal__content input::placeholder {
   color: #7e7e7e;
@@ -487,8 +486,7 @@ html {
   top: 24px;
 }
 .sample__wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 100%;
 }
 .ship__image {
   background-repeat: no-repeat;
@@ -498,6 +496,8 @@ html {
   width: 100%;
   display: flex;
   align-items: flex-end;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .ship__info {
   background-color: rgba(0, 0, 0, 0.4);
@@ -519,12 +519,20 @@ html {
 .ship__name {
   text-transform: uppercase;
 }
+.ship__anchors__wrapper {
+}
 .ship__anchors {
   padding: 14px 0;
-  position: sticky;
   background-color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
+  /**/
+  position: sticky;
   top: 92px;
   z-index: 3;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
 }
 .ship__anchors a {
   text-decoration: none;
@@ -1256,12 +1264,24 @@ html {
   transform: rotate(180deg);
   transition: 0.15s;
 }
+.cruise__categories__bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: none;
+}
 .ship__cruise__card .cruise__categories__block {
   margin-top: 25px;
   display: none;
   position: absolute;
   background: #fff;
-  z-index: 1;
+  z-index: 11;
   border: 1px solid #0071ad;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 27px 60px 26px 21px;
