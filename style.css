@@ -1277,16 +1277,20 @@ html {
   display: none;
 }
 .ship__cruise__card .cruise__categories__block {
-  margin-top: 25px;
   display: none;
-  position: absolute;
+  position: fixed;
   background: #fff;
   z-index: 11;
   border: 1px solid #0071ad;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
   padding: 27px 60px 26px 21px;
   flex-wrap: nowrap;
   left: 16px;
+  left: 15px;
+  right: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  top: 40%;
 }
 .ship__cruise__card .cruise__categories__close {
   position: absolute;
