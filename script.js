@@ -7,7 +7,7 @@ $(function () {
     let headerNav = $(".header__slide");
     let headerItem = $(".header__item");
     let cruiseCategoriesBlockCard = $(".cruise__categories__block");
-    let cabinTypes = $(".cabin__type__card__slide__content"); // тут указываем ID элемента
+    // let cabinTypes = $(".cabin__type__card__slide__content"); // тут указываем ID элемента
     let cruiseFilterDropdown = $(".ship__depature__dropdown__active");
     // элементы скрытия
 
@@ -36,13 +36,15 @@ $(function () {
     ) {
       $(".cruise__categories__bg").fadeOut(100);
       cruiseCategoriesBlockCard.fadeOut(100);
-    }
-    if (!cabinTypes.is(e.target) && cabinTypes.has(e.target).length === 0) {
-      $(".slide__cabin__prices.active").removeClass("active");
-      $(".cabin__type__card__slide__title").removeClass("active");
-      cabinTypes.slideUp(100);
+      $(".ship__cruise__card .slide__cabin__prices").removeClass("active");
       $("body").css("overflow", "auto").css("padding-right", "0");
     }
+    // if (!cabinTypes.is(e.target) && cabinTypes.has(e.target).length === 0) {
+    //   $(".slide__cabin__prices.active").removeClass("active");
+    //   $(".cabin__type__card__slide__title").removeClass("active");
+    //   cabinTypes.slideUp(100);
+    //   $("body").css("overflow", "auto").css("padding-right", "0");
+    // }
     if (
       !cruiseFilterDropdown.is(e.target) &&
       cruiseFilterDropdown.has(e.target).length === 0
@@ -344,5 +346,25 @@ $(function () {
   });
   $(".offices__btn").click(function () {
     $(this).toggleClass("active");
+  });
+  $(".filter__item__block").click(function () {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active").siblings(".dropdown__select").slideUp(100);
+    } else {
+      $(".filter__item__block")
+        .removeClass("active")
+        .siblings(".dropdown__select")
+        .slideUp(100);
+      $(this).addClass("active").siblings(".dropdown__select").slideDown(100);
+    }
+  });
+  function updateCurrentValueSelect(dropDownSelect, currentClickCheck) {
+    console.log(dropDownSelect.find(":checkbox:checked").length);
+  }
+  $(".custom__checkbox").click(function () {
+    updateCurrentValueSelect(
+      $(this).closest(".dropdown__select"),
+      $(this).find(":checkbox")
+    );
   });
 });

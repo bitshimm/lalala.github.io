@@ -7,6 +7,9 @@ body,
 html {
   width: 100%;
 }
+body.compensate-for-scrollbar {
+  padding-right: 15px !important;
+}
 .login__modal {
   display: none;
   position: fixed;
@@ -217,6 +220,8 @@ html {
   padding-right: 10px;
   cursor: pointer;
   border-bottom: 3px solid transparent;
+  text-decoration: none;
+  color: #0071ad;
 }
 .header__item img {
   position: absolute;
@@ -433,22 +438,29 @@ html {
   top: 30px;
   z-index: 4;
 }
-.filter__wrapper > div:not(.btn) {
+.filter__wrapper > .filter__item {
+  cursor: pointer;
+  position: relative;
+}
+.filter__wrapper .filter__item__block {
   background: #ffffff;
   border-radius: 4px;
   padding: 6px 8px;
-  position: relative;
   height: 50px;
   display: flex;
   align-items: flex-end;
   color: #343434;
+  position: relative;
 }
-.filter__wrapper > div:not(.btn) .filter__label {
+.filter__wrapper .filter__item__block .filter__label {
   font-size: 10px;
   color: #7e7e7e;
   position: absolute;
   top: 6px;
   left: 8px;
+}
+.filter__wrapper .dropdown__select {
+  display: none;
 }
 .filter__wrapper .btn {
   text-align: center;
@@ -458,10 +470,10 @@ html {
   background: #4798ca;
   border-radius: 4px;
 }
-.filter__wrapper .depature__city::after,
-.filter__wrapper .route::after,
-.filter__wrapper .days__count::after,
-.filter__wrapper .ship::after {
+.depature__city .filter__item__block::after,
+.route .filter__item__block::after,
+.days__count .filter__item__block::after,
+.ship .filter__item__block::after {
   content: "";
   background-image: url("/images/filter__icon__chevron.png");
   background-position: center;
@@ -472,9 +484,14 @@ html {
   right: 13.29px;
   top: 28.21px;
 }
-.filter__wrapper .depature__date::after,
-.filter__wrapper .arrival__date::after,
-.filter__wrapper .days__count::after {
+.depature__city .filter__item__block.active::after,
+.route .filter__item__block.active::after,
+.days__count .filter__item__block.active::after,
+.ship .filter__item__block.active::after {
+  transform: rotate(180deg);
+}
+.depature__date .filter__item__block::after,
+.arrival__date .filter__item__block::after {
   content: "";
   background-image: url("/images/filter__icon__calendar.png");
   background-position: center;
@@ -484,6 +501,69 @@ html {
   position: absolute;
   right: 8px;
   top: 24px;
+}
+.dropdown__select {
+  position: absolute;
+  background-color: #fff;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  border-radius: 0 0 4px 4px;
+  overflow-y: auto;
+  max-height: 200px;
+  padding-bottom: 6px;
+}
+.dropdown__select::-webkit-scrollbar {
+  width: 5px;
+}
+.dropdown__select::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 100px;
+}
+.dropdown__select::-webkit-scrollbar-thumb {
+  background-color: #4798ca;
+  border-radius: 100px;
+}
+.dropdown__select .custom__checkbox {
+  display: block;
+}
+.dropdown__select .custom__checkbox:hover {
+  background-color: rgb(233, 239, 242);
+}
+.custom__checkbox {
+  position: relative;
+  cursor: pointer;
+}
+.custom__checkbox input {
+  position: absolute;
+  opacity: 0;
+}
+.custom__checkbox label {
+  display: flex;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  padding: 5px 8px;
+}
+.custom__checkbox label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.custom__checkbox input:checked + label::before {
+  background-image: url("/images/checkbox__checked.png");
 }
 .sample__wrapper {
   width: 100%;
@@ -1025,6 +1105,7 @@ html {
   width: 390px;
   display: flex;
   align-items: flex-end;
+  text-decoration: none;
 }
 .ship__sale__el:nth-child(n + 4) {
   display: none;
@@ -1635,6 +1716,8 @@ html {
   background: #0071ad;
   border-radius: 4px;
   padding: 14px 0;
+  display: block;
+  text-decoration: none;
 }
 .ship__recommendations .slick-slide {
   margin: 0 8px;

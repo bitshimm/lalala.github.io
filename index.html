@@ -102,26 +102,26 @@
                 Поиск круизов&nbsp;<img src="/images/chevron__down__blue.png" alt="">
             </span>
         </div>
-        <div class="header__item">
+        <a class="header__item" href="#">
             <span class="header__item__title">
                 спецпредложения&nbsp;<img src="/images/chevron__right__blue.png" alt="">
             </span>
-        </div>
+        </a>
         <div class="header__item">
             <span class="header__item__title">
                 Туристам&nbsp;<img src="/images/chevron__down__blue.png" alt="">
             </span>
         </div>
-        <div class="header__item">
+        <a class="header__item" href="#">
             <span class="header__item__title">
                 Агентствам&nbsp;<img src="/images/chevron__right__blue.png" alt="">
             </span>
-        </div>
-        <div class="header__item">
+        </a>
+        <a class="header__item" href="#">
             <span class="header__item__title">
                 Аренда&nbsp;<img src="/images/chevron__right__blue.png" alt="">
             </span>
-        </div>
+        </a>
         <div class="header__item" header-nav="about-company">
             <span class="header__item__title">
                 О компании&nbsp;<img src="/images/chevron__down__blue.png" alt="">
@@ -268,25 +268,115 @@
         </div>
     </div>
     <div class="filter__wrapper">
-        <div class="depature__city">
-            <div class="filter__current__value">Любой</div><span class="filter__label">Город отправления</span>
+        <div class="depature__city filter__item">
+            <div class="filter__item__block">
+                <div class="filter__current__value">Любой</div><span class="filter__label">Город отправления</span>
+            </div>
+            <div class="dropdown__select">
+                <div class="custom__checkbox" for="moscow">
+                    <input type="checkbox" id="cityStart1" name="cityStart1">
+                    <label for="cityStart1">Москва</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="cityStart2" name="cityStart2">
+                    <label for="cityStart2">Санкт-Петербург</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="cityStart3" name="cityStart3">
+                    <label for="cityStart3">Самара</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="cityStart4" name="cityStart4">
+                    <label for="cityStart4">Нижний Новгород</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="cityStart5" name="cityStart5">
+                    <label for="cityStart5">Пермь</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="cityStart6" name="cityStart6">
+                    <label for="cityStart6">Самара</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="cityStart7" name="cityStart7">
+                    <label for="cityStart7">Нижний Новгород</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="cityStart8" name="cityStart8">
+                    <label for="cityStart8">Пермь</label>
+                </div>
+            </div>
         </div>
-        <div class="route">
-            <div class="filter__current__value">Любой</div><span class="filter__label">Маршрут</span>
+        <div class="route filter__item">
+            <div class="filter__item__block">
+                <div class="filter__current__value">Любой</div><span class="filter__label">Маршрут</span>
+            </div>
+            <div class="dropdown__select">
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="route1" name="route1">
+                    <label for="route1">Золотое кольцо России</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="route2" name="route2">
+                    <label for="route2">Между Москвой и Санкт-Петербургом</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="route3" name="route3">
+                    <label for="route3">Золотая коллекция круизов</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="route4" name="route4">
+                    <label for="route4">Карелия</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="route5" name="route5">
+                    <label for="route5">Байкал</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="route6" name="route6">
+                    <label for="route6">Обь и Иртыш</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="route7" name="route7">
+                    <label for="route7">Круизы в Казань</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="route8" name="route8">
+                    <label for="route8">Круизы в Астрахань</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="route9" name="route9">
+                    <label for="route9">Круизы в Ростов-на-Дону</label>
+                </div>
+                <div class="custom__checkbox">
+                    <input type="checkbox" id="route10" name="route10">
+                    <label for="route10">Валаам или Кижи</label>
+                </div>
+            </div>
         </div>
-        <div class="depature__date">
-            <div class="filter__current__value">25.04.2022</div><span class="filter__label">Отправление, не ранее</span>
+        <div class="depature__date filter__item">
+            <div class="filter__item__block">
+                <div class="filter__current__value">25.04.2022</div><span class="filter__label">Отправление, не
+                    ранее</span>
+            </div>
         </div>
-        <div class="arrival__date">
-            <div class="filter__current__value">25.04.2022</div><span class="filter__label">Прибытие, не позднее</span>
+        <div class="arrival__date filter__item">
+            <div class="filter__item__block">
+                <div class="filter__current__value">25.04.2022</div><span class="filter__label">Прибытие, не
+                    позднее</span>
+            </div>
         </div>
-        <div class="days__count">
-            <div class="filter__current__value">Любое</div><span class="filter__label">Количество дней</span>
+        <div class="days__count filter__item">
+            <div class="filter__item__block">
+                <div class="filter__current__value">Любое</div><span class="filter__label">Количество дней</span>
+            </div>
         </div>
-        <div class="ship">
-            <div class="filter__current__value">Любой</div><span class="filter__label">Теплоход</span>
+        <div class="ship filter__item">
+            <div class="filter__item__block">
+                <div class="filter__current__value">Любой</div><span class="filter__label">Теплоход</span>
+            </div>
         </div>
-        <div class="btn">
+        <div class="btn filter__item">
             <div class="filter__current__value">Показать круизы</div>
         </div>
     </div>
@@ -1217,7 +1307,7 @@
                     Скидки и акции
                 </div>
                 <div class="ship__sales">
-                    <div class="ship__sale__el" style="background-image: url('/images/sale__bg.png');">
+                    <a class="ship__sale__el" style="background-image: url('/images/sale__bg.png');" href="#">
                         <div class="ship__sale__text">
                             <div class="ship__sale__title">
                                 Свой кешбек
@@ -1227,40 +1317,40 @@
                                 с 13.09.2021 по 20.09.2021
                             </div>
                         </div>
-                    </div>
-                    <div class="ship__sale__el" style="background-image: url('/images/sale__bg.png');">
+                    </a>
+                    <a class="ship__sale__el" style="background-image: url('/images/sale__bg.png');" href="#">
                         <div class="ship__sale__text">
                             <div class="ship__sale__title">
                                 Свой кешбек
                             </div>
                             <div class="ship__sale__desc">
-                                Акция действует в период
+                                Акция действует в период <br>
                                 с 13.09.2021 по 20.09.2021
                             </div>
                         </div>
-                    </div>
-                    <div class="ship__sale__el" style="background-image: url('/images/sale__bg.png');">
+                    </a>
+                    <a class="ship__sale__el" style="background-image: url('/images/sale__bg.png');" href="#">
                         <div class="ship__sale__text">
                             <div class="ship__sale__title">
                                 Свой кешбек
                             </div>
                             <div class="ship__sale__desc">
-                                Акция действует в период
+                                Акция действует в период <br>
                                 с 13.09.2021 по 20.09.2021
                             </div>
                         </div>
-                    </div>
-                    <div class="ship__sale__el" style="background-image: url('/images/sale__bg.png');">
+                    </a>
+                    <a class="ship__sale__el" style="background-image: url('/images/sale__bg.png');" href="#">
                         <div class="ship__sale__text">
                             <div class="ship__sale__title">
                                 Свой кешбек
                             </div>
                             <div class="ship__sale__desc">
-                                Акция действует в период
+                                Акция действует в период <br>
                                 с 13.09.2021 по 20.09.2021
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="ship__sales__pag">
                         Больше акций&nbsp;<img width="14" src="/images/chevron__down__blue.png" alt="">
                     </div>
@@ -4112,9 +4202,9 @@
                         <div class="recommendation__title">
                             «Маленький принц»
                         </div>
-                        <div class="recommendation__btn">
+                        <a href="#" class="recommendation__btn">
                             Подробнее о теплоходе
-                        </div>
+                        </a>
                     </div>
                     <div class="ship__recommendation__el">
                         <div class="recommendation__img">
@@ -4123,9 +4213,9 @@
                         <div class="recommendation__title">
                             «Лунная Соната»
                         </div>
-                        <div class="recommendation__btn">
+                        <a href="#" class="recommendation__btn">
                             Подробнее о теплоходе
-                        </div>
+                        </a>
                     </div>
                     <div class="ship__recommendation__el">
                         <div class="recommendation__img">
@@ -4134,9 +4224,9 @@
                         <div class="recommendation__title">
                             «Дмитрий Фурманов»
                         </div>
-                        <div class="recommendation__btn">
+                        <a href="#" class="recommendation__btn">
                             Подробнее о теплоходе
-                        </div>
+                        </a>
                     </div>
                     <div class="ship__recommendation__el">
                         <div class="recommendation__img">
@@ -4145,9 +4235,9 @@
                         <div class="recommendation__title">
                             «Александр Бенуа»
                         </div>
-                        <div class="recommendation__btn">
+                        <a href="#" class="recommendation__btn">
                             Подробнее о теплоходе
-                        </div>
+                        </a>
                     </div>
                     <div class="ship__recommendation__el">
                         <div class="recommendation__img">
@@ -4156,9 +4246,9 @@
                         <div class="recommendation__title">
                             «Маленький принц»
                         </div>
-                        <div class="recommendation__btn">
+                        <a href="#" class="recommendation__btn">
                             Подробнее о теплоходе
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
