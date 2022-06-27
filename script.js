@@ -22,10 +22,19 @@ $(function () {
   $("#depature--date,#arrival--date").val(
     $.datepicker.formatDate("dd.mm.yy", defaultDate)
   );
+
   // $("#arrival--date").val($.datepicker.formatDate("dd.mm.yy", arrivalDate));
   let scrollSection = $(".ship__section"),
     shipAnchors = $(".anchors__group");
   $(window).on("scroll", function () {
+    $(".filter__wrapper").css("top", $(".navbar__fixed__top").outerHeight());
+    $(".ship__anchors").css(
+      "top",
+      $(".navbar__fixed__top").outerHeight() +
+        $(".filter__wrapper").outerHeight()
+    );
+    $(".header__slide").slideUp(100);
+    $(".header__item ").removeClass("active");
     inputDate.datepicker("hide");
     let cur_pos = $(this).scrollTop();
     scrollSection.each(function () {
