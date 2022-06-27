@@ -253,6 +253,55 @@ body.compensate-for-scrollbar {
   padding: 10px 0;
   display: none;
 }
+.header__slide[header-nav="for-tourists"] {
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  display: none;
+}
+.for__tourists {
+  border: 1px solid #0071ad;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 9px 40px 26px 30px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  gap: 0 36px;
+  margin-left: 250px;
+}
+.for__tourists__el {
+  text-decoration: none;
+  font-size: 14px;
+  color: #343434;
+  display: block;
+  margin-bottom: 6px;
+}
+.for__tourists__el:hover {
+  color: #0071ad;
+}
+.for__tourists__el:nth-child(odd) {
+  width: 300px;
+}
+.for__tourists:after,
+.for__tourists:before {
+  content: "";
+  border: solid transparent;
+  position: absolute;
+  top: -14px;
+  right: 43%;
+}
+.for__tourists:after {
+  border-bottom-color: #fff;
+  border-width: 14px;
+  margin-top: -1px;
+}
+.for__tourists:before {
+  border-bottom-color: #4798ca;
+  border-width: 14px;
+  margin-top: -3px;
+}
 .header__slide[header-nav="about-company"] {
   display: flex;
   background-color: #fff;
@@ -442,6 +491,13 @@ body.compensate-for-scrollbar {
   cursor: pointer;
   position: relative;
 }
+.filter__wrapper .filter__current__value {
+  height: 19px;
+  width: 145px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .filter__wrapper .filter__item__block {
   background: #ffffff;
   border-radius: 4px;
@@ -530,15 +586,18 @@ body.compensate-for-scrollbar {
 .dropdown__select .custom__checkbox:hover {
   background-color: rgb(233, 239, 242);
 }
-.custom__checkbox {
+.custom__checkbox,
+.custom__radiobtn {
   position: relative;
   cursor: pointer;
 }
-.custom__checkbox input {
+.custom__checkbox input,
+.custom__radiobtn input {
   position: absolute;
   opacity: 0;
 }
-.custom__checkbox label {
+.custom__checkbox label,
+.custom__radiobtn label {
   display: flex;
   align-items: center;
   -webkit-user-select: none;
@@ -564,6 +623,57 @@ body.compensate-for-scrollbar {
 }
 .custom__checkbox input:checked + label::before {
   background-image: url("/images/checkbox__checked.png");
+}
+.custom__radiobtn label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 100px;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.custom__radiobtn input:checked + label::before {
+  background-image: url("/images/checked__radio.png");
+}
+#depature--date {
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  background: transparent;
+  cursor: pointer;
+}
+#arrival--date {
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  background: transparent;
+  cursor: pointer;
+}
+#depature--date,
+#depature--date:active,
+#arrival--date,
+#arrival--date:active {
+  border: none;
+  outline: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #343434;
 }
 .sample__wrapper {
   width: 100%;
@@ -1433,9 +1543,21 @@ body.compensate-for-scrollbar {
 .ship__cruise__card .cruise__sugg__el {
   height: 36px;
   width: 36px;
+  position: relative;
 }
 .ship__cruise__card .cruise__sugg__desc {
   display: none;
+  z-index: 1;
+  background-color: #fff;
+  position: absolute;
+  bottom: 36px;
+  min-width: 136px;
+  padding: 6px 12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #7e7e7e;
+}
+.ship__cruise__card .cruise__sugg__el:hover .cruise__sugg__desc {
+  display: block;
 }
 .ship__cruise__card .cruise__btn {
   font-weight: 700;
@@ -1541,8 +1663,25 @@ body.compensate-for-scrollbar {
   margin-top: 11px;
   flex-wrap: wrap;
 }
-.ship__cruise__list .cruise__suggestions img {
+.ship__cruise__list .cruise__sugg__el {
+  height: 36px;
+  width: 36px;
   margin-right: 27px;
+  position: relative;
+}
+.ship__cruise__list .cruise__sugg__desc {
+  display: none;
+  z-index: 1;
+  background-color: #fff;
+  position: absolute;
+  bottom: 36px;
+  min-width: 136px;
+  padding: 6px 12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #7e7e7e;
+}
+.ship__cruise__list .cruise__sugg__el:hover .cruise__sugg__desc {
+  display: block;
 }
 .ship__cruise__list .top__right__block {
   margin-left: auto;

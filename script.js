@@ -1,18 +1,75 @@
 $(function () {
+  let inputDate = $("#depature--date,#arrival--date").datepicker({
+    dateFormat: "dd.mm.yy",
+    monthNames: [
+      "Январь",
+      "Февраль",
+      "Март",
+      "Апрель",
+      "Май",
+      "Июнь",
+      "Июль",
+      "Август",
+      "Сентябрь",
+      "Октябрь",
+      "Ноябрь",
+      "Декабрь",
+    ],
+    dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+  });
+  let defaultDate = new Date(),
+    arrivalDate = defaultDate.getFullYear + 1;
+  $("#depature--date,#arrival--date").val(
+    $.datepicker.formatDate("dd.mm.yy", defaultDate)
+  );
+  // $("#arrival--date").val($.datepicker.formatDate("dd.mm.yy", arrivalDate));
+  let scrollSection = $(".ship__section"),
+    shipAnchors = $(".anchors__group");
+  $(window).on("scroll", function () {
+    inputDate.datepicker("hide");
+    let cur_pos = $(this).scrollTop();
+    scrollSection.each(function () {
+      let top = $(this).offset().top - 222,
+        bottom = top + $(this).outerHeight();
+      if (cur_pos >= top && cur_pos <= bottom) {
+        shipAnchors.removeClass("active");
+        $('.anchors__group[href="#' + $(this).attr("id") + '"]').addClass(
+          "active"
+        );
+      }
+    });
+  });
+  $(".ship__anchors__bottom a, .ship__anchors__top a").click(function (event) {
+    event.preventDefault();
+    let id = $(this).attr("href"),
+      top = $(id).offset().top;
+    $("body,html").animate({ scrollTop: top - 202 }, 400);
+  });
   $(document).mouseup(function (e) {
     //элементы скрытия
+    // тут указываем ID элемента
     let officesList = $(".list__offices");
     let officesBtn = $(".offices__btn");
 
     let headerNav = $(".header__slide");
     let headerItem = $(".header__item");
+
     let cruiseCategoriesBlockCard = $(".cruise__categories__block");
-    // let cabinTypes = $(".cabin__type__card__slide__content"); // тут указываем ID элемента
     let cruiseFilterDropdown = $(".ship__depature__dropdown__active");
+    let filterBtn = $(".filter__item__block");
+    let filterSelect = $(".dropdown__select");
     // элементы скрытия
 
     // если клик был не по нашему блоку или не по кнопке открывающей его
     // скрываем его
+    if (
+      !filterBtn.is(e.target) &&
+      filterBtn.has(e.target).length === 0 &&
+      !filterSelect.is(e.target) &&
+      filterSelect.has(e.target).length === 0
+    ) {
+      filterSelect.slideUp(100);
+    }
     if (
       !officesList.is(e.target) &&
       officesList.has(e.target).length === 0 &&
@@ -344,6 +401,7 @@ $(function () {
       }
     }
   });
+
   $(".offices__btn").click(function () {
     $(this).toggleClass("active");
   });
@@ -359,12 +417,34 @@ $(function () {
     }
   });
   function updateCurrentValueSelect(dropDownSelect, currentClickCheck) {
-    console.log(dropDownSelect.find(":checkbox:checked").length);
+    if (dropDownSelect.find(":checkbox:checked").length > 1) {
+      dropDownSelect
+        .siblings(".filter__item__block")
+        .find(".filter__current__value")
+        .text("Выбрано " + dropDownSelect.find(":checkbox:checked").length);
+    } else if (dropDownSelect.find(":checkbox:checked").length == 1) {
+      dropDownSelect
+        .siblings(".filter__item__block")
+        .find(".filter__current__value")
+        .text(
+          dropDownSelect.find(":checkbox:checked").siblings("label").text()
+        );
+    } else {
+      dropDownSelect
+        .siblings(".filter__item__block")
+        .find(".filter__current__value")
+        .text("Любой");
+    }
   }
   $(".custom__checkbox").click(function () {
     updateCurrentValueSelect(
       $(this).closest(".dropdown__select"),
-      $(this).find(":checkbox")
+      $(this).find("label")
+    );
+  });
+  $(".custom__radiobtn").click(function () {
+    $(".days__count .filter__current__value").text(
+      $(this).find("label").text()
     );
   });
 });
