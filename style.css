@@ -518,6 +518,7 @@ body.compensate-for-scrollbar {
 }
 .filter__wrapper .dropdown__select {
   display: none;
+  box-shadow: 0 5px 5px -5px rgb(0 0 0 / 50%);
 }
 .filter__wrapper .btn {
   text-align: center;
