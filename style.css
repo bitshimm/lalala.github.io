@@ -712,7 +712,7 @@ body.compensate-for-scrollbar {
   text-transform: uppercase;
 }
 .ship__anchors {
-  padding: 14px 13px;
+  padding: 14px 0;
   background-color: #fff;
   max-width: 1440px;
   margin: 0 auto;
@@ -764,6 +764,7 @@ body.compensate-for-scrollbar {
   font-weight: 400;
   font-size: 20px;
   color: #343434;
+  padding: 0 13px;
 }
 .ship__anchors__bottom a.active {
   color: #0071ad;
@@ -1995,4 +1996,9 @@ body.compensate-for-scrollbar {
 }
 .footer__soc__el {
   margin-right: 28px;
+}
+@media (max-width: 1140px) {
+  .ship__anchors__bottom{
+    justify-content: flex-start;
+  }
 }
