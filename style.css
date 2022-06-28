@@ -384,40 +384,80 @@ body.compensate-for-scrollbar {
   right: 14px;
   margin: auto 0;
 }
-.header__slide .tab__content[header-tab="other-russian-cruises"] {
+.header__slide .tab__content[header-tab="cruise-s-cruises"],
+.header__slide .tab__content[header-tab="other-russian-cruises"],
+.header__slide .tab__content[header-tab="overseas-cruises"],
+.header__slide .tab__content[header-tab="cruises-by-region"] {
   background: #fff;
   border: 1px solid #4798ca;
   border-radius: 4px;
   margin-left: 15px;
-  padding: 12px 39px 20px 20px;
   position: relative;
+  min-width: 856px;
+  padding: 12px 39px 20px 20px;
+  height: 250px;
   display: grid;
+}
+.header__slide .tab__content[header-tab="cruise-s-cruises"] {
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  display: none;
+  gap: 38px;
+}
+.header__slide .tab__content[header-tab="other-russian-cruises"] {
   grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 20px;
   grid-template-rows: repeat(12, 1fr);
   grid-auto-flow: column;
   display: none;
+  height: auto;
 }
-.header__slide .tab__content[header-tab="other-russian-cruises"]:after,
-.header__slide .tab__content[header-tab="other-russian-cruises"]:before {
+.header__slide .tab__content[header-tab="overseas-cruises"] {
+  grid-template-columns: 30% 70%;
+  grid-auto-flow: column;
+  display: none;
+  gap: 0 20px;
+}
+.header__slide .tab__content[header-tab="cruises-by-region"] {
+  grid-template-rows: repeat(6, 1fr);
+  grid-auto-flow: column;
+  display: none;
+  gap: 0 20px;
+  padding-bottom: 95px;
+}
+.header__slide .tab__content:after,
+.header__slide .tab__content:before {
   content: "";
   border: solid transparent;
   position: absolute;
-  top: 59px;
   left: -12px;
   transform: rotate(270deg);
 }
-.header__slide .tab__content[header-tab="other-russian-cruises"]:after {
+.header__slide .tab__content:after {
   border-bottom-color: #fff;
   border-width: 7px;
   margin-left: -1px;
 }
-.header__slide .tab__content[header-tab="other-russian-cruises"]:before {
+.header__slide .tab__content:before {
   border-bottom-color: #4798ca;
   border-width: 7px;
   margin-left: -3px;
 }
-
+.header__slide .tab__content[header-tab="cruise-s-cruises"]:after,
+.header__slide .tab__content[header-tab="cruise-s-cruises"]:before {
+  top: 13px;
+}
+.header__slide .tab__content[header-tab="other-russian-cruises"]:after,
+.header__slide .tab__content[header-tab="other-russian-cruises"]:before {
+  top: 59px;
+}
+.header__slide .tab__content[header-tab="overseas-cruises"]:after,
+.header__slide .tab__content[header-tab="overseas-cruises"]:before {
+  top: 105px;
+}
+.header__slide .tab__content[header-tab="cruises-by-region"]:after,
+.header__slide .tab__content[header-tab="cruises-by-region"]:before {
+  top: 151px;
+}
 .header__slide .tab__content a {
   display: block;
   text-decoration: none;
@@ -432,40 +472,7 @@ body.compensate-for-scrollbar {
 .header__slide .tab__content a:hover {
   color: #0071ad;
 }
-.header__slide .tab__content[header-tab="cruise-s-cruises"] {
-  background: #fff;
-  border: 1px solid #4798ca;
-  border-radius: 4px;
-  margin-left: 15px;
-  padding: 12px 21px 38px 20px;
-  position: relative;
-  display: none;
-  gap: 38px;
-  width: 1000px;
-}
-.header__slide .tab__content[header-tab="cruise-s-cruises"]:after,
-.header__slide .tab__content[header-tab="cruise-s-cruises"]:before {
-  content: "";
-  border: solid transparent;
-  position: absolute;
-  top: 13px;
-  left: -12px;
-  transform: rotate(270deg);
-}
-.header__slide .tab__content[header-tab="cruise-s-cruises"]:after {
-  border-bottom-color: #fff;
-  border-width: 7px;
-  margin-left: -1px;
-}
-.header__slide .tab__content[header-tab="cruise-s-cruises"]:before {
-  border-bottom-color: #4798ca;
-  border-width: 7px;
-  margin-left: -3px;
-}
-.header__slide .tab__content[header-tab="cruise-s-cruises"] > div {
-  width: calc(100 / 3);
-}
-.header__slide .tab__content[header-tab="cruise-s-cruises"] .tab__title {
+.header__slide .tab__content .tab__title {
   font-weight: 700;
   font-size: 18px;
   color: #0071ad;
@@ -475,7 +482,6 @@ body.compensate-for-scrollbar {
   max-width: 1440px;
   margin: 0 auto;
   display: grid;
-  /* grid-template-columns: repeat(7, 1fr); */
   grid-template-columns: repeat(auto-fill, minmax(177px, 1fr));
   gap: 2px;
   background: #e6f2f7;
@@ -977,13 +983,11 @@ body.compensate-for-scrollbar {
 .ship__cabin__types {
   display: flex;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   color: #343434;
-  /* gap: 73px; */
   margin-bottom: 51px;
 }
 .ship__cabin__types img {
@@ -1045,16 +1049,24 @@ body.compensate-for-scrollbar {
   display: block;
   margin: auto 0;
 }
-.cabin__type__card__bigimg img {
+.cabin__type__card__bigimg a {
   display: block;
   width: 100%;
   margin-bottom: 8px;
+  height: 214px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .cabin__type__card__smallimgs {
   position: relative;
 }
 .cabin__type__card__smallimgs a {
   display: block;
+  height: 72px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .cabin__type__card__smallimgs .slick-slide {
   margin: 0 4.5px;
@@ -1327,9 +1339,6 @@ body.compensate-for-scrollbar {
   position: absolute;
   right: 12px;
 }
-/* .ship__depature__list.active:after {
-  content: url("/images/dropdown__down__gray.png");
-} */
 .ship__depature__dropdown {
   position: absolute;
   display: none;
@@ -1998,7 +2007,7 @@ body.compensate-for-scrollbar {
   margin-right: 28px;
 }
 @media (max-width: 1140px) {
-  .ship__anchors__bottom{
+  .ship__anchors__bottom {
     justify-content: flex-start;
   }
 }

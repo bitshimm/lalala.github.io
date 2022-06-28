@@ -107,12 +107,6 @@ $(function () {
       $(".ship__cruise__card .slide__cabin__prices").removeClass("active");
       $("body").css("overflow", "auto").css("padding-right", "0");
     }
-    // if (!cabinTypes.is(e.target) && cabinTypes.has(e.target).length === 0) {
-    //   $(".slide__cabin__prices.active").removeClass("active");
-    //   $(".cabin__type__card__slide__title").removeClass("active");
-    //   cabinTypes.slideUp(100);
-    //   $("body").css("overflow", "auto").css("padding-right", "0");
-    // }
     if (
       !cruiseFilterDropdown.is(e.target) &&
       cruiseFilterDropdown.has(e.target).length === 0
@@ -212,7 +206,18 @@ $(function () {
         .slideDown(100);
     }
   });
-
+  function getSliderSettings() {
+    return {
+      lazyLoad: "ondemand",
+      infinite: false,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      prevArrow:
+        '<img class="slick__prev" src="/images/slick__arrow__left.png">',
+      nextArrow:
+        '<img class="slick__next" src="/images/slick__arrow__right.png">',
+    };
+  }
   $(".cabin__types__pag").click(function () {
     if ($(this).hasClass("active")) {
       $(this)
@@ -228,6 +233,12 @@ $(function () {
         )
         .addClass("active");
       $(".ship__cabin__type__card:nth-child(n + 7)").slideDown(100);
+      $(
+        ".ship__cabin__type__card:nth-child(n + 7) .cabin__type__card__smallimgs"
+      ).slick("unslick");
+      $(
+        ".ship__cabin__type__card:nth-child(n + 7) .cabin__type__card__smallimgs"
+      ).slick(getSliderSettings());
     }
   });
   $(".ship__sales__pag").click(function () {
@@ -401,15 +412,20 @@ $(function () {
       $(
         '.header__slide .tab__content[header-tab="' + headerTabAttr + '"]'
       ).slideDown(100);
-      if (headerTabAttr == "other-russian-cruises") {
-        $(
-          '.header__slide .tab__content[header-tab="' + headerTabAttr + '"]'
-        ).css("display", "grid");
-      } else {
-        $(
-          '.header__slide .tab__content[header-tab="' + headerTabAttr + '"]'
-        ).css("display", "flex");
-      }
+      // if (
+      //   headerTabAttr == "other-russian-cruises" ||
+      //   headerTabAttr == "cruises-by-region"
+      // ) {
+      $('.header__slide .tab__content[header-tab="' + headerTabAttr + '"]').css(
+        "display",
+        "grid"
+      );
+      // } else {
+      // $('.header__slide .tab__content[header-tab="' + headerTabAttr + '"]').css(
+      //   "display",
+      //   "flex"
+      // );
+      // }
     }
   });
 
