@@ -1,4 +1,7 @@
 $(function () {
+  let dateNowPicker = new Date();
+  let maxDatePicker = new Date();
+  maxDatePicker.setFullYear(maxDatePicker.getFullYear() + 1, 10, 3);
   let inputDate = $("#depature--date,#arrival--date").datepicker({
     dateFormat: "dd.mm.yy",
     monthNames: [
@@ -16,14 +19,13 @@ $(function () {
       "Декабрь",
     ],
     dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+    firstDay: 1,
+    minDate: dateNowPicker,
+    maxDate: maxDatePicker,
   });
-  let defaultDate = new Date(),
-    arrivalDate = defaultDate.getFullYear + 1;
-  $("#depature--date,#arrival--date").val(
-    $.datepicker.formatDate("dd.mm.yy", defaultDate)
-  );
+  $("#depature--date").datepicker("setDate", dateNowPicker);
+  $("#arrival--date").datepicker("setDate", maxDatePicker);
 
-  // $("#arrival--date").val($.datepicker.formatDate("dd.mm.yy", arrivalDate));
   let scrollSection = $(".ship__section"),
     shipAnchors = $(".anchors__group");
   $(window).on("scroll", function () {
