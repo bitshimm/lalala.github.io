@@ -446,8 +446,8 @@ body.compensate-for-scrollbar {
 .header__slide .tab__content[header-tab="cruise-s-cruises"]:before {
   top: 13px;
 }
-.header__slide .tab__content[header-tab="other-russian-cruises"]:after,
-.header__slide .tab__content[header-tab="other-russian-cruises"]:before {
+.header__slide .tab__content[header-tab="cruises-by-region"]:after,
+.header__slide .tab__content[header-tab="cruises-by-region"]:before {
   top: 59px;
 }
 .header__slide .tab__content[header-tab="overseas-cruises"]:after,
