@@ -474,4 +474,12 @@ $(function () {
       $(this).find("label").text()
     );
   });
+  $(".slide__filter span").click(function () {
+    $(this).toggleClass("active");
+    if ($(this).hasClass("active")){
+      $(".slide__additional__filter").show(100).css("display", "grid");
+    }else{
+      $(".slide__additional__filter").hide(100);
+    }
+  });
 });
